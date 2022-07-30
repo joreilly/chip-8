@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version Versions.composeDesktopWeb
+    id("org.jetbrains.compose") version Versions.composeDesktop
     application
 }
 
@@ -14,6 +14,7 @@ repositories {
 
 dependencies {
     implementation(project(":shared"))
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:${Versions.kotlinxCoroutines}")
     implementation(compose.desktop.currentOs)
 }
 
