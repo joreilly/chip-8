@@ -109,7 +109,7 @@ fun GameListSidebar(gameNames: List<String>, selectedGame: String, onGameSelecte
         items(gameNames) { game ->
             println(game)
             val backgroundColor = if (selectedGame == game) SlackColors.optionSelected else Color.Transparent
-            val color = if (selectedGame == game) Color.White else Color.LightGray
+            val color = if (selectedGame == game) Color.White else Color.Black
             Row(
                 modifier = Modifier.fillMaxWidth()
                 .background(
