@@ -12,3 +12,13 @@ Current clients
 keys...on mobile these are simulated with buttons)
 
 ![Screenshots](/art/screenshots.png?raw=true)
+
+
+# Other Kotlin Multiplatform samples
+* [PeopleInSpace](https://github.com/joreilly/PeopleInSpace)
+* [BikeShare](https://github.com/joreilly/BikeShare)
+* [FantasyPremierLeague](https://github.com/joreilly/FantasyPremierLeague)
+* [MortyComposeKMM](https://github.com/joreilly/MortyComposeKMM)
+* [StarWars](https://github.com/joreilly/StarWars)
+* [Confetti](https://github.com/joreilly/Confetti)
+* [GalwayBus](https://github.com/joreilly/GalwayBus)
