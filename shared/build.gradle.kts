@@ -59,5 +59,6 @@ android {
         minSdk = 21
         targetSdk = 32
     }
+    namespace = "dev.johnoreilly.chip_8_kmm.shared"
 }
 
