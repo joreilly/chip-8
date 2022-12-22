@@ -13,3 +13,4 @@ rootProject.name = "chip-8"
 
 include(":androidApp", ":shared", ":compose-desktop")
 
+include(":wearApp")
