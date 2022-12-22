@@ -5,6 +5,7 @@ Kotlin Multiplatform fork of https://github.com/cbeust/chip-8
 
 Current clients
 * Android (Jetpack Compose)
+* Wear (Compose for Wear)
 * iOS (SwiftUI)
 * Desktop (Compose for Desktop)
 
