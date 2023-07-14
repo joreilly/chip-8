@@ -5,17 +5,13 @@ plugins {
 
 
 kotlin {
-    android()
+    androidTarget()
 
     val iosArm64 = iosArm64()
     val iosX64 = iosX64()
     val iosSimulatorArm64 = iosSimulatorArm64()
 
     jvm()
-
-    js(IR) {
-        browser()
-    }
 
     sourceSets {
         val commonMain by getting {
@@ -25,9 +21,7 @@ kotlin {
         }
         val commonTest by getting
         val androidMain by getting
-        val androidTest by getting
         val jvmMain by getting
-        val jsMain by getting
 
         val appleMain by creating {
             dependsOn(commonMain)
@@ -53,11 +47,14 @@ kotlin {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 33
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
-        targetSdk = 32
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     namespace = "dev.johnoreilly.chip_8_kmm.shared"
 }
