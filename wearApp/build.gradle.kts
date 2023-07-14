@@ -30,25 +30,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
-
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-        freeCompilerArgs = listOf("-Xskip-prerelease-check",
-            "-opt-in=androidx.wear.material.ExperimentalWearMaterialApi",
-            "-opt-in=com.google.accompanist.pager.ExperimentalPagerApi"
-        )
-    }
-}
-
 
 dependencies {
     implementation(project(":shared"))
@@ -65,5 +51,5 @@ dependencies {
         implementation(wearNavigation)
     }
 
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha03")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
 }
