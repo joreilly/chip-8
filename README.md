@@ -19,6 +19,9 @@ keys...on mobile these are simulated with buttons)
 
 ![Screenshot_20230121_130752](https://user-images.githubusercontent.com/6302/213868342-cbca8ad6-38a1-4297-9dbc-ddcdbba513c3.png)
 
+<img width="1202" alt="Screenshot 2023-07-15 at 14 12 01" src="https://github.com/joreilly/chip-8/assets/6302/e09216b3-f404-48fb-8b00-f372bea70ac6">
+
+
 
 
 # Other Kotlin Multiplatform samples
