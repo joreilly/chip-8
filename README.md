@@ -10,6 +10,7 @@ Current clients
 * Wear (Compose for Wear)
 * iOS (SwiftUI)
 * Desktop (Compose for Desktop)
+* Web (Wasm based Compose for Web)
 
 (The game emulator has virtual "keyboard" interface. In the desktop client game is typically driven by 4, 5, and 6
 keys...on mobile these are simulated with buttons)
