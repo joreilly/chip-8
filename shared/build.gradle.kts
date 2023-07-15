@@ -13,10 +13,15 @@ kotlin {
 
     jvm()
 
+    wasm() {
+        browser()
+    }
+
+
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinxCoroutines}")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-RC-wasm0")
             }
         }
         val commonTest by getting
