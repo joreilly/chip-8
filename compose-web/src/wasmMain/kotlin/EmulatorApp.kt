@@ -37,9 +37,11 @@ fun EmulatorApp() {
     }
 
     LaunchedEffect(selectedGame) {
-        println("new selected game, ${selectedGame}")
-        val romData = getRomData(selectedGame)
-        emulator.loadRom(romData)
+        if (selectedGame.isNotEmpty()) {
+            println("new selected game, ${selectedGame}")
+            val romData = getRomData(selectedGame)
+            emulator.loadRom(romData)
+        }
     }
 
 
@@ -66,7 +68,7 @@ fun EmulatorApp() {
 
 @OptIn(ExperimentalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    return resource("chip-8/${gameName}.ch8").readBytes()
+    return resource("${gameName}.ch8").readBytes()
 }
 
 @Composable
