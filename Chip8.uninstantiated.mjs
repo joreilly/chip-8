@@ -103,6 +103,8 @@ export async function instantiate(imports={}, runInitializer=true) {
         'kotlin.wasm.internal.tryGetOrSetExternrefBox_$external_fun' : (p0, p1) => tryGetOrSetExternrefBox(p0, p1),
         'kotlin.io.printError' : (error) => console.error(error),
         'kotlin.io.printlnImpl' : (message) => console.log(message),
+        'kotlin.js.jsArrayGet' : (array, index) => array[index],
+        'kotlin.js.length_$external_prop_getter' : (_this) => _this.length,
         'kotlin.js.__convertKotlinClosureToJsClosure_((Js)->Js?)' : (f) => (p0) => wasmExports['__callFunction_((Js)->Js?)'](f, p0),
         'kotlin.js.__convertKotlinClosureToJsClosure_(()->Unit)' : (f) => () => wasmExports['__callFunction_(()->Unit)'](f, ),
         'kotlin.random.initialSeed' : () => ((Math.random() * Math.pow(2, 32)) | 0),
@@ -210,6 +212,10 @@ export async function instantiate(imports={}, runInitializer=true) {
             }
         }
         ,
+        'androidx.compose.ui.text.intl.parseLanguageTagToIntlLocale' : (languageTag) => new Intl.Locale(languageTag),
+        'androidx.compose.ui.text.intl.language_$external_prop_getter' : (_this) => _this.language,
+        'androidx.compose.ui.text.intl.baseName_$external_prop_getter' : (_this) => _this.baseName,
+        'androidx.compose.ui.text.intl.getUserPreferredLanguagesAsArray' : () => window.navigator.languages,
         'androidx.compose.ui.window.setCursor' : (elementId, value) => document.getElementById(elementId).style.cursor = value,
         'org.jetbrains.compose.resources.jsExportInt8ArrayToWasm' :  (src, size, dstAddr) => {
                 const mem8 = new Int8Array(wasmExports.memory.buffer, dstAddr, size);
