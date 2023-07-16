@@ -68,7 +68,7 @@ fun EmulatorApp() {
 
 @OptIn(ExperimentalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    return resource("${gameName}.ch8").readBytes()
+    return resource("chip-8/${gameName}.ch8").readBytes()
 }
 
 @Composable
