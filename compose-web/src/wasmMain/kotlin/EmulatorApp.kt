@@ -45,7 +45,7 @@ fun EmulatorApp() {
 
 @OptIn(ExperimentalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    return resource("Space Invaders [David Winter].ch8").readBytes()
+    return resource("chip-8/Space Invaders [David Winter].ch8").readBytes()
 }
 
 @Composable
