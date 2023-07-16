@@ -17,44 +17,63 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.input.key.*
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.resource
-//import theme.SlackColors
-//import theme.divider
 
 
 @Composable
 fun EmulatorApp() {
     val emulator = remember { Emulator() }
-    var selectedGame by remember { mutableStateOf("Space Invaders [David Winter]") }
+
+    var gameNames by remember { mutableStateOf(emptyList<String>()) }
+    var selectedGame by remember { mutableStateOf("") }
+
+    LaunchedEffect(true) {
+        gameNames =  listOf("Brix [Andreas Gustafsson, 1990]", "Breakout [Carmelo Cortez, 1979]", "Space Invaders [David Winter]", "Tetris [Fran Dachille, 1991]")
+    }
 
     LaunchedEffect(selectedGame) {
+        println("new selected game, ${selectedGame}")
         val romData = getRomData(selectedGame)
         emulator.loadRom(romData)
     }
 
-    Row(
-        modifier = Modifier.background(color = MaterialTheme.colors.surface).fillMaxSize()
-    ) {
-        GameWindow(emulator, selectedGame)
+
+    Column(Modifier.fillMaxSize()) {
+        Text(
+            text ="Chip-8 Emulator (using Wasm based Compose for Web).  Use 4,5,6 keys to control.",
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(color = Color.Gray)
+                .align(Alignment.CenterHorizontally)
+                .padding(8.dp),
+            textAlign = TextAlign.Center,
+            color = Color.White,
+            style = MaterialTheme.typography.h5)
+
+        Row(modifier = Modifier.background(color = MaterialTheme.colors.surface)) {
+            GameListSidebar(gameNames, selectedGame, onGameSelected = {
+                selectedGame = it
+            })
+            GameWindow(emulator, selectedGame)
+        }
     }
 }
 
 @OptIn(ExperimentalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    return resource("chip-8/Space Invaders [David Winter].ch8").readBytes()
+    return resource("chip-8/${gameName}.ch8").readBytes()
 }
 
 @Composable
 fun GameListSidebar(gameNames: List<String>, selectedGame: String, onGameSelected: (game: String) -> Unit) {
-
-
     LazyColumn(
         modifier = Modifier
-            .width(350.dp)
+            .width(300.dp)
             .background(
                 color = MaterialTheme.colors.surface,
                 shape = RectangleShape
@@ -68,7 +87,6 @@ fun GameListSidebar(gameNames: List<String>, selectedGame: String, onGameSelecte
     ) {
 
         items(gameNames) { game ->
-            println(game)
             val backgroundColor = if (selectedGame == game) Color(0xff5B7AA2) else Color.Transparent
             val color = if (selectedGame == game) Color.White else Color.Black
             Row(
@@ -97,9 +115,9 @@ fun GameListSidebar(gameNames: List<String>, selectedGame: String, onGameSelecte
 
 @Composable
 fun GameWindow(emulator: Emulator, gameName: String) {
-    val focusRequester = remember(::FocusRequester)
+    val focusRequester = remember { FocusRequester() }
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(gameName) {
         focusRequester.requestFocus()
     }
 
