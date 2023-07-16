@@ -26,7 +26,6 @@ class Computer(val display: Display,
             start()
         }
 
-    //private val executor = Executors.newSingleThreadScheduledExecutor()
     private var cpuTickJob: Job? = null
     private var timerFutureJob: Job? = null
     private var romData: ByteArray? = null
@@ -86,24 +85,16 @@ class Computer(val display: Display,
     }
 
     private fun launchTimers() {
-
-        cpuTickJob = scope.launch {
-            while (true) {
-                delay(1000 / cpuClockHz)
-                nextInstruction().run()
-            }
+        cpuTickJob = startCoroutineTimer(repeatMillis = 2) {
+            nextInstruction().run()
         }
 
-
-        timerFutureJob = scope.launch {
-            while (true) {
-                delay(16)
-                if (cpu.DT > 0) {
-                    cpu.DT--
-                }
-                if (cpu.ST > 0) {
-                    cpu.ST--
-                }
+        timerFutureJob = startCoroutineTimer(repeatMillis = 16) {
+            if (cpu.DT > 0) {
+                cpu.DT--
+            }
+            if (cpu.ST > 0) {
+                cpu.ST--
             }
         }
     }
@@ -119,5 +110,17 @@ class Computer(val display: Display,
             pc += 2
         }
         return result
+    }
+}
+
+inline fun startCoroutineTimer(delayMillis: Long = 0, repeatMillis: Long = 0, crossinline action: () -> Unit) = GlobalScope.launch {
+    delay(delayMillis)
+    if (repeatMillis > 0) {
+        while (true) {
+            action()
+            delay(repeatMillis)
+        }
+    } else {
+        action()
     }
 }
