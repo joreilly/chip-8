@@ -1,5 +1,9 @@
 name: Build and Publish
-on: [ push, pull_request ]
+
+# configure manual trigger
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     name: Test and Build
