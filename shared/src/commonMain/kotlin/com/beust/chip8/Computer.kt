@@ -30,8 +30,6 @@ class Computer(val display: Display,
     private var timerFutureJob: Job? = null
     private var romData: ByteArray? = null
 
-    private val scope = MainScope()
-
     var listener: ComputerListener? = null
 
     private fun unsigned(b: Byte): Int = if (b < 0) b + 0x10 else b.toInt()
@@ -104,7 +102,7 @@ class Computer(val display: Display,
     fun disassemble(p: Int = cpu.PC): List<AssemblyLine> {
         var pc = p
         val result = arrayListOf<AssemblyLine>()
-        repeat(30) {
+        repeat(1024) {
             val inst = nextInstruction(pc)
             result.add(AssemblyLine(pc, cpu.memory[pc], cpu.memory[pc + 1], inst.toString()))
             pc += 2

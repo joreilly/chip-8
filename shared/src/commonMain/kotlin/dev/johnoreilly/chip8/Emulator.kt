@@ -16,6 +16,10 @@ class Emulator {
         computer.stop()
     }
 
+    fun disassemble(): List<Computer.AssemblyLine> {
+        return computer.disassemble()
+    }
+
     fun observeScreenUpdates(success: (IntArray) -> Unit) {
         display.setScreenCallback {
             success(it)

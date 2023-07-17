@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalStdlibApi::class)
+
 package com.beust.chip8
 
 fun log(s: String) {
@@ -12,8 +14,8 @@ interface KeyListener {
 }
 
 /** Format to hex with leading zeros */
-val Int.h get() = this.toString(16).toUpperCase()    // TODO check if this is ok?
-val Byte.h get() = this.toString(16).toUpperCase()      //("%02X", this)
+val Int.h get() = this.toHexString(HexFormat { upperCase = true; number.removeLeadingZeros = true })
+val Byte.h get() = this.toHexString(HexFormat { upperCase = true; number.removeLeadingZeros = false })
 
 class Nibbles(private val b0: Int, val b1: Int, val b2: Int, val b3: Int) {
     fun val2(a: Int, b: Int) = a.shl(4) + b
