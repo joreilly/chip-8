@@ -19,7 +19,9 @@ import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.beust.chip8.Computer
 import com.beust.chip8.Display
+import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.resource
@@ -30,6 +32,7 @@ fun EmulatorApp() {
     val emulator = remember { Emulator() }
 
     var gameNames by remember { mutableStateOf(emptyList<String>()) }
+    var disassembly by remember { mutableStateOf(emptyList<Computer.AssemblyLine>()) }
     var selectedGame by remember { mutableStateOf("") }
 
     LaunchedEffect(true) {
@@ -41,6 +44,7 @@ fun EmulatorApp() {
             println("new selected game, ${selectedGame}")
             val romData = getRomData(selectedGame)
             emulator.loadRom(romData)
+            disassembly = emulator.disassemble()
         }
     }
 
@@ -58,9 +62,12 @@ fun EmulatorApp() {
             style = MaterialTheme.typography.h5)
 
         Row(modifier = Modifier.background(color = MaterialTheme.colors.surface)) {
-            GameListSidebar(gameNames, selectedGame, onGameSelected = {
-                selectedGame = it
-            })
+            Column {
+                GameListSidebar(gameNames, selectedGame, onGameSelected = {
+                    selectedGame = it
+                })
+                DisassemblyInfo(disassembly)
+            }
             GameWindow(emulator, selectedGame)
         }
     }
@@ -71,7 +78,37 @@ private suspend fun getRomData(gameName: String): ByteArray {
     //return resource("chip-8/${gameName}.ch8").readBytes()
     // need to figure out way to manage web resource paths when
     // deployed but leaving like this for now so can be run locally
-    return resource("${gameName}.ch8").readBytes()
+    return resource("chip-8/${gameName}.ch8").readBytes()
+}
+
+@Composable
+fun DisassemblyInfo(disassembly: List<Computer.AssemblyLine>) {
+
+    LazyColumn(
+        modifier = Modifier
+            .width(300.dp)
+            .background(
+                color = Color.LightGray,
+                shape = RectangleShape
+            )
+            .border(
+                border = BorderStroke(1.dp, color = Color(0xff35383D)),
+                shape = RectangleShape
+            )
+            .fillMaxWidth()
+    ) {
+
+        items(disassembly) { instruction ->
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 15.dp, vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(instruction.counter.toString(16), Modifier.width(50.dp))
+                Text("${instruction.byte0.h} ${instruction.byte1.h}", Modifier.width(60.dp))
+                Text(instruction.name)
+            }
+        }
+    }
 }
 
 @Composable
@@ -87,7 +124,6 @@ fun GameListSidebar(gameNames: List<String>, selectedGame: String, onGameSelecte
                 border = BorderStroke(1.dp, color = Color(0xff35383D)),
                 shape = RectangleShape
             )
-            .fillMaxHeight()
             .fillMaxWidth()
     ) {
 
