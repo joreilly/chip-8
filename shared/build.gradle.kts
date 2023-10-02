@@ -21,7 +21,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-RC-wasm0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2-wasm1")
             }
         }
         val commonTest by getting
