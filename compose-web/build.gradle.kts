@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.4.0-dev-wasm09"
+    id("org.jetbrains.compose") version "1.5.1-dev-wasm01"
 }
 
 group = "com.example"
@@ -67,6 +67,6 @@ compose.experimental {
 }
 
 compose {
-    kotlinCompilerPlugin.set("1.4.0-dev-wasm09")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.0")
+    kotlinCompilerPlugin.set("1.5.2.1-Beta")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-Beta2")
 }

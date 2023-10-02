@@ -1,15 +1,7 @@
-import org.jetbrains.compose.compose
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version Versions.composeDesktop
+    id("org.jetbrains.compose") version "1.5.1-dev-wasm01"
     application
-}
-
-repositories {
-    mavenCentral()
-    maven(url = "https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
 dependencies {
@@ -18,13 +10,9 @@ dependencies {
     implementation(compose.desktop.currentOs)
 }
 
-//tasks.withType<KotlinCompile> {
-//    kotlinOptions.jvmTarget = "1.8"
-//}
-
 compose {
-    kotlinCompilerPlugin.set("1.4.7.1-beta")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.0")
+    kotlinCompilerPlugin.set("1.5.2.1-Beta")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-Beta2")
 }
 
 application {
