@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.0.2")
+        classpath("com.android.tools.build:gradle:8.1.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
     }
 }
@@ -24,7 +24,7 @@ allprojects {
         val conf = this
         conf.resolutionStrategy.eachDependency {
             if (requested.module.name.startsWith("kotlin-stdlib")) {
-                useVersion("1.9.20-Beta2")
+                useVersion("1.9.20-RC")
             }
         }
     }
