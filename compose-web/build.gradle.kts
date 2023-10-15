@@ -10,7 +10,7 @@ version = "1.0-SNAPSHOT"
 
 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
 kotlin {
-    wasm {
+    wasmJs {
         moduleName = "Chip8"
         browser {
             commonWebpackConfig(Action {
@@ -24,25 +24,7 @@ kotlin {
             })
         }
 
-        applyBinaryen {
-            binaryenArgs = mutableListOf(
-                "--enable-nontrapping-float-to-int",
-                "--enable-gc",
-                "--enable-reference-types",
-                "--enable-exception-handling",
-                "--enable-bulk-memory",
-                "--hybrid",
-                "--inline-functions-with-loops",
-                "--traps-never-happen",
-                "--fast-math",
-                "-O1",
-                "-c", // Run passes while binary size decreases
-            )
-        }
-
         binaries.executable()
-
-
     }
     sourceSets {
         val commonMain by getting {
@@ -68,5 +50,5 @@ compose.experimental {
 
 compose {
     kotlinCompilerPlugin.set("1.5.2.1-Beta")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-Beta2")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-RC")
 }
