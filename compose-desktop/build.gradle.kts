@@ -12,7 +12,7 @@ dependencies {
 
 compose {
     kotlinCompilerPlugin.set("1.5.2.1-Beta")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-Beta2")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-RC")
 }
 
 application {

@@ -1,51 +1,32 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
 }
 
-
 kotlin {
     androidTarget()
-
-    val iosArm64 = iosArm64()
-    val iosX64 = iosX64()
-    val iosSimulatorArm64 = iosSimulatorArm64()
-
     jvm()
 
-    wasm() {
+    listOf(
+        iosArm64(), iosX64(), iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "shared"
+        }
+    }
+
+    wasmJs {
         browser()
     }
 
-
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2-wasm1")
-            }
-        }
-        val commonTest by getting
-        val androidMain by getting
-        val jvmMain by getting
-
-        val appleMain by creating {
-            dependsOn(commonMain)
-        }
-        val appleTest by creating {
-            dependsOn(commonTest)
-        }
-
-        listOf(
-            iosArm64, iosX64, iosSimulatorArm64
-        ).forEach {
-            it.binaries.framework {
-                baseName = "shared"
-            }
-            getByName("${it.targetName}Main") {
-                dependsOn(appleMain)
-            }
-            getByName("${it.targetName}Test") {
-                dependsOn(appleTest)
             }
         }
     }
@@ -63,4 +44,3 @@ android {
     }
     namespace = "dev.johnoreilly.chip_8_kmm.shared"
 }
-
