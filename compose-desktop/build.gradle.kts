@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version "1.5.1-dev-wasm01"
+    id("org.jetbrains.compose") version "1.5.10-dev-wasm01"
     application
 }
 
@@ -11,7 +11,7 @@ dependencies {
 }
 
 compose {
-    kotlinCompilerPlugin.set("1.5.2.1-Beta")
+    kotlinCompilerPlugin.set("1.5.2.1-rc01")
     kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-RC")
 }
 
