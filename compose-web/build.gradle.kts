@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.5.1-dev-wasm01"
+    id("org.jetbrains.compose") version "1.5.10-dev-wasm01"
 }
 
 group = "com.example"
@@ -13,7 +13,8 @@ kotlin {
     wasmJs {
         moduleName = "Chip8"
         browser {
-            commonWebpackConfig(Action {
+            commonWebpackConfig {
+                outputFileName = "Chip8.js"
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).copy(
                     static = (devServer?.static ?: mutableListOf()).apply {
                         // Serve sources to debug inside browser
@@ -21,7 +22,7 @@ kotlin {
                         add(project.rootDir.path + "/compose-web/")
                     },)
 
-            })
+            }
         }
 
         binaries.executable()
@@ -49,6 +50,6 @@ compose.experimental {
 }
 
 compose {
-    kotlinCompilerPlugin.set("1.5.2.1-Beta")
+    kotlinCompilerPlugin.set("1.5.2.1-rc01")
     kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20-RC")
 }
