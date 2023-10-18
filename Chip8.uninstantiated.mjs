@@ -9,10 +9,6 @@ export async function instantiate(imports={}, runInitializer=true) {
         externrefBoxes.set(ref, ifNotCached);
         return ifNotCached;
     }
-    
-    async function _importModule(x) { 
-        return imports[x] ?? await import(x);
-    }
 
 
     
@@ -43,8 +39,6 @@ export async function instantiate(imports={}, runInitializer=true) {
              },
         'kotlin.wasm.internal.getJsEmptyString' : () => '',
         'kotlin.wasm.internal.externrefToInt' : (ref) => Number(ref),
-        'kotlin.wasm.internal.newJsArray' : () => [],
-        'kotlin.wasm.internal.jsArrayPush' : (array, element) => { array.push(element); },
         'kotlin.wasm.internal.externrefToString' : (ref) => String(ref),
         'kotlin.wasm.internal.externrefEquals' : (lhs, rhs) => lhs === rhs,
         'kotlin.wasm.internal.externrefHashCode' : 
@@ -91,7 +85,7 @@ export async function instantiate(imports={}, runInitializer=true) {
                 case "number":
                     return numberHashCode(obj);
                 case "boolean":
-                    return obj;
+                    return obj ? 1231 : 1237;
                 default:
                     return getStringHashCode(String(obj)); 
             }
@@ -105,7 +99,6 @@ export async function instantiate(imports={}, runInitializer=true) {
         'kotlin.io.printlnImpl' : (message) => console.log(message),
         'kotlin.js.jsArrayGet' : (array, index) => array[index],
         'kotlin.js.length_$external_prop_getter' : (_this) => _this.length,
-        'kotlin.js.__convertKotlinClosureToJsClosure_((Js)->Js?)' : (f) => (p0) => wasmExports['__callFunction_((Js)->Js?)'](f, p0),
         'kotlin.js.__convertKotlinClosureToJsClosure_(()->Unit)' : (f) => () => wasmExports['__callFunction_(()->Unit)'](f, ),
         'kotlin.random.initialSeed' : () => ((Math.random() * Math.pow(2, 32)) | 0),
         'kotlinx.browser.window_$external_prop_getter' : () => window,
@@ -117,8 +110,8 @@ export async function instantiate(imports={}, runInitializer=true) {
         'org.w3c.dom.css.height_$external_prop_setter' : (_this, v) => _this.height = v,
         'org.w3c.dom.css.width_$external_prop_setter' : (_this, v) => _this.width = v,
         'org.w3c.dom.css.style_$external_prop_getter' : (_this) => _this.style,
-        'org.w3c.dom.events.addEventListener_$external_fun' : (_this, p0, p1, p2, isDefault0) => _this.addEventListener(p0, p1, isDefault0 ? undefined : p2, ),
-        'org.w3c.dom.events.__convertKotlinClosureToJsClosure_((Js)->Unit)' : (f) => (p0) => wasmExports['__callFunction_((Js)->Unit)'](f, p0),
+        'org.w3c.dom.encryptedmedia.__convertKotlinClosureToJsClosure_((Js)->Unit)' : (f) => (p0) => wasmExports['__callFunction_((Js)->Unit)'](f, p0),
+        'org.w3c.dom.events.addEventListener_$external_fun' : (_this, p0, p1) => _this.addEventListener(p0, p1),
         'org.w3c.dom.events.timeStamp_$external_prop_getter' : (_this) => _this.timeStamp,
         'org.w3c.dom.events.preventDefault_$external_fun' : (_this, ) => _this.preventDefault(),
         'org.w3c.dom.events.Event_$external_class_instanceof' : (x) => x instanceof Event,
@@ -147,15 +140,27 @@ export async function instantiate(imports={}, runInitializer=true) {
         'org.w3c.dom.devicePixelRatio_$external_prop_getter' : (_this) => _this.devicePixelRatio,
         'org.w3c.dom.requestAnimationFrame_$external_fun' : (_this, p0) => _this.requestAnimationFrame(p0),
         'org.w3c.dom.__convertKotlinClosureToJsClosure_((Double)->Unit)' : (f) => (p0) => wasmExports['__callFunction_((Double)->Unit)'](f, p0),
-        'org.w3c.dom.setTimeout_$external_fun' : (_this, p0, p1, p2, isDefault0, isDefault1) => _this.setTimeout(p0, isDefault0 ? undefined : p1, ...p2, ),
         'org.w3c.dom.clearTimeout_$external_fun' : (_this, p0, isDefault0) => _this.clearTimeout(isDefault0 ? undefined : p0, ),
         'org.w3c.dom.documentElement_$external_prop_getter' : (_this) => _this.documentElement,
+        'org.w3c.dom.head_$external_prop_getter' : (_this) => _this.head,
+        'org.w3c.dom.createElement_$external_fun' : (_this, p0, p1, isDefault0) => _this.createElement(p0, isDefault0 ? undefined : p1, ),
+        'org.w3c.dom.createTextNode_$external_fun' : (_this, p0) => _this.createTextNode(p0),
         'org.w3c.dom.getElementById_$external_fun' : (_this, p0) => _this.getElementById(p0),
         'org.w3c.dom.clientWidth_$external_prop_getter' : (_this) => _this.clientWidth,
         'org.w3c.dom.clientHeight_$external_prop_getter' : (_this) => _this.clientHeight,
         'org.w3c.dom.setAttribute_$external_fun' : (_this, p0, p1) => _this.setAttribute(p0, p1),
+        'org.w3c.dom.getElementsByTagName_$external_fun' : (_this, p0) => _this.getElementsByTagName(p0),
         'org.w3c.dom.userAgent_$external_prop_getter' : (_this) => _this.userAgent,
         'org.w3c.dom.language_$external_prop_getter' : (_this) => _this.language,
+        'org.w3c.dom.parentElement_$external_prop_getter' : (_this) => _this.parentElement,
+        'org.w3c.dom.textContent_$external_prop_setter' : (_this, v) => _this.textContent = v,
+        'org.w3c.dom.cloneNode_$external_fun' : (_this, p0, isDefault0) => _this.cloneNode(isDefault0 ? undefined : p0, ),
+        'org.w3c.dom.appendChild_$external_fun' : (_this, p0) => _this.appendChild(p0),
+        'org.w3c.dom.replaceChild_$external_fun' : (_this, p0, p1) => _this.replaceChild(p0, p1),
+        'org.w3c.dom.item_$external_fun' : (_this, p0) => _this.item(p0),
+        'org.w3c.dom.HTMLTitleElement_$external_class_instanceof' : (x) => x instanceof HTMLTitleElement,
+        'org.w3c.dom.type_$external_prop_setter' : (_this, v) => _this.type = v,
+        'org.w3c.dom.HTMLStyleElement_$external_class_instanceof' : (x) => x instanceof HTMLStyleElement,
         'org.w3c.dom.width_$external_prop_getter' : (_this) => _this.width,
         'org.w3c.dom.width_$external_prop_setter' : (_this, v) => _this.width = v,
         'org.w3c.dom.height_$external_prop_getter' : (_this) => _this.height,
@@ -167,12 +172,13 @@ export async function instantiate(imports={}, runInitializer=true) {
         'org.w3c.xhr.responseType_$external_prop_setter' : (_this, v) => _this.responseType = v,
         'org.w3c.xhr.response_$external_prop_getter' : (_this) => _this.response,
         'org.w3c.xhr.open_$external_fun' : (_this, p0, p1, p2, p3, p4, isDefault0, isDefault1) => _this.open(p0, p1, p2, isDefault0 ? undefined : p3, isDefault1 ? undefined : p4, ),
-        'org.w3c.xhr.send_$external_fun' : (_this, p0, isDefault0) => _this.send(isDefault0 ? undefined : p0, ),
+        'org.w3c.xhr.send_$external_fun' : (_this, p0) => _this.send(p0),
         'org.w3c.xhr.onload_$external_prop_setter' : (_this, v) => _this.onload = v,
         'kotlinx.coroutines.tryGetProcess' : () => (typeof(process) !== 'undefined' && typeof(process.nextTick) === 'function') ? process : null,
         'kotlinx.coroutines.tryGetWindow' : () => (typeof(window) !== 'undefined' && window != null && typeof(window.addEventListener) === 'function') ? window : null,
         'kotlinx.coroutines.nextTick_$external_fun' : (_this, p0) => _this.nextTick(p0),
-        'kotlinx.coroutines.toJsAnyCallback' : (handle) => handle,
+        'kotlinx.coroutines.error_$external_fun' : (_this, p0) => _this.error(p0),
+        'kotlinx.coroutines.console_$external_prop_getter' : () => console,
         'kotlinx.coroutines.createScheduleMessagePoster' : (process) => () => Promise.resolve(0).then(process),
         'kotlinx.coroutines.__callJsClosure_(()->Unit)' : (f, ) => f(),
         'kotlinx.coroutines.createRescheduleMessagePoster' : (window) => () => window.postMessage('dispatchCoroutine', '*'),
@@ -185,6 +191,7 @@ export async function instantiate(imports={}, runInitializer=true) {
             }
             window.addEventListener('message', handler, true);
         },
+        'kotlinx.coroutines.setTimeout' : (window, handler, timeout) => window.setTimeout(handler, timeout),
         'kotlinx.coroutines.clearTimeout' : (handle) => { if (typeof clearTimeout !== 'undefined') clearTimeout(handle); },
         'kotlinx.coroutines.setTimeout_$external_fun' : (p0, p1) => setTimeout(p0, p1),
         'org.jetbrains.skiko.getNavigatorInfo' : () => navigator.userAgentData ? navigator.userAgentData.platform : navigator.platform,
@@ -245,7 +252,7 @@ export async function instantiate(imports={}, runInitializer=true) {
     const wasmFilePath = './Chip8.wasm';
     const importObject = {
         js_code,
-        'skia': await _importModule('skia'),
+        'skia': imports['skia'] ?? await import('skia'),
 
     };
     
@@ -274,23 +281,11 @@ export async function instantiate(imports={}, runInitializer=true) {
       }
     } catch (e) {
       if (e instanceof WebAssembly.CompileError) {
-        const styles = [];
-        const styled = (t, css, escSeq) => isBrowser ? (styles.push(css, /* reset */""), `%c${t}%c`) : `\x1b[${escSeq}m${t}\x1b[m`;
-        const name = t => styled(t, "font-weight:bold", 1);
-        const uri = t => styled(t, "text-decoration:underline", 4);
-        const cli = t => styled(t, "font-family:monospace", 2);
-        
-        let text = `Using experimental Kotlin/Wasm may require enabling experimental features in the target environment.
-
-- ${name("Chrome")}: enable ${name("WebAssembly Garbage Collection")} at ${uri("chrome://flags/#enable-webassembly-garbage-collection")} or run the program with the ${cli("--js-flags=--experimental-wasm-gc")} command line argument.
-- ${name("Firefox")}: enable ${name("javascript.options.wasm_function_references")} and ${name("javascript.options.wasm_gc")} at ${uri("about:config")}.
-- ${name("Edge")}: run the program with the ${cli("--js-flags=--experimental-wasm-gc")} command line argument.
-- ${name("Node.js")}: run the program with the ${cli("--experimental-wasm-gc")} command line argument.
-
-For more information see ${uri("https://kotl.in/wasm_help/")}.
+        let text = `Please make sure that your runtime environment supports the latest version of Wasm GC and Exception-Handling proposals.
+For more information, see https://kotl.in/wasm-help
 `;
         if (isBrowser) {
-          console.error(text, ...styles);
+          console.error(text);
         } else {
           const t = "\n" + text;
           if (typeof console !== "undefined" && console.log !== void 0) 
@@ -304,7 +299,7 @@ For more information see ${uri("https://kotl.in/wasm_help/")}.
     
     wasmExports = wasmInstance.exports;
     if (runInitializer) {
-        wasmExports.__init();
+        wasmExports._initialize();
     }
 
     return { instance: wasmInstance,  exports: wasmExports };

@@ -991,12 +991,12 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  1873176: ($0) => { _releaseCallback($0) },  
- 1873201: ($0) => { return _callCallback($0).value ? 1 : 0; },  
- 1873245: ($0) => { return _callCallback($0).value; },  
- 1873281: ($0) => { return _callCallback($0).value; },  
- 1873317: ($0) => { return _callCallback($0).value; },  
- 1873353: ($0) => { _callCallback($0); }
+  1873208: ($0) => { _releaseCallback($0) },  
+ 1873233: ($0) => { return _callCallback($0).value ? 1 : 0; },  
+ 1873277: ($0) => { return _callCallback($0).value; },  
+ 1873313: ($0) => { return _callCallback($0).value; },  
+ 1873349: ($0) => { return _callCallback($0).value; },  
+ 1873385: ($0) => { _callCallback($0); }
 };
 
 
@@ -7743,135 +7743,49 @@ var asm = createWasm();
 /** @type {function(...*):?} */
 var ___wasm_call_ctors = createExportWrapper("__wasm_call_ctors");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nGetFinalizer = Module["org_jetbrains_skia_ManagedString__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nGetFinalizer");
+var org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer = Module["org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nMake = Module["org_jetbrains_skia_ManagedString__1nMake"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nMake");
+var org_jetbrains_skia_TextBlobBuilder__1nMake = Module["org_jetbrains_skia_TextBlobBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nMake");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__nStringSize = Module["org_jetbrains_skia_ManagedString__nStringSize"] = createExportWrapper("org_jetbrains_skia_ManagedString__nStringSize");
+var org_jetbrains_skia_TextBlobBuilder__1nBuild = Module["org_jetbrains_skia_TextBlobBuilder__1nBuild"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nBuild");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__nStringData = Module["org_jetbrains_skia_ManagedString__nStringData"] = createExportWrapper("org_jetbrains_skia_ManagedString__nStringData");
+var org_jetbrains_skia_TextBlobBuilder__1nAppendRun = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRun"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRun");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nInsert = Module["org_jetbrains_skia_ManagedString__1nInsert"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nInsert");
+var org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nAppend = Module["org_jetbrains_skia_ManagedString__1nAppend"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nAppend");
+var org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nRemoveSuffix = Module["org_jetbrains_skia_ManagedString__1nRemoveSuffix"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nRemoveSuffix");
+var org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ManagedString__1nRemove = Module["org_jetbrains_skia_ManagedString__1nRemove"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nRemove");
+var org_jetbrains_skia_Shader__1nMakeWithColorFilter = Module["org_jetbrains_skia_Shader__1nMakeWithColorFilter"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeWithColorFilter");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_MaskFilter__1nMakeBlur = Module["org_jetbrains_skia_MaskFilter__1nMakeBlur"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeBlur");
+var org_jetbrains_skia_Shader__1nMakeLinearGradient = Module["org_jetbrains_skia_Shader__1nMakeLinearGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeLinearGradient");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_MaskFilter__1nMakeShader = Module["org_jetbrains_skia_MaskFilter__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeShader");
+var org_jetbrains_skia_Shader__1nMakeLinearGradientCS = Module["org_jetbrains_skia_Shader__1nMakeLinearGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeLinearGradientCS");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_MaskFilter__1nMakeTable = Module["org_jetbrains_skia_MaskFilter__1nMakeTable"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeTable");
+var org_jetbrains_skia_Shader__1nMakeRadialGradient = Module["org_jetbrains_skia_Shader__1nMakeRadialGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeRadialGradient");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_MaskFilter__1nMakeGamma = Module["org_jetbrains_skia_MaskFilter__1nMakeGamma"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeGamma");
+var org_jetbrains_skia_Shader__1nMakeRadialGradientCS = Module["org_jetbrains_skia_Shader__1nMakeRadialGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeRadialGradientCS");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_MaskFilter__1nMakeClip = Module["org_jetbrains_skia_MaskFilter__1nMakeClip"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeClip");
+var org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient = Module["org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer = Module["org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer");
+var org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS = Module["org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_sksg_InvalidationController_nMake = Module["org_jetbrains_skia_sksg_InvalidationController_nMake"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nMake");
+var org_jetbrains_skia_Shader__1nMakeSweepGradient = Module["org_jetbrains_skia_Shader__1nMakeSweepGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeSweepGradient");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_sksg_InvalidationController_nInvalidate = Module["org_jetbrains_skia_sksg_InvalidationController_nInvalidate"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nInvalidate");
+var org_jetbrains_skia_Shader__1nMakeSweepGradientCS = Module["org_jetbrains_skia_Shader__1nMakeSweepGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeSweepGradientCS");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_sksg_InvalidationController_nGetBounds = Module["org_jetbrains_skia_sksg_InvalidationController_nGetBounds"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nGetBounds");
+var org_jetbrains_skia_Shader__1nMakeEmpty = Module["org_jetbrains_skia_Shader__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeEmpty");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_sksg_InvalidationController_nReset = Module["org_jetbrains_skia_sksg_InvalidationController_nReset"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nReset");
+var org_jetbrains_skia_Shader__1nMakeColor = Module["org_jetbrains_skia_Shader__1nMakeColor"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeColor");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1nMakeShader = Module["org_jetbrains_skia_RuntimeEffect__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeShader");
+var org_jetbrains_skia_Shader__1nMakeColorCS = Module["org_jetbrains_skia_Shader__1nMakeColorCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeColorCS");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1nMakeForShader = Module["org_jetbrains_skia_RuntimeEffect__1nMakeForShader"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeForShader");
+var org_jetbrains_skia_Shader__1nMakeBlend = Module["org_jetbrains_skia_Shader__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeBlend");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter = Module["org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter");
+var org_jetbrains_skia_Shader__1nMakeFractalNoise = Module["org_jetbrains_skia_Shader__1nMakeFractalNoise"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeFractalNoise");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr = Module["org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1Result_nGetError = Module["org_jetbrains_skia_RuntimeEffect__1Result_nGetError"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nGetError");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeEffect__1Result_nDestroy = Module["org_jetbrains_skia_RuntimeEffect__1Result_nDestroy"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nDestroy");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nGetFamiliesCount = Module["org_jetbrains_skia_FontMgr__1nGetFamiliesCount"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nGetFamiliesCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nGetFamilyName = Module["org_jetbrains_skia_FontMgr__1nGetFamilyName"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nGetFamilyName");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nMakeStyleSet = Module["org_jetbrains_skia_FontMgr__1nMakeStyleSet"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMakeStyleSet");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nMatchFamily = Module["org_jetbrains_skia_FontMgr__1nMatchFamily"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamily");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nMatchFamilyStyle = Module["org_jetbrains_skia_FontMgr__1nMatchFamilyStyle"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamilyStyle");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter = Module["org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nMakeFromData = Module["org_jetbrains_skia_FontMgr__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMakeFromData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_FontMgr__1nDefault = Module["org_jetbrains_skia_FontMgr__1nDefault"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nDefault");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nMake = Module["org_jetbrains_skia_PictureRecorder__1nMake"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nGetFinalizer = Module["org_jetbrains_skia_PictureRecorder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nBeginRecording = Module["org_jetbrains_skia_PictureRecorder__1nBeginRecording"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nBeginRecording");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas = Module["org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetFontStyle = Module["org_jetbrains_skia_Typeface__1nGetFontStyle"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFontStyle");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nIsFixedPitch = Module["org_jetbrains_skia_Typeface__1nIsFixedPitch"] = createExportWrapper("org_jetbrains_skia_Typeface__1nIsFixedPitch");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetVariationsCount = Module["org_jetbrains_skia_Typeface__1nGetVariationsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetVariations = Module["org_jetbrains_skia_Typeface__1nGetVariations"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariations");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetVariationAxesCount = Module["org_jetbrains_skia_Typeface__1nGetVariationAxesCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationAxesCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetVariationAxes = Module["org_jetbrains_skia_Typeface__1nGetVariationAxes"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationAxes");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetUniqueId = Module["org_jetbrains_skia_Typeface__1nGetUniqueId"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUniqueId");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nEquals = Module["org_jetbrains_skia_Typeface__1nEquals"] = createExportWrapper("org_jetbrains_skia_Typeface__1nEquals");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nMakeDefault = Module["org_jetbrains_skia_Typeface__1nMakeDefault"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeDefault");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nMakeFromName = Module["org_jetbrains_skia_Typeface__1nMakeFromName"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromName");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nMakeFromFile = Module["org_jetbrains_skia_Typeface__1nMakeFromFile"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromFile");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nMakeFromData = Module["org_jetbrains_skia_Typeface__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nMakeClone = Module["org_jetbrains_skia_Typeface__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeClone");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetUTF32Glyphs = Module["org_jetbrains_skia_Typeface__1nGetUTF32Glyphs"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUTF32Glyphs");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetUTF32Glyph = Module["org_jetbrains_skia_Typeface__1nGetUTF32Glyph"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUTF32Glyph");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetGlyphsCount = Module["org_jetbrains_skia_Typeface__1nGetGlyphsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetGlyphsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetTablesCount = Module["org_jetbrains_skia_Typeface__1nGetTablesCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTablesCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetTableTagsCount = Module["org_jetbrains_skia_Typeface__1nGetTableTagsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableTagsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetTableTags = Module["org_jetbrains_skia_Typeface__1nGetTableTags"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableTags");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetTableSize = Module["org_jetbrains_skia_Typeface__1nGetTableSize"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetTableData = Module["org_jetbrains_skia_Typeface__1nGetTableData"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetUnitsPerEm = Module["org_jetbrains_skia_Typeface__1nGetUnitsPerEm"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUnitsPerEm");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments = Module["org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetFamilyNames = Module["org_jetbrains_skia_Typeface__1nGetFamilyNames"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFamilyNames");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetFamilyName = Module["org_jetbrains_skia_Typeface__1nGetFamilyName"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFamilyName");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Typeface__1nGetBounds = Module["org_jetbrains_skia_Typeface__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetBounds");
+var org_jetbrains_skia_Shader__1nMakeTurbulence = Module["org_jetbrains_skia_Shader__1nMakeTurbulence"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTurbulence");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Pixmap__1nGetFinalizer = Module["org_jetbrains_skia_Pixmap__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Pixmap__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -7919,155 +7833,121 @@ var org_jetbrains_skia_Pixmap__1nErase = Module["org_jetbrains_skia_Pixmap__1nEr
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Pixmap__1nEraseSubset = Module["org_jetbrains_skia_Pixmap__1nEraseSubset"] = createExportWrapper("org_jetbrains_skia_Pixmap__1nEraseSubset");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nMakeGL = Module["org_jetbrains_skia_DirectContext__1nMakeGL"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeGL");
+var org_jetbrains_skia_Drawable__1nGetFinalizer = Module["org_jetbrains_skia_Drawable__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nMakeGLWithInterface = Module["org_jetbrains_skia_DirectContext__1nMakeGLWithInterface"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeGLWithInterface");
+var org_jetbrains_skia_Drawable__1nSetBounds = Module["org_jetbrains_skia_Drawable__1nSetBounds"] = createExportWrapper("org_jetbrains_skia_Drawable__1nSetBounds");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nMakeMetal = Module["org_jetbrains_skia_DirectContext__1nMakeMetal"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeMetal");
+var org_jetbrains_skia_Drawable__1nGetBounds = Module["org_jetbrains_skia_Drawable__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetBounds");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nMakeDirect3D = Module["org_jetbrains_skia_DirectContext__1nMakeDirect3D"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeDirect3D");
+var org_jetbrains_skia_Drawable__1nGetOnDrawCanvas = Module["org_jetbrains_skia_Drawable__1nGetOnDrawCanvas"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetOnDrawCanvas");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nFlush = Module["org_jetbrains_skia_DirectContext__1nFlush"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nFlush");
+var org_jetbrains_skia_Drawable__1nMake = Module["org_jetbrains_skia_Drawable__1nMake"] = createExportWrapper("org_jetbrains_skia_Drawable__1nMake");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nSubmit = Module["org_jetbrains_skia_DirectContext__1nSubmit"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nSubmit");
+var org_jetbrains_skia_Drawable__1nInit = Module["org_jetbrains_skia_Drawable__1nInit"] = createExportWrapper("org_jetbrains_skia_Drawable__1nInit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nReset = Module["org_jetbrains_skia_DirectContext__1nReset"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nReset");
+var org_jetbrains_skia_Drawable__1nDraw = Module["org_jetbrains_skia_Drawable__1nDraw"] = createExportWrapper("org_jetbrains_skia_Drawable__1nDraw");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_DirectContext__1nAbandon = Module["org_jetbrains_skia_DirectContext__1nAbandon"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nAbandon");
+var org_jetbrains_skia_Drawable__1nMakePictureSnapshot = Module["org_jetbrains_skia_Drawable__1nMakePictureSnapshot"] = createExportWrapper("org_jetbrains_skia_Drawable__1nMakePictureSnapshot");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer = Module["org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nGetFinalizer");
+var org_jetbrains_skia_Drawable__1nGetGenerationId = Module["org_jetbrains_skia_Drawable__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetGenerationId");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nMake = Module["org_jetbrains_skia_TextBlobBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nMake");
+var org_jetbrains_skia_Drawable__1nNotifyDrawingChanged = Module["org_jetbrains_skia_Drawable__1nNotifyDrawingChanged"] = createExportWrapper("org_jetbrains_skia_Drawable__1nNotifyDrawingChanged");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nBuild = Module["org_jetbrains_skia_TextBlobBuilder__1nBuild"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nBuild");
+var org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nAppendRun = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRun"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRun");
+var org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunPosH");
+var org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunPos");
+var org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform = Module["org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform"] = createExportWrapper("org_jetbrains_skia_TextBlobBuilder__1nAppendRunRSXform");
+var org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nMakeFromData = Module["org_jetbrains_skia_Picture__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakeFromData");
+var org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nPlayback = Module["org_jetbrains_skia_Picture__1nPlayback"] = createExportWrapper("org_jetbrains_skia_Picture__1nPlayback");
+var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nGetCullRect = Module["org_jetbrains_skia_Picture__1nGetCullRect"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetCullRect");
+var org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nGetUniqueId = Module["org_jetbrains_skia_Picture__1nGetUniqueId"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetUniqueId");
+var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nSerializeToData = Module["org_jetbrains_skia_Picture__1nSerializeToData"] = createExportWrapper("org_jetbrains_skia_Picture__1nSerializeToData");
+var org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nMakePlaceholder = Module["org_jetbrains_skia_Picture__1nMakePlaceholder"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakePlaceholder");
+var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nGetApproximateOpCount = Module["org_jetbrains_skia_Picture__1nGetApproximateOpCount"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetApproximateOpCount");
+var org_jetbrains_skia_GraphicsKt__1nPurgeFontCache = Module["org_jetbrains_skia_GraphicsKt__1nPurgeFontCache"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeFontCache");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nGetApproximateBytesUsed = Module["org_jetbrains_skia_Picture__1nGetApproximateBytesUsed"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetApproximateBytesUsed");
+var org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache = Module["org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Picture__1nMakeShader = Module["org_jetbrains_skia_Picture__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakeShader");
+var org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches = Module["org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer = Module["org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer");
+var _fflush = Module["_fflush"] = createExportWrapper("fflush");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BackendRenderTarget__1nMakeGL = Module["org_jetbrains_skia_BackendRenderTarget__1nMakeGL"] = createExportWrapper("org_jetbrains_skia_BackendRenderTarget__1nMakeGL");
+var _skia_memGetByte = Module["_skia_memGetByte"] = createExportWrapper("skia_memGetByte");
 /** @type {function(...*):?} */
-var _BackendRenderTarget_nMakeMetal = Module["_BackendRenderTarget_nMakeMetal"] = createExportWrapper("BackendRenderTarget_nMakeMetal");
+var _skia_memSetByte = Module["_skia_memSetByte"] = createExportWrapper("skia_memSetByte");
 /** @type {function(...*):?} */
-var _BackendRenderTarget_MakeDirect3D = Module["_BackendRenderTarget_MakeDirect3D"] = createExportWrapper("BackendRenderTarget_MakeDirect3D");
+var _skia_memGetChar = Module["_skia_memGetChar"] = createExportWrapper("skia_memGetChar");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ShadowUtils__1nDrawShadow = Module["org_jetbrains_skia_ShadowUtils__1nDrawShadow"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nDrawShadow");
+var _skia_memSetChar = Module["_skia_memSetChar"] = createExportWrapper("skia_memSetChar");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor = Module["org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor");
+var _skia_memGetShort = Module["_skia_memGetShort"] = createExportWrapper("skia_memGetShort");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor = Module["org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor");
+var _skia_memSetShort = Module["_skia_memSetShort"] = createExportWrapper("skia_memSetShort");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_ColorType__1nIsAlwaysOpaque = Module["org_jetbrains_skia_ColorType__1nIsAlwaysOpaque"] = createExportWrapper("org_jetbrains_skia_ColorType__1nIsAlwaysOpaque");
+var _skia_memGetInt = Module["_skia_memGetInt"] = createExportWrapper("skia_memGetInt");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_impl_Managed__invokeFinalizer = Module["org_jetbrains_skia_impl_Managed__invokeFinalizer"] = createExportWrapper("org_jetbrains_skia_impl_Managed__invokeFinalizer");
+var _skia_memSetInt = Module["_skia_memSetInt"] = createExportWrapper("skia_memSetInt");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nMakeEmpty = Module["org_jetbrains_skia_FontStyleSet__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nMakeEmpty");
+var _skia_memGetFloat = Module["_skia_memGetFloat"] = createExportWrapper("skia_memGetFloat");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nCount = Module["org_jetbrains_skia_FontStyleSet__1nCount"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nCount");
+var _skia_memSetFloat = Module["_skia_memSetFloat"] = createExportWrapper("skia_memSetFloat");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nGetStyle = Module["org_jetbrains_skia_FontStyleSet__1nGetStyle"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetStyle");
+var _skia_memGetDouble = Module["_skia_memGetDouble"] = createExportWrapper("skia_memGetDouble");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nGetStyleName = Module["org_jetbrains_skia_FontStyleSet__1nGetStyleName"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetStyleName");
+var _skia_memSetDouble = Module["_skia_memSetDouble"] = createExportWrapper("skia_memSetDouble");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nGetTypeface = Module["org_jetbrains_skia_FontStyleSet__1nGetTypeface"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetTypeface");
+var org_jetbrains_skia_svg_SVGNode__1nGetTag = Module["org_jetbrains_skia_svg_SVGNode__1nGetTag"] = createExportWrapper("org_jetbrains_skia_svg_SVGNode__1nGetTag");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_FontStyleSet__1nMatchStyle = Module["org_jetbrains_skia_FontStyleSet__1nMatchStyle"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nMatchStyle");
+var org_jetbrains_skia_svg_SVGDOM__1nMakeFromData = Module["org_jetbrains_skia_svg_SVGDOM__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nMakeFromData");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetFinalizer = Module["org_jetbrains_skia_Paint__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetFinalizer");
+var org_jetbrains_skia_svg_SVGDOM__1nGetRoot = Module["org_jetbrains_skia_svg_SVGDOM__1nGetRoot"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nGetRoot");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nMake = Module["org_jetbrains_skia_Paint__1nMake"] = createExportWrapper("org_jetbrains_skia_Paint__1nMake");
+var org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize = Module["org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nMakeClone = Module["org_jetbrains_skia_Paint__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Paint__1nMakeClone");
+var org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize = Module["org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nEquals = Module["org_jetbrains_skia_Paint__1nEquals"] = createExportWrapper("org_jetbrains_skia_Paint__1nEquals");
+var org_jetbrains_skia_svg_SVGDOM__1nRender = Module["org_jetbrains_skia_svg_SVGDOM__1nRender"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nRender");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nReset = Module["org_jetbrains_skia_Paint__1nReset"] = createExportWrapper("org_jetbrains_skia_Paint__1nReset");
+var org_jetbrains_skia_svg_SVGSVG__1nGetTag = Module["org_jetbrains_skia_svg_SVGSVG__1nGetTag"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetTag");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nIsAntiAlias = Module["org_jetbrains_skia_Paint__1nIsAntiAlias"] = createExportWrapper("org_jetbrains_skia_Paint__1nIsAntiAlias");
+var org_jetbrains_skia_svg_SVGSVG__1nGetX = Module["org_jetbrains_skia_svg_SVGSVG__1nGetX"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetX");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetAntiAlias = Module["org_jetbrains_skia_Paint__1nSetAntiAlias"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetAntiAlias");
+var org_jetbrains_skia_svg_SVGSVG__1nGetY = Module["org_jetbrains_skia_svg_SVGSVG__1nGetY"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetY");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nIsDither = Module["org_jetbrains_skia_Paint__1nIsDither"] = createExportWrapper("org_jetbrains_skia_Paint__1nIsDither");
+var org_jetbrains_skia_svg_SVGSVG__1nGetHeight = Module["org_jetbrains_skia_svg_SVGSVG__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetHeight");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetDither = Module["org_jetbrains_skia_Paint__1nSetDither"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetDither");
+var org_jetbrains_skia_svg_SVGSVG__1nGetWidth = Module["org_jetbrains_skia_svg_SVGSVG__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetWidth");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetColor = Module["org_jetbrains_skia_Paint__1nGetColor"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColor");
+var org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio = Module["org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetColor = Module["org_jetbrains_skia_Paint__1nSetColor"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColor");
+var org_jetbrains_skia_svg_SVGSVG__1nGetViewBox = Module["org_jetbrains_skia_svg_SVGSVG__1nGetViewBox"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetViewBox");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetColor4f = Module["org_jetbrains_skia_Paint__1nGetColor4f"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColor4f");
+var org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize = Module["org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetColor4f = Module["org_jetbrains_skia_Paint__1nSetColor4f"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColor4f");
+var org_jetbrains_skia_svg_SVGSVG__1nSetX = Module["org_jetbrains_skia_svg_SVGSVG__1nSetX"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetX");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetMode = Module["org_jetbrains_skia_Paint__1nGetMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetMode");
+var org_jetbrains_skia_svg_SVGSVG__1nSetY = Module["org_jetbrains_skia_svg_SVGSVG__1nSetY"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetY");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetMode = Module["org_jetbrains_skia_Paint__1nSetMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetMode");
+var org_jetbrains_skia_svg_SVGSVG__1nSetWidth = Module["org_jetbrains_skia_svg_SVGSVG__1nSetWidth"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetWidth");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetStrokeWidth = Module["org_jetbrains_skia_Paint__1nGetStrokeWidth"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeWidth");
+var org_jetbrains_skia_svg_SVGSVG__1nSetHeight = Module["org_jetbrains_skia_svg_SVGSVG__1nSetHeight"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetHeight");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetStrokeWidth = Module["org_jetbrains_skia_Paint__1nSetStrokeWidth"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeWidth");
+var org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio = Module["org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetStrokeMiter = Module["org_jetbrains_skia_Paint__1nGetStrokeMiter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeMiter");
+var org_jetbrains_skia_svg_SVGSVG__1nSetViewBox = Module["org_jetbrains_skia_svg_SVGSVG__1nSetViewBox"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetViewBox");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetStrokeMiter = Module["org_jetbrains_skia_Paint__1nSetStrokeMiter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeMiter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetStrokeCap = Module["org_jetbrains_skia_Paint__1nGetStrokeCap"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeCap");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetStrokeCap = Module["org_jetbrains_skia_Paint__1nSetStrokeCap"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeCap");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetStrokeJoin = Module["org_jetbrains_skia_Paint__1nGetStrokeJoin"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeJoin");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetStrokeJoin = Module["org_jetbrains_skia_Paint__1nSetStrokeJoin"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeJoin");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetMaskFilter = Module["org_jetbrains_skia_Paint__1nGetMaskFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetMaskFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetMaskFilter = Module["org_jetbrains_skia_Paint__1nSetMaskFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetMaskFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetImageFilter = Module["org_jetbrains_skia_Paint__1nGetImageFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetImageFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetImageFilter = Module["org_jetbrains_skia_Paint__1nSetImageFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetImageFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetBlendMode = Module["org_jetbrains_skia_Paint__1nGetBlendMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetBlendMode");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetBlendMode = Module["org_jetbrains_skia_Paint__1nSetBlendMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetBlendMode");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetPathEffect = Module["org_jetbrains_skia_Paint__1nGetPathEffect"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetPathEffect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetPathEffect = Module["org_jetbrains_skia_Paint__1nSetPathEffect"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetPathEffect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetShader = Module["org_jetbrains_skia_Paint__1nGetShader"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetShader = Module["org_jetbrains_skia_Paint__1nSetShader"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nGetColorFilter = Module["org_jetbrains_skia_Paint__1nGetColorFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColorFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nSetColorFilter = Module["org_jetbrains_skia_Paint__1nSetColorFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColorFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Paint__1nHasNothingToDraw = Module["org_jetbrains_skia_Paint__1nHasNothingToDraw"] = createExportWrapper("org_jetbrains_skia_Paint__1nHasNothingToDraw");
+var org_jetbrains_skia_svg_SVGCanvas__1nMake = Module["org_jetbrains_skia_svg_SVGCanvas__1nMake"] = createExportWrapper("org_jetbrains_skia_svg_SVGCanvas__1nMake");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Canvas__1nGetFinalizer = Module["org_jetbrains_skia_Canvas__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Canvas__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -8155,93 +8035,21 @@ var org_jetbrains_skia_Canvas__1nRestore = Module["org_jetbrains_skia_Canvas__1n
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Canvas__1nRestoreToCount = Module["org_jetbrains_skia_Canvas__1nRestoreToCount"] = createExportWrapper("org_jetbrains_skia_Canvas__1nRestoreToCount");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheLimit");
+var org_jetbrains_skia_ColorSpace__1nGetFinalizer = Module["org_jetbrains_skia_ColorSpace__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetFontCacheLimit");
+var org_jetbrains_skia_ColorSpace__1nMakeSRGB = Module["org_jetbrains_skia_ColorSpace__1nMakeSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeSRGB");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheUsed");
+var org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear = Module["org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountLimit");
+var org_jetbrains_skia_ColorSpace__1nMakeDisplayP3 = Module["org_jetbrains_skia_ColorSpace__1nMakeDisplayP3"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeDisplayP3");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetFontCacheCountLimit");
+var org_jetbrains_skia_ColorSpace__nConvert = Module["org_jetbrains_skia_ColorSpace__nConvert"] = createExportWrapper("org_jetbrains_skia_ColorSpace__nConvert");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetFontCacheCountUsed");
+var org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB = Module["org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalByteLimit");
+var org_jetbrains_skia_ColorSpace__1nIsGammaLinear = Module["org_jetbrains_skia_ColorSpace__1nIsGammaLinear"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsGammaLinear");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetResourceCacheTotalByteLimit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheSingleAllocationByteLimit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit = Module["org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nSetResourceCacheSingleAllocationByteLimit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed = Module["org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nGetResourceCacheTotalBytesUsed");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nPurgeFontCache = Module["org_jetbrains_skia_GraphicsKt__1nPurgeFontCache"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeFontCache");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache = Module["org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeResourceCache");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches = Module["org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches"] = createExportWrapper("org_jetbrains_skia_GraphicsKt__1nPurgeAllCaches");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeComposed = Module["org_jetbrains_skia_ColorFilter__1nMakeComposed"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeComposed");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeBlend = Module["org_jetbrains_skia_ColorFilter__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeBlend");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeMatrix = Module["org_jetbrains_skia_ColorFilter__1nMakeMatrix"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeMatrix");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix = Module["org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma = Module["org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma = Module["org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeLerp = Module["org_jetbrains_skia_ColorFilter__1nMakeLerp"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeLerp");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeLighting = Module["org_jetbrains_skia_ColorFilter__1nMakeLighting"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeLighting");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeHighContrast = Module["org_jetbrains_skia_ColorFilter__1nMakeHighContrast"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeHighContrast");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeTable = Module["org_jetbrains_skia_ColorFilter__1nMakeTable"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeTable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeTableARGB = Module["org_jetbrains_skia_ColorFilter__1nMakeTableARGB"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeTableARGB");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nMakeOverdraw = Module["org_jetbrains_skia_ColorFilter__1nMakeOverdraw"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeOverdraw");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorFilter__1nGetLuma = Module["org_jetbrains_skia_ColorFilter__1nGetLuma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetLuma");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_icu_Unicode_charDirection = Module["org_jetbrains_skia_icu_Unicode_charDirection"] = createExportWrapper("org_jetbrains_skia_icu_Unicode_charDirection");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader");
+var org_jetbrains_skia_ColorSpace__1nIsSRGB = Module["org_jetbrains_skia_ColorSpace__1nIsSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsSRGB");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_PathMeasure__1nGetFinalizer = Module["org_jetbrains_skia_PathMeasure__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_PathMeasure__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -8267,353 +8075,7 @@ var org_jetbrains_skia_PathMeasure__1nIsClosed = Module["org_jetbrains_skia_Path
 /** @type {function(...*):?} */
 var org_jetbrains_skia_PathMeasure__1nNextContour = Module["org_jetbrains_skia_PathMeasure__1nNextContour"] = createExportWrapper("org_jetbrains_skia_PathMeasure__1nNextContour");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake = Module["org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag = Module["org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag"] = createExportWrapper("org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMakePrimitive = Module["org_jetbrains_skia_shaper_Shaper__1nMakePrimitive"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakePrimitive");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMakeCoreText = Module["org_jetbrains_skia_shaper_Shaper__1nMakeCoreText"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeCoreText");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nMake = Module["org_jetbrains_skia_shaper_Shaper__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nShapeBlob = Module["org_jetbrains_skia_shaper_Shaper__1nShapeBlob"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShapeBlob");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nShapeLine = Module["org_jetbrains_skia_shaper_Shaper__1nShapeLine"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShapeLine");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper__1nShape = Module["org_jetbrains_skia_shaper_Shaper__1nShape"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShape");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake = Module["org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont = Module["org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont"] = createExportWrapper("org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake = Module["org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel = Module["org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel"] = createExportWrapper("org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nMake = Module["org_jetbrains_skia_Region__1nMake"] = createExportWrapper("org_jetbrains_skia_Region__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nGetFinalizer = Module["org_jetbrains_skia_Region__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Region__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSet = Module["org_jetbrains_skia_Region__1nSet"] = createExportWrapper("org_jetbrains_skia_Region__1nSet");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nIsEmpty = Module["org_jetbrains_skia_Region__1nIsEmpty"] = createExportWrapper("org_jetbrains_skia_Region__1nIsEmpty");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nIsRect = Module["org_jetbrains_skia_Region__1nIsRect"] = createExportWrapper("org_jetbrains_skia_Region__1nIsRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nIsComplex = Module["org_jetbrains_skia_Region__1nIsComplex"] = createExportWrapper("org_jetbrains_skia_Region__1nIsComplex");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nGetBounds = Module["org_jetbrains_skia_Region__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Region__1nGetBounds");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nComputeRegionComplexity = Module["org_jetbrains_skia_Region__1nComputeRegionComplexity"] = createExportWrapper("org_jetbrains_skia_Region__1nComputeRegionComplexity");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nGetBoundaryPath = Module["org_jetbrains_skia_Region__1nGetBoundaryPath"] = createExportWrapper("org_jetbrains_skia_Region__1nGetBoundaryPath");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSetEmpty = Module["org_jetbrains_skia_Region__1nSetEmpty"] = createExportWrapper("org_jetbrains_skia_Region__1nSetEmpty");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSetRect = Module["org_jetbrains_skia_Region__1nSetRect"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSetRects = Module["org_jetbrains_skia_Region__1nSetRects"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRects");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSetRegion = Module["org_jetbrains_skia_Region__1nSetRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nSetPath = Module["org_jetbrains_skia_Region__1nSetPath"] = createExportWrapper("org_jetbrains_skia_Region__1nSetPath");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nIntersectsIRect = Module["org_jetbrains_skia_Region__1nIntersectsIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nIntersectsIRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nIntersectsRegion = Module["org_jetbrains_skia_Region__1nIntersectsRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nIntersectsRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nContainsIPoint = Module["org_jetbrains_skia_Region__1nContainsIPoint"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsIPoint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nContainsIRect = Module["org_jetbrains_skia_Region__1nContainsIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsIRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nContainsRegion = Module["org_jetbrains_skia_Region__1nContainsRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nQuickContains = Module["org_jetbrains_skia_Region__1nQuickContains"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickContains");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nQuickRejectIRect = Module["org_jetbrains_skia_Region__1nQuickRejectIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickRejectIRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nQuickRejectRegion = Module["org_jetbrains_skia_Region__1nQuickRejectRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickRejectRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nTranslate = Module["org_jetbrains_skia_Region__1nTranslate"] = createExportWrapper("org_jetbrains_skia_Region__1nTranslate");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nOpIRect = Module["org_jetbrains_skia_Region__1nOpIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nOpIRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nOpRegion = Module["org_jetbrains_skia_Region__1nOpRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nOpIRectRegion = Module["org_jetbrains_skia_Region__1nOpIRectRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpIRectRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nOpRegionIRect = Module["org_jetbrains_skia_Region__1nOpRegionIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegionIRect");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Region__1nOpRegionRegion = Module["org_jetbrains_skia_Region__1nOpRegionRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegionRegion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PaintFilterCanvas__1nInit = Module["org_jetbrains_skia_PaintFilterCanvas__1nInit"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nInit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PaintFilterCanvas__1nMake = Module["org_jetbrains_skia_PaintFilterCanvas__1nMake"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint = Module["org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nGetFinalizer = Module["org_jetbrains_skia_ColorSpace__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nMakeSRGB = Module["org_jetbrains_skia_ColorSpace__1nMakeSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeSRGB");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear = Module["org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeSRGBLinear");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nMakeDisplayP3 = Module["org_jetbrains_skia_ColorSpace__1nMakeDisplayP3"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nMakeDisplayP3");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__nConvert = Module["org_jetbrains_skia_ColorSpace__nConvert"] = createExportWrapper("org_jetbrains_skia_ColorSpace__nConvert");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB = Module["org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsGammaCloseToSRGB");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nIsGammaLinear = Module["org_jetbrains_skia_ColorSpace__1nIsGammaLinear"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsGammaLinear");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ColorSpace__1nIsSRGB = Module["org_jetbrains_skia_ColorSpace__1nIsSRGB"] = createExportWrapper("org_jetbrains_skia_ColorSpace__1nIsSRGB");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_U16String__1nGetFinalizer = Module["org_jetbrains_skia_U16String__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_U16String__1nGetFinalizer");
-/** @type {function(...*):?} */
-var _fflush = Module["_fflush"] = createExportWrapper("fflush");
-/** @type {function(...*):?} */
-var _skia_memGetByte = Module["_skia_memGetByte"] = createExportWrapper("skia_memGetByte");
-/** @type {function(...*):?} */
-var _skia_memSetByte = Module["_skia_memSetByte"] = createExportWrapper("skia_memSetByte");
-/** @type {function(...*):?} */
-var _skia_memGetChar = Module["_skia_memGetChar"] = createExportWrapper("skia_memGetChar");
-/** @type {function(...*):?} */
-var _skia_memSetChar = Module["_skia_memSetChar"] = createExportWrapper("skia_memSetChar");
-/** @type {function(...*):?} */
-var _skia_memGetShort = Module["_skia_memGetShort"] = createExportWrapper("skia_memGetShort");
-/** @type {function(...*):?} */
-var _skia_memSetShort = Module["_skia_memSetShort"] = createExportWrapper("skia_memSetShort");
-/** @type {function(...*):?} */
-var _skia_memGetInt = Module["_skia_memGetInt"] = createExportWrapper("skia_memGetInt");
-/** @type {function(...*):?} */
-var _skia_memSetInt = Module["_skia_memSetInt"] = createExportWrapper("skia_memSetInt");
-/** @type {function(...*):?} */
-var _skia_memGetFloat = Module["_skia_memGetFloat"] = createExportWrapper("skia_memGetFloat");
-/** @type {function(...*):?} */
-var _skia_memSetFloat = Module["_skia_memSetFloat"] = createExportWrapper("skia_memSetFloat");
-/** @type {function(...*):?} */
-var _skia_memGetDouble = Module["_skia_memGetDouble"] = createExportWrapper("skia_memGetDouble");
-/** @type {function(...*):?} */
-var _skia_memSetDouble = Module["_skia_memSetDouble"] = createExportWrapper("skia_memSetDouble");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold = Module["org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeArithmetic = Module["org_jetbrains_skia_ImageFilter__1nMakeArithmetic"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeArithmetic");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeBlend = Module["org_jetbrains_skia_ImageFilter__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeBlend");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeBlur = Module["org_jetbrains_skia_ImageFilter__1nMakeBlur"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeBlur");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeColorFilter = Module["org_jetbrains_skia_ImageFilter__1nMakeColorFilter"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeColorFilter");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeCompose = Module["org_jetbrains_skia_ImageFilter__1nMakeCompose"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeCompose");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap = Module["org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDropShadow = Module["org_jetbrains_skia_ImageFilter__1nMakeDropShadow"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDropShadow");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly = Module["org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeImage = Module["org_jetbrains_skia_ImageFilter__1nMakeImage"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeImage");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeMagnifier = Module["org_jetbrains_skia_ImageFilter__1nMakeMagnifier"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMagnifier");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution = Module["org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform = Module["org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeMerge = Module["org_jetbrains_skia_ImageFilter__1nMakeMerge"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMerge");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeOffset = Module["org_jetbrains_skia_ImageFilter__1nMakeOffset"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeOffset");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeShader = Module["org_jetbrains_skia_ImageFilter__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakePicture = Module["org_jetbrains_skia_ImageFilter__1nMakePicture"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePicture");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader = Module["org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray = Module["org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeTile = Module["org_jetbrains_skia_ImageFilter__1nMakeTile"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeTile");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDilate = Module["org_jetbrains_skia_ImageFilter__1nMakeDilate"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDilate");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeErode = Module["org_jetbrains_skia_ImageFilter__1nMakeErode"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeErode");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nGetFinalizer = Module["org_jetbrains_skia_Data__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Data__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nSize = Module["org_jetbrains_skia_Data__1nSize"] = createExportWrapper("org_jetbrains_skia_Data__1nSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nBytes = Module["org_jetbrains_skia_Data__1nBytes"] = createExportWrapper("org_jetbrains_skia_Data__1nBytes");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nEquals = Module["org_jetbrains_skia_Data__1nEquals"] = createExportWrapper("org_jetbrains_skia_Data__1nEquals");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeFromBytes = Module["org_jetbrains_skia_Data__1nMakeFromBytes"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeFromBytes");
-/** @type {function(...*):?} */
-var _malloc = createExportWrapper("malloc");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeWithoutCopy = Module["org_jetbrains_skia_Data__1nMakeWithoutCopy"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeWithoutCopy");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeFromFileName = Module["org_jetbrains_skia_Data__1nMakeFromFileName"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeFromFileName");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeSubset = Module["org_jetbrains_skia_Data__1nMakeSubset"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeSubset");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeEmpty = Module["org_jetbrains_skia_Data__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeEmpty");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nMakeUninitialized = Module["org_jetbrains_skia_Data__1nMakeUninitialized"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeUninitialized");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Data__1nWritableData = Module["org_jetbrains_skia_Data__1nWritableData"] = createExportWrapper("org_jetbrains_skia_Data__1nWritableData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_OutputWStream__1nGetFinalizer = Module["org_jetbrains_skia_OutputWStream__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_OutputWStream__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_OutputWStream__1nMake = Module["org_jetbrains_skia_OutputWStream__1nMake"] = createExportWrapper("org_jetbrains_skia_OutputWStream__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetFinalizer = Module["org_jetbrains_skia_Font__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Font__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMakeDefault = Module["org_jetbrains_skia_Font__1nMakeDefault"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeDefault");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMakeTypeface = Module["org_jetbrains_skia_Font__1nMakeTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypeface");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMakeTypefaceSize = Module["org_jetbrains_skia_Font__1nMakeTypefaceSize"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypefaceSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew = Module["org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMakeClone = Module["org_jetbrains_skia_Font__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeClone");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nEquals = Module["org_jetbrains_skia_Font__1nEquals"] = createExportWrapper("org_jetbrains_skia_Font__1nEquals");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nIsAutoHintingForced = Module["org_jetbrains_skia_Font__1nIsAutoHintingForced"] = createExportWrapper("org_jetbrains_skia_Font__1nIsAutoHintingForced");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nAreBitmapsEmbedded = Module["org_jetbrains_skia_Font__1nAreBitmapsEmbedded"] = createExportWrapper("org_jetbrains_skia_Font__1nAreBitmapsEmbedded");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nIsSubpixel = Module["org_jetbrains_skia_Font__1nIsSubpixel"] = createExportWrapper("org_jetbrains_skia_Font__1nIsSubpixel");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nAreMetricsLinear = Module["org_jetbrains_skia_Font__1nAreMetricsLinear"] = createExportWrapper("org_jetbrains_skia_Font__1nAreMetricsLinear");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nIsEmboldened = Module["org_jetbrains_skia_Font__1nIsEmboldened"] = createExportWrapper("org_jetbrains_skia_Font__1nIsEmboldened");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nIsBaselineSnapped = Module["org_jetbrains_skia_Font__1nIsBaselineSnapped"] = createExportWrapper("org_jetbrains_skia_Font__1nIsBaselineSnapped");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetAutoHintingForced = Module["org_jetbrains_skia_Font__1nSetAutoHintingForced"] = createExportWrapper("org_jetbrains_skia_Font__1nSetAutoHintingForced");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetBitmapsEmbedded = Module["org_jetbrains_skia_Font__1nSetBitmapsEmbedded"] = createExportWrapper("org_jetbrains_skia_Font__1nSetBitmapsEmbedded");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetSubpixel = Module["org_jetbrains_skia_Font__1nSetSubpixel"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSubpixel");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetMetricsLinear = Module["org_jetbrains_skia_Font__1nSetMetricsLinear"] = createExportWrapper("org_jetbrains_skia_Font__1nSetMetricsLinear");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetEmboldened = Module["org_jetbrains_skia_Font__1nSetEmboldened"] = createExportWrapper("org_jetbrains_skia_Font__1nSetEmboldened");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetBaselineSnapped = Module["org_jetbrains_skia_Font__1nSetBaselineSnapped"] = createExportWrapper("org_jetbrains_skia_Font__1nSetBaselineSnapped");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetEdging = Module["org_jetbrains_skia_Font__1nGetEdging"] = createExportWrapper("org_jetbrains_skia_Font__1nGetEdging");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetEdging = Module["org_jetbrains_skia_Font__1nSetEdging"] = createExportWrapper("org_jetbrains_skia_Font__1nSetEdging");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetHinting = Module["org_jetbrains_skia_Font__1nGetHinting"] = createExportWrapper("org_jetbrains_skia_Font__1nGetHinting");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetHinting = Module["org_jetbrains_skia_Font__1nSetHinting"] = createExportWrapper("org_jetbrains_skia_Font__1nSetHinting");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetTypeface = Module["org_jetbrains_skia_Font__1nGetTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nGetTypeface");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetTypefaceOrDefault = Module["org_jetbrains_skia_Font__1nGetTypefaceOrDefault"] = createExportWrapper("org_jetbrains_skia_Font__1nGetTypefaceOrDefault");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetSize = Module["org_jetbrains_skia_Font__1nGetSize"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetScaleX = Module["org_jetbrains_skia_Font__1nGetScaleX"] = createExportWrapper("org_jetbrains_skia_Font__1nGetScaleX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetSkewX = Module["org_jetbrains_skia_Font__1nGetSkewX"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSkewX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetTypeface = Module["org_jetbrains_skia_Font__1nSetTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nSetTypeface");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetSize = Module["org_jetbrains_skia_Font__1nSetSize"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetScaleX = Module["org_jetbrains_skia_Font__1nSetScaleX"] = createExportWrapper("org_jetbrains_skia_Font__1nSetScaleX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nSetSkewX = Module["org_jetbrains_skia_Font__1nSetSkewX"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSkewX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetUTF32Glyphs = Module["org_jetbrains_skia_Font__1nGetUTF32Glyphs"] = createExportWrapper("org_jetbrains_skia_Font__1nGetUTF32Glyphs");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetUTF32Glyph = Module["org_jetbrains_skia_Font__1nGetUTF32Glyph"] = createExportWrapper("org_jetbrains_skia_Font__1nGetUTF32Glyph");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetStringGlyphsCount = Module["org_jetbrains_skia_Font__1nGetStringGlyphsCount"] = createExportWrapper("org_jetbrains_skia_Font__1nGetStringGlyphsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMeasureText = Module["org_jetbrains_skia_Font__1nMeasureText"] = createExportWrapper("org_jetbrains_skia_Font__1nMeasureText");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nMeasureTextWidth = Module["org_jetbrains_skia_Font__1nMeasureTextWidth"] = createExportWrapper("org_jetbrains_skia_Font__1nMeasureTextWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetWidths = Module["org_jetbrains_skia_Font__1nGetWidths"] = createExportWrapper("org_jetbrains_skia_Font__1nGetWidths");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetBounds = Module["org_jetbrains_skia_Font__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Font__1nGetBounds");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetPositions = Module["org_jetbrains_skia_Font__1nGetPositions"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetXPositions = Module["org_jetbrains_skia_Font__1nGetXPositions"] = createExportWrapper("org_jetbrains_skia_Font__1nGetXPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetPath = Module["org_jetbrains_skia_Font__1nGetPath"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPath");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetPaths = Module["org_jetbrains_skia_Font__1nGetPaths"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPaths");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetMetrics = Module["org_jetbrains_skia_Font__1nGetMetrics"] = createExportWrapper("org_jetbrains_skia_Font__1nGetMetrics");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Font__1nGetSpacing = Module["org_jetbrains_skia_Font__1nGetSpacing"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSpacing");
+var org_jetbrains_skia_icu_Unicode_charDirection = Module["org_jetbrains_skia_icu_Unicode_charDirection"] = createExportWrapper("org_jetbrains_skia_icu_Unicode_charDirection");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Path__1nGetFinalizer = Module["org_jetbrains_skia_Path__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Path__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -8763,9 +8225,135 @@ var org_jetbrains_skia_Path__1nGetGenerationId = Module["org_jetbrains_skia_Path
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Path__1nIsValid = Module["org_jetbrains_skia_Path__1nIsValid"] = createExportWrapper("org_jetbrains_skia_Path__1nIsValid");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_impl_RefCnt__getFinalizer = Module["org_jetbrains_skia_impl_RefCnt__getFinalizer"] = createExportWrapper("org_jetbrains_skia_impl_RefCnt__getFinalizer");
+var org_jetbrains_skia_ShadowUtils__1nDrawShadow = Module["org_jetbrains_skia_ShadowUtils__1nDrawShadow"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nDrawShadow");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_impl_RefCnt__getRefCount = Module["org_jetbrains_skia_impl_RefCnt__getRefCount"] = createExportWrapper("org_jetbrains_skia_impl_RefCnt__getRefCount");
+var org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor = Module["org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nComputeTonalAmbientColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor = Module["org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor"] = createExportWrapper("org_jetbrains_skia_ShadowUtils__1nComputeTonalSpotColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake = Module["org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_IcuBidiRunIterator__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel = Module["org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel"] = createExportWrapper("org_jetbrains_skia_shaper_IcuBidiRunIterator__1nGetCurrentLevel");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake = Module["org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_FontMgrRunIterator__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont = Module["org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont"] = createExportWrapper("org_jetbrains_skia_shaper_FontMgrRunIterator__1nGetCurrentFont");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nConsume");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nGetEndOfCurrentRun");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd = Module["org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd"] = createExportWrapper("org_jetbrains_skia_shaper_ManagedRunIterator__1nIsAtEnd");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMakePrimitive = Module["org_jetbrains_skia_shaper_Shaper__1nMakePrimitive"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakePrimitive");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShaperDrivenWrapper");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShapeThenWrap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder = Module["org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeShapeDontWrapOrReorder");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMakeCoreText = Module["org_jetbrains_skia_shaper_Shaper__1nMakeCoreText"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMakeCoreText");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nMake = Module["org_jetbrains_skia_shaper_Shaper__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nShapeBlob = Module["org_jetbrains_skia_shaper_Shaper__1nShapeBlob"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShapeBlob");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nShapeLine = Module["org_jetbrains_skia_shaper_Shaper__1nShapeLine"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShapeLine");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper__1nShape = Module["org_jetbrains_skia_shaper_Shaper__1nShape"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper__1nShape");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nCreateRunIterator");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator = Module["org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunIterator_1nInitRunIterator");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetRunInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetGlyphs");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nGetClusters");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nSetOffset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nCreate");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit = Module["org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit"] = createExportWrapper("org_jetbrains_skia_shaper_Shaper_RunHandler_1nInit");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake = Module["org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag = Module["org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag"] = createExportWrapper("org_jetbrains_skia_shaper_HbIcuScriptRunIterator__1nGetCurrentScriptTag");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob = Module["org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob"] = createExportWrapper("org_jetbrains_skia_shaper_TextBlobBuilderRunHandler__1nMakeBlob");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold = Module["org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeAlphaThreshold");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeArithmetic = Module["org_jetbrains_skia_ImageFilter__1nMakeArithmetic"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeArithmetic");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeBlend = Module["org_jetbrains_skia_ImageFilter__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeBlend");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeBlur = Module["org_jetbrains_skia_ImageFilter__1nMakeBlur"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeBlur");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeColorFilter = Module["org_jetbrains_skia_ImageFilter__1nMakeColorFilter"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeColorFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeCompose = Module["org_jetbrains_skia_ImageFilter__1nMakeCompose"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeCompose");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap = Module["org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDisplacementMap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDropShadow = Module["org_jetbrains_skia_ImageFilter__1nMakeDropShadow"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDropShadow");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly = Module["org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDropShadowOnly");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeImage = Module["org_jetbrains_skia_ImageFilter__1nMakeImage"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeImage");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeMagnifier = Module["org_jetbrains_skia_ImageFilter__1nMakeMagnifier"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMagnifier");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution = Module["org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMatrixConvolution");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform = Module["org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMatrixTransform");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeMerge = Module["org_jetbrains_skia_ImageFilter__1nMakeMerge"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeMerge");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeOffset = Module["org_jetbrains_skia_ImageFilter__1nMakeOffset"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeOffset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeShader = Module["org_jetbrains_skia_ImageFilter__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakePicture = Module["org_jetbrains_skia_ImageFilter__1nMakePicture"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePicture");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader = Module["org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeRuntimeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray = Module["org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeRuntimeShaderFromArray");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeTile = Module["org_jetbrains_skia_ImageFilter__1nMakeTile"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeTile");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDilate = Module["org_jetbrains_skia_ImageFilter__1nMakeDilate"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDilate");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeErode = Module["org_jetbrains_skia_ImageFilter__1nMakeErode"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeErode");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDistantLitDiffuse");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePointLitDiffuse");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse = Module["org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeSpotLitDiffuse");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeDistantLitSpecular");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakePointLitSpecular");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular = Module["org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular"] = createExportWrapper("org_jetbrains_skia_ImageFilter__1nMakeSpotLitSpecular");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Surface__1nMakeRasterDirect = Module["org_jetbrains_skia_Surface__1nMakeRasterDirect"] = createExportWrapper("org_jetbrains_skia_Surface__1nMakeRasterDirect");
 /** @type {function(...*):?} */
@@ -8823,9 +8411,701 @@ var org_jetbrains_skia_Surface__1nNotifyContentWillChange = Module["org_jetbrain
 /** @type {function(...*):?} */
 var org_jetbrains_skia_Surface__1nGetRecordingContext = Module["org_jetbrains_skia_Surface__1nGetRecordingContext"] = createExportWrapper("org_jetbrains_skia_Surface__1nGetRecordingContext");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake = Module["org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake");
+var org_jetbrains_skia_U16String__1nGetFinalizer = Module["org_jetbrains_skia_U16String__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_U16String__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface = Module["org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface"] = createExportWrapper("org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface");
+var org_jetbrains_skia_ColorType__1nIsAlwaysOpaque = Module["org_jetbrains_skia_ColorType__1nIsAlwaysOpaque"] = createExportWrapper("org_jetbrains_skia_ColorType__1nIsAlwaysOpaque");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_impl_Managed__invokeFinalizer = Module["org_jetbrains_skia_impl_Managed__invokeFinalizer"] = createExportWrapper("org_jetbrains_skia_impl_Managed__invokeFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetFontStyle = Module["org_jetbrains_skia_Typeface__1nGetFontStyle"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFontStyle");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nIsFixedPitch = Module["org_jetbrains_skia_Typeface__1nIsFixedPitch"] = createExportWrapper("org_jetbrains_skia_Typeface__1nIsFixedPitch");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetVariationsCount = Module["org_jetbrains_skia_Typeface__1nGetVariationsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetVariations = Module["org_jetbrains_skia_Typeface__1nGetVariations"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariations");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetVariationAxesCount = Module["org_jetbrains_skia_Typeface__1nGetVariationAxesCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationAxesCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetVariationAxes = Module["org_jetbrains_skia_Typeface__1nGetVariationAxes"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetVariationAxes");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetUniqueId = Module["org_jetbrains_skia_Typeface__1nGetUniqueId"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUniqueId");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nEquals = Module["org_jetbrains_skia_Typeface__1nEquals"] = createExportWrapper("org_jetbrains_skia_Typeface__1nEquals");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nMakeDefault = Module["org_jetbrains_skia_Typeface__1nMakeDefault"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeDefault");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nMakeFromName = Module["org_jetbrains_skia_Typeface__1nMakeFromName"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromName");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nMakeFromFile = Module["org_jetbrains_skia_Typeface__1nMakeFromFile"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromFile");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nMakeFromData = Module["org_jetbrains_skia_Typeface__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeFromData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nMakeClone = Module["org_jetbrains_skia_Typeface__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Typeface__1nMakeClone");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetUTF32Glyphs = Module["org_jetbrains_skia_Typeface__1nGetUTF32Glyphs"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUTF32Glyphs");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetUTF32Glyph = Module["org_jetbrains_skia_Typeface__1nGetUTF32Glyph"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUTF32Glyph");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetGlyphsCount = Module["org_jetbrains_skia_Typeface__1nGetGlyphsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetGlyphsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetTablesCount = Module["org_jetbrains_skia_Typeface__1nGetTablesCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTablesCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetTableTagsCount = Module["org_jetbrains_skia_Typeface__1nGetTableTagsCount"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableTagsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetTableTags = Module["org_jetbrains_skia_Typeface__1nGetTableTags"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableTags");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetTableSize = Module["org_jetbrains_skia_Typeface__1nGetTableSize"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetTableData = Module["org_jetbrains_skia_Typeface__1nGetTableData"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetTableData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetUnitsPerEm = Module["org_jetbrains_skia_Typeface__1nGetUnitsPerEm"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetUnitsPerEm");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments = Module["org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetKerningPairAdjustments");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetFamilyNames = Module["org_jetbrains_skia_Typeface__1nGetFamilyNames"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFamilyNames");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetFamilyName = Module["org_jetbrains_skia_Typeface__1nGetFamilyName"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetFamilyName");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Typeface__1nGetBounds = Module["org_jetbrains_skia_Typeface__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Typeface__1nGetBounds");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nMakeFromData = Module["org_jetbrains_skia_Picture__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakeFromData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nPlayback = Module["org_jetbrains_skia_Picture__1nPlayback"] = createExportWrapper("org_jetbrains_skia_Picture__1nPlayback");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nGetCullRect = Module["org_jetbrains_skia_Picture__1nGetCullRect"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetCullRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nGetUniqueId = Module["org_jetbrains_skia_Picture__1nGetUniqueId"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetUniqueId");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nSerializeToData = Module["org_jetbrains_skia_Picture__1nSerializeToData"] = createExportWrapper("org_jetbrains_skia_Picture__1nSerializeToData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nMakePlaceholder = Module["org_jetbrains_skia_Picture__1nMakePlaceholder"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakePlaceholder");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nGetApproximateOpCount = Module["org_jetbrains_skia_Picture__1nGetApproximateOpCount"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetApproximateOpCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nGetApproximateBytesUsed = Module["org_jetbrains_skia_Picture__1nGetApproximateBytesUsed"] = createExportWrapper("org_jetbrains_skia_Picture__1nGetApproximateBytesUsed");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Picture__1nMakeShader = Module["org_jetbrains_skia_Picture__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Picture__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetFinalizer = Module["org_jetbrains_skia_Font__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Font__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMakeDefault = Module["org_jetbrains_skia_Font__1nMakeDefault"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeDefault");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMakeTypeface = Module["org_jetbrains_skia_Font__1nMakeTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypeface");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMakeTypefaceSize = Module["org_jetbrains_skia_Font__1nMakeTypefaceSize"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypefaceSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew = Module["org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeTypefaceSizeScaleSkew");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMakeClone = Module["org_jetbrains_skia_Font__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Font__1nMakeClone");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nEquals = Module["org_jetbrains_skia_Font__1nEquals"] = createExportWrapper("org_jetbrains_skia_Font__1nEquals");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nIsAutoHintingForced = Module["org_jetbrains_skia_Font__1nIsAutoHintingForced"] = createExportWrapper("org_jetbrains_skia_Font__1nIsAutoHintingForced");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nAreBitmapsEmbedded = Module["org_jetbrains_skia_Font__1nAreBitmapsEmbedded"] = createExportWrapper("org_jetbrains_skia_Font__1nAreBitmapsEmbedded");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nIsSubpixel = Module["org_jetbrains_skia_Font__1nIsSubpixel"] = createExportWrapper("org_jetbrains_skia_Font__1nIsSubpixel");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nAreMetricsLinear = Module["org_jetbrains_skia_Font__1nAreMetricsLinear"] = createExportWrapper("org_jetbrains_skia_Font__1nAreMetricsLinear");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nIsEmboldened = Module["org_jetbrains_skia_Font__1nIsEmboldened"] = createExportWrapper("org_jetbrains_skia_Font__1nIsEmboldened");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nIsBaselineSnapped = Module["org_jetbrains_skia_Font__1nIsBaselineSnapped"] = createExportWrapper("org_jetbrains_skia_Font__1nIsBaselineSnapped");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetAutoHintingForced = Module["org_jetbrains_skia_Font__1nSetAutoHintingForced"] = createExportWrapper("org_jetbrains_skia_Font__1nSetAutoHintingForced");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetBitmapsEmbedded = Module["org_jetbrains_skia_Font__1nSetBitmapsEmbedded"] = createExportWrapper("org_jetbrains_skia_Font__1nSetBitmapsEmbedded");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetSubpixel = Module["org_jetbrains_skia_Font__1nSetSubpixel"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSubpixel");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetMetricsLinear = Module["org_jetbrains_skia_Font__1nSetMetricsLinear"] = createExportWrapper("org_jetbrains_skia_Font__1nSetMetricsLinear");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetEmboldened = Module["org_jetbrains_skia_Font__1nSetEmboldened"] = createExportWrapper("org_jetbrains_skia_Font__1nSetEmboldened");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetBaselineSnapped = Module["org_jetbrains_skia_Font__1nSetBaselineSnapped"] = createExportWrapper("org_jetbrains_skia_Font__1nSetBaselineSnapped");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetEdging = Module["org_jetbrains_skia_Font__1nGetEdging"] = createExportWrapper("org_jetbrains_skia_Font__1nGetEdging");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetEdging = Module["org_jetbrains_skia_Font__1nSetEdging"] = createExportWrapper("org_jetbrains_skia_Font__1nSetEdging");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetHinting = Module["org_jetbrains_skia_Font__1nGetHinting"] = createExportWrapper("org_jetbrains_skia_Font__1nGetHinting");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetHinting = Module["org_jetbrains_skia_Font__1nSetHinting"] = createExportWrapper("org_jetbrains_skia_Font__1nSetHinting");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetTypeface = Module["org_jetbrains_skia_Font__1nGetTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nGetTypeface");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetTypefaceOrDefault = Module["org_jetbrains_skia_Font__1nGetTypefaceOrDefault"] = createExportWrapper("org_jetbrains_skia_Font__1nGetTypefaceOrDefault");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetSize = Module["org_jetbrains_skia_Font__1nGetSize"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetScaleX = Module["org_jetbrains_skia_Font__1nGetScaleX"] = createExportWrapper("org_jetbrains_skia_Font__1nGetScaleX");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetSkewX = Module["org_jetbrains_skia_Font__1nGetSkewX"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSkewX");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetTypeface = Module["org_jetbrains_skia_Font__1nSetTypeface"] = createExportWrapper("org_jetbrains_skia_Font__1nSetTypeface");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetSize = Module["org_jetbrains_skia_Font__1nSetSize"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetScaleX = Module["org_jetbrains_skia_Font__1nSetScaleX"] = createExportWrapper("org_jetbrains_skia_Font__1nSetScaleX");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nSetSkewX = Module["org_jetbrains_skia_Font__1nSetSkewX"] = createExportWrapper("org_jetbrains_skia_Font__1nSetSkewX");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetUTF32Glyphs = Module["org_jetbrains_skia_Font__1nGetUTF32Glyphs"] = createExportWrapper("org_jetbrains_skia_Font__1nGetUTF32Glyphs");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetUTF32Glyph = Module["org_jetbrains_skia_Font__1nGetUTF32Glyph"] = createExportWrapper("org_jetbrains_skia_Font__1nGetUTF32Glyph");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetStringGlyphsCount = Module["org_jetbrains_skia_Font__1nGetStringGlyphsCount"] = createExportWrapper("org_jetbrains_skia_Font__1nGetStringGlyphsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMeasureText = Module["org_jetbrains_skia_Font__1nMeasureText"] = createExportWrapper("org_jetbrains_skia_Font__1nMeasureText");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nMeasureTextWidth = Module["org_jetbrains_skia_Font__1nMeasureTextWidth"] = createExportWrapper("org_jetbrains_skia_Font__1nMeasureTextWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetWidths = Module["org_jetbrains_skia_Font__1nGetWidths"] = createExportWrapper("org_jetbrains_skia_Font__1nGetWidths");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetBounds = Module["org_jetbrains_skia_Font__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Font__1nGetBounds");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetPositions = Module["org_jetbrains_skia_Font__1nGetPositions"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetXPositions = Module["org_jetbrains_skia_Font__1nGetXPositions"] = createExportWrapper("org_jetbrains_skia_Font__1nGetXPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetPath = Module["org_jetbrains_skia_Font__1nGetPath"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPath");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetPaths = Module["org_jetbrains_skia_Font__1nGetPaths"] = createExportWrapper("org_jetbrains_skia_Font__1nGetPaths");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetMetrics = Module["org_jetbrains_skia_Font__1nGetMetrics"] = createExportWrapper("org_jetbrains_skia_Font__1nGetMetrics");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Font__1nGetSpacing = Module["org_jetbrains_skia_Font__1nGetSpacing"] = createExportWrapper("org_jetbrains_skia_Font__1nGetSpacing");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer = Module["org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_BackendRenderTarget__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BackendRenderTarget__1nMakeGL = Module["org_jetbrains_skia_BackendRenderTarget__1nMakeGL"] = createExportWrapper("org_jetbrains_skia_BackendRenderTarget__1nMakeGL");
+/** @type {function(...*):?} */
+var _BackendRenderTarget_nMakeMetal = Module["_BackendRenderTarget_nMakeMetal"] = createExportWrapper("BackendRenderTarget_nMakeMetal");
+/** @type {function(...*):?} */
+var _BackendRenderTarget_MakeDirect3D = Module["_BackendRenderTarget_MakeDirect3D"] = createExportWrapper("BackendRenderTarget_MakeDirect3D");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nGetFinalizer = Module["org_jetbrains_skia_BreakIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nMake = Module["org_jetbrains_skia_BreakIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nClone = Module["org_jetbrains_skia_BreakIterator__1nClone"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nClone");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nCurrent = Module["org_jetbrains_skia_BreakIterator__1nCurrent"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nCurrent");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nNext = Module["org_jetbrains_skia_BreakIterator__1nNext"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nNext");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nPrevious = Module["org_jetbrains_skia_BreakIterator__1nPrevious"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nPrevious");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nFirst = Module["org_jetbrains_skia_BreakIterator__1nFirst"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nFirst");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nLast = Module["org_jetbrains_skia_BreakIterator__1nLast"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nLast");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nPreceding = Module["org_jetbrains_skia_BreakIterator__1nPreceding"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nPreceding");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nFollowing = Module["org_jetbrains_skia_BreakIterator__1nFollowing"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nFollowing");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nIsBoundary = Module["org_jetbrains_skia_BreakIterator__1nIsBoundary"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nIsBoundary");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nGetRuleStatus = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatus"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatus");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nGetRuleStatuses = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatuses"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatuses");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_BreakIterator__1nSetText = Module["org_jetbrains_skia_BreakIterator__1nSetText"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nSetText");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nMakeGL = Module["org_jetbrains_skia_DirectContext__1nMakeGL"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeGL");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nMakeGLWithInterface = Module["org_jetbrains_skia_DirectContext__1nMakeGLWithInterface"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeGLWithInterface");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nMakeMetal = Module["org_jetbrains_skia_DirectContext__1nMakeMetal"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeMetal");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nMakeDirect3D = Module["org_jetbrains_skia_DirectContext__1nMakeDirect3D"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nMakeDirect3D");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nFlush = Module["org_jetbrains_skia_DirectContext__1nFlush"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nFlush");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nSubmit = Module["org_jetbrains_skia_DirectContext__1nSubmit"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nSubmit");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nReset = Module["org_jetbrains_skia_DirectContext__1nReset"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nReset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_DirectContext__1nAbandon = Module["org_jetbrains_skia_DirectContext__1nAbandon"] = createExportWrapper("org_jetbrains_skia_DirectContext__1nAbandon");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_MaskFilter__1nMakeBlur = Module["org_jetbrains_skia_MaskFilter__1nMakeBlur"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeBlur");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_MaskFilter__1nMakeShader = Module["org_jetbrains_skia_MaskFilter__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_MaskFilter__1nMakeTable = Module["org_jetbrains_skia_MaskFilter__1nMakeTable"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeTable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_MaskFilter__1nMakeGamma = Module["org_jetbrains_skia_MaskFilter__1nMakeGamma"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeGamma");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_MaskFilter__1nMakeClip = Module["org_jetbrains_skia_MaskFilter__1nMakeClip"] = createExportWrapper("org_jetbrains_skia_MaskFilter__1nMakeClip");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetFinalizer = Module["org_jetbrains_skia_Codec__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nMakeFromData = Module["org_jetbrains_skia_Codec__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Codec__1nMakeFromData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetImageInfo = Module["org_jetbrains_skia_Codec__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetImageInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetSizeWidth = Module["org_jetbrains_skia_Codec__1nGetSizeWidth"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetSizeWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetSizeHeight = Module["org_jetbrains_skia_Codec__1nGetSizeHeight"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetSizeHeight");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetEncodedOrigin = Module["org_jetbrains_skia_Codec__1nGetEncodedOrigin"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetEncodedOrigin");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetEncodedImageFormat = Module["org_jetbrains_skia_Codec__1nGetEncodedImageFormat"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetEncodedImageFormat");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nReadPixels = Module["org_jetbrains_skia_Codec__1nReadPixels"] = createExportWrapper("org_jetbrains_skia_Codec__1nReadPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetFrameCount = Module["org_jetbrains_skia_Codec__1nGetFrameCount"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFrameCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetFrameInfo = Module["org_jetbrains_skia_Codec__1nGetFrameInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFrameInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetFramesInfo = Module["org_jetbrains_skia_Codec__1nGetFramesInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFramesInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nFramesInfo_Delete = Module["org_jetbrains_skia_Codec__1nFramesInfo_Delete"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_Delete");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nFramesInfo_GetSize = Module["org_jetbrains_skia_Codec__1nFramesInfo_GetSize"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_GetSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nFramesInfo_GetInfos = Module["org_jetbrains_skia_Codec__1nFramesInfo_GetInfos"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_GetInfos");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Codec__1nGetRepetitionCount = Module["org_jetbrains_skia_Codec__1nGetRepetitionCount"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetRepetitionCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeSum = Module["org_jetbrains_skia_PathEffect__1nMakeSum"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeSum");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeCompose = Module["org_jetbrains_skia_PathEffect__1nMakeCompose"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeCompose");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakePath1D = Module["org_jetbrains_skia_PathEffect__1nMakePath1D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakePath1D");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakePath2D = Module["org_jetbrains_skia_PathEffect__1nMakePath2D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakePath2D");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeLine2D = Module["org_jetbrains_skia_PathEffect__1nMakeLine2D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeLine2D");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeCorner = Module["org_jetbrains_skia_PathEffect__1nMakeCorner"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeCorner");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeDash = Module["org_jetbrains_skia_PathEffect__1nMakeDash"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeDash");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathEffect__1nMakeDiscrete = Module["org_jetbrains_skia_PathEffect__1nMakeDiscrete"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeDiscrete");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeRaster = Module["org_jetbrains_skia_Image__1nMakeRaster"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeRaster");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeRasterData = Module["org_jetbrains_skia_Image__1nMakeRasterData"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeRasterData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeFromBitmap = Module["org_jetbrains_skia_Image__1nMakeFromBitmap"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromBitmap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeFromPixmap = Module["org_jetbrains_skia_Image__1nMakeFromPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromPixmap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeFromEncoded = Module["org_jetbrains_skia_Image__1nMakeFromEncoded"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromEncoded");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nGetImageInfo = Module["org_jetbrains_skia_Image__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Image__1nGetImageInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nEncodeToData = Module["org_jetbrains_skia_Image__1nEncodeToData"] = createExportWrapper("org_jetbrains_skia_Image__1nEncodeToData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nMakeShader = Module["org_jetbrains_skia_Image__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nPeekPixels = Module["org_jetbrains_skia_Image__1nPeekPixels"] = createExportWrapper("org_jetbrains_skia_Image__1nPeekPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nPeekPixelsToPixmap = Module["org_jetbrains_skia_Image__1nPeekPixelsToPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nPeekPixelsToPixmap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nReadPixelsBitmap = Module["org_jetbrains_skia_Image__1nReadPixelsBitmap"] = createExportWrapper("org_jetbrains_skia_Image__1nReadPixelsBitmap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nReadPixelsPixmap = Module["org_jetbrains_skia_Image__1nReadPixelsPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nReadPixelsPixmap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Image__1nScalePixels = Module["org_jetbrains_skia_Image__1nScalePixels"] = createExportWrapper("org_jetbrains_skia_Image__1nScalePixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PaintFilterCanvas__1nInit = Module["org_jetbrains_skia_PaintFilterCanvas__1nInit"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nInit");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PaintFilterCanvas__1nMake = Module["org_jetbrains_skia_PaintFilterCanvas__1nMake"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint = Module["org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint"] = createExportWrapper("org_jetbrains_skia_PaintFilterCanvas__1nGetOnFilterPaint");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeComposed = Module["org_jetbrains_skia_ColorFilter__1nMakeComposed"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeComposed");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeBlend = Module["org_jetbrains_skia_ColorFilter__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeBlend");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeMatrix = Module["org_jetbrains_skia_ColorFilter__1nMakeMatrix"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeMatrix");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix = Module["org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeHSLAMatrix");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma = Module["org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetLinearToSRGBGamma");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma = Module["org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetSRGBToLinearGamma");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeLerp = Module["org_jetbrains_skia_ColorFilter__1nMakeLerp"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeLerp");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeLighting = Module["org_jetbrains_skia_ColorFilter__1nMakeLighting"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeLighting");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeHighContrast = Module["org_jetbrains_skia_ColorFilter__1nMakeHighContrast"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeHighContrast");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeTable = Module["org_jetbrains_skia_ColorFilter__1nMakeTable"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeTable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeTableARGB = Module["org_jetbrains_skia_ColorFilter__1nMakeTableARGB"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeTableARGB");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nMakeOverdraw = Module["org_jetbrains_skia_ColorFilter__1nMakeOverdraw"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nMakeOverdraw");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ColorFilter__1nGetLuma = Module["org_jetbrains_skia_ColorFilter__1nGetLuma"] = createExportWrapper("org_jetbrains_skia_ColorFilter__1nGetLuma");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nGetWidth = Module["org_jetbrains_skia_PixelRef__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nGetHeight = Module["org_jetbrains_skia_PixelRef__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetHeight");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nGetRowBytes = Module["org_jetbrains_skia_PixelRef__1nGetRowBytes"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetRowBytes");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nGetGenerationId = Module["org_jetbrains_skia_PixelRef__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetGenerationId");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged = Module["org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nIsImmutable = Module["org_jetbrains_skia_PixelRef__1nIsImmutable"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nIsImmutable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PixelRef__1nSetImmutable = Module["org_jetbrains_skia_PixelRef__1nSetImmutable"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nSetImmutable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetFinalizer = Module["org_jetbrains_skia_Paint__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nMake = Module["org_jetbrains_skia_Paint__1nMake"] = createExportWrapper("org_jetbrains_skia_Paint__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nMakeClone = Module["org_jetbrains_skia_Paint__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Paint__1nMakeClone");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nEquals = Module["org_jetbrains_skia_Paint__1nEquals"] = createExportWrapper("org_jetbrains_skia_Paint__1nEquals");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nReset = Module["org_jetbrains_skia_Paint__1nReset"] = createExportWrapper("org_jetbrains_skia_Paint__1nReset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nIsAntiAlias = Module["org_jetbrains_skia_Paint__1nIsAntiAlias"] = createExportWrapper("org_jetbrains_skia_Paint__1nIsAntiAlias");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetAntiAlias = Module["org_jetbrains_skia_Paint__1nSetAntiAlias"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetAntiAlias");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nIsDither = Module["org_jetbrains_skia_Paint__1nIsDither"] = createExportWrapper("org_jetbrains_skia_Paint__1nIsDither");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetDither = Module["org_jetbrains_skia_Paint__1nSetDither"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetDither");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetColor = Module["org_jetbrains_skia_Paint__1nGetColor"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetColor = Module["org_jetbrains_skia_Paint__1nSetColor"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetColor4f = Module["org_jetbrains_skia_Paint__1nGetColor4f"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColor4f");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetColor4f = Module["org_jetbrains_skia_Paint__1nSetColor4f"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColor4f");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetMode = Module["org_jetbrains_skia_Paint__1nGetMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetMode");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetMode = Module["org_jetbrains_skia_Paint__1nSetMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetMode");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetStrokeWidth = Module["org_jetbrains_skia_Paint__1nGetStrokeWidth"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetStrokeWidth = Module["org_jetbrains_skia_Paint__1nSetStrokeWidth"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetStrokeMiter = Module["org_jetbrains_skia_Paint__1nGetStrokeMiter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeMiter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetStrokeMiter = Module["org_jetbrains_skia_Paint__1nSetStrokeMiter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeMiter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetStrokeCap = Module["org_jetbrains_skia_Paint__1nGetStrokeCap"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeCap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetStrokeCap = Module["org_jetbrains_skia_Paint__1nSetStrokeCap"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeCap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetStrokeJoin = Module["org_jetbrains_skia_Paint__1nGetStrokeJoin"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetStrokeJoin");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetStrokeJoin = Module["org_jetbrains_skia_Paint__1nSetStrokeJoin"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetStrokeJoin");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetMaskFilter = Module["org_jetbrains_skia_Paint__1nGetMaskFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetMaskFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetMaskFilter = Module["org_jetbrains_skia_Paint__1nSetMaskFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetMaskFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetImageFilter = Module["org_jetbrains_skia_Paint__1nGetImageFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetImageFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetImageFilter = Module["org_jetbrains_skia_Paint__1nSetImageFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetImageFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetBlendMode = Module["org_jetbrains_skia_Paint__1nGetBlendMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetBlendMode");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetBlendMode = Module["org_jetbrains_skia_Paint__1nSetBlendMode"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetBlendMode");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetPathEffect = Module["org_jetbrains_skia_Paint__1nGetPathEffect"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetPathEffect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetPathEffect = Module["org_jetbrains_skia_Paint__1nSetPathEffect"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetPathEffect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetShader = Module["org_jetbrains_skia_Paint__1nGetShader"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetShader = Module["org_jetbrains_skia_Paint__1nSetShader"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nGetColorFilter = Module["org_jetbrains_skia_Paint__1nGetColorFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nGetColorFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nSetColorFilter = Module["org_jetbrains_skia_Paint__1nSetColorFilter"] = createExportWrapper("org_jetbrains_skia_Paint__1nSetColorFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Paint__1nHasNothingToDraw = Module["org_jetbrains_skia_Paint__1nHasNothingToDraw"] = createExportWrapper("org_jetbrains_skia_Paint__1nHasNothingToDraw");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_impl_RefCnt__getFinalizer = Module["org_jetbrains_skia_impl_RefCnt__getFinalizer"] = createExportWrapper("org_jetbrains_skia_impl_RefCnt__getFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_impl_RefCnt__getRefCount = Module["org_jetbrains_skia_impl_RefCnt__getRefCount"] = createExportWrapper("org_jetbrains_skia_impl_RefCnt__getRefCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_StdVectorDecoder__1nGetArraySize = Module["org_jetbrains_skia_StdVectorDecoder__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nGetArraySize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_StdVectorDecoder__1nReleaseElement = Module["org_jetbrains_skia_StdVectorDecoder__1nReleaseElement"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nReleaseElement");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_StdVectorDecoder__1nDisposeArray = Module["org_jetbrains_skia_StdVectorDecoder__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nDisposeArray");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_OutputWStream__1nGetFinalizer = Module["org_jetbrains_skia_OutputWStream__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_OutputWStream__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_OutputWStream__1nMake = Module["org_jetbrains_skia_OutputWStream__1nMake"] = createExportWrapper("org_jetbrains_skia_OutputWStream__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetFinalizer = Module["org_jetbrains_skia_TextLine__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetAscent = Module["org_jetbrains_skia_TextLine__1nGetAscent"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetAscent");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetCapHeight = Module["org_jetbrains_skia_TextLine__1nGetCapHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetCapHeight");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetXHeight = Module["org_jetbrains_skia_TextLine__1nGetXHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetXHeight");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetDescent = Module["org_jetbrains_skia_TextLine__1nGetDescent"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetDescent");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetLeading = Module["org_jetbrains_skia_TextLine__1nGetLeading"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetLeading");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetWidth = Module["org_jetbrains_skia_TextLine__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetWidth");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetHeight = Module["org_jetbrains_skia_TextLine__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetHeight");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetTextBlob = Module["org_jetbrains_skia_TextLine__1nGetTextBlob"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetTextBlob");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetGlyphsLength = Module["org_jetbrains_skia_TextLine__1nGetGlyphsLength"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetGlyphsLength");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetGlyphs = Module["org_jetbrains_skia_TextLine__1nGetGlyphs"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetGlyphs");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetPositions = Module["org_jetbrains_skia_TextLine__1nGetPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetRunPositionsCount = Module["org_jetbrains_skia_TextLine__1nGetRunPositionsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetRunPositionsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetRunPositions = Module["org_jetbrains_skia_TextLine__1nGetRunPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetRunPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetBreakPositionsCount = Module["org_jetbrains_skia_TextLine__1nGetBreakPositionsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakPositionsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetBreakPositions = Module["org_jetbrains_skia_TextLine__1nGetBreakPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakPositions");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount = Module["org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetBreakOffsets = Module["org_jetbrains_skia_TextLine__1nGetBreakOffsets"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakOffsets");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetOffsetAtCoord = Module["org_jetbrains_skia_TextLine__1nGetOffsetAtCoord"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetOffsetAtCoord");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord = Module["org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_TextLine__1nGetCoordAtOffset = Module["org_jetbrains_skia_TextLine__1nGetCoordAtOffset"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetCoordAtOffset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nGetFinalizer = Module["org_jetbrains_skia_ManagedString__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nMake = Module["org_jetbrains_skia_ManagedString__1nMake"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__nStringSize = Module["org_jetbrains_skia_ManagedString__nStringSize"] = createExportWrapper("org_jetbrains_skia_ManagedString__nStringSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__nStringData = Module["org_jetbrains_skia_ManagedString__nStringData"] = createExportWrapper("org_jetbrains_skia_ManagedString__nStringData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nInsert = Module["org_jetbrains_skia_ManagedString__1nInsert"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nInsert");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nAppend = Module["org_jetbrains_skia_ManagedString__1nAppend"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nAppend");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nRemoveSuffix = Module["org_jetbrains_skia_ManagedString__1nRemoveSuffix"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nRemoveSuffix");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_ManagedString__1nRemove = Module["org_jetbrains_skia_ManagedString__1nRemove"] = createExportWrapper("org_jetbrains_skia_ManagedString__1nRemove");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nMake = Module["org_jetbrains_skia_Region__1nMake"] = createExportWrapper("org_jetbrains_skia_Region__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nGetFinalizer = Module["org_jetbrains_skia_Region__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Region__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSet = Module["org_jetbrains_skia_Region__1nSet"] = createExportWrapper("org_jetbrains_skia_Region__1nSet");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nIsEmpty = Module["org_jetbrains_skia_Region__1nIsEmpty"] = createExportWrapper("org_jetbrains_skia_Region__1nIsEmpty");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nIsRect = Module["org_jetbrains_skia_Region__1nIsRect"] = createExportWrapper("org_jetbrains_skia_Region__1nIsRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nIsComplex = Module["org_jetbrains_skia_Region__1nIsComplex"] = createExportWrapper("org_jetbrains_skia_Region__1nIsComplex");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nGetBounds = Module["org_jetbrains_skia_Region__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Region__1nGetBounds");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nComputeRegionComplexity = Module["org_jetbrains_skia_Region__1nComputeRegionComplexity"] = createExportWrapper("org_jetbrains_skia_Region__1nComputeRegionComplexity");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nGetBoundaryPath = Module["org_jetbrains_skia_Region__1nGetBoundaryPath"] = createExportWrapper("org_jetbrains_skia_Region__1nGetBoundaryPath");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSetEmpty = Module["org_jetbrains_skia_Region__1nSetEmpty"] = createExportWrapper("org_jetbrains_skia_Region__1nSetEmpty");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSetRect = Module["org_jetbrains_skia_Region__1nSetRect"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSetRects = Module["org_jetbrains_skia_Region__1nSetRects"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRects");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSetRegion = Module["org_jetbrains_skia_Region__1nSetRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nSetRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nSetPath = Module["org_jetbrains_skia_Region__1nSetPath"] = createExportWrapper("org_jetbrains_skia_Region__1nSetPath");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nIntersectsIRect = Module["org_jetbrains_skia_Region__1nIntersectsIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nIntersectsIRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nIntersectsRegion = Module["org_jetbrains_skia_Region__1nIntersectsRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nIntersectsRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nContainsIPoint = Module["org_jetbrains_skia_Region__1nContainsIPoint"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsIPoint");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nContainsIRect = Module["org_jetbrains_skia_Region__1nContainsIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsIRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nContainsRegion = Module["org_jetbrains_skia_Region__1nContainsRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nContainsRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nQuickContains = Module["org_jetbrains_skia_Region__1nQuickContains"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickContains");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nQuickRejectIRect = Module["org_jetbrains_skia_Region__1nQuickRejectIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickRejectIRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nQuickRejectRegion = Module["org_jetbrains_skia_Region__1nQuickRejectRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nQuickRejectRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nTranslate = Module["org_jetbrains_skia_Region__1nTranslate"] = createExportWrapper("org_jetbrains_skia_Region__1nTranslate");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nOpIRect = Module["org_jetbrains_skia_Region__1nOpIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nOpIRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nOpRegion = Module["org_jetbrains_skia_Region__1nOpRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nOpIRectRegion = Module["org_jetbrains_skia_Region__1nOpIRectRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpIRectRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nOpRegionIRect = Module["org_jetbrains_skia_Region__1nOpRegionIRect"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegionIRect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Region__1nOpRegionRegion = Module["org_jetbrains_skia_Region__1nOpRegionRegion"] = createExportWrapper("org_jetbrains_skia_Region__1nOpRegionRegion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nMake = Module["org_jetbrains_skia_PictureRecorder__1nMake"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nGetFinalizer = Module["org_jetbrains_skia_PictureRecorder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nBeginRecording = Module["org_jetbrains_skia_PictureRecorder__1nBeginRecording"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nBeginRecording");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas = Module["org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nGetRecordingCanvas");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPicture");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsPictureWithCull");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable = Module["org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable"] = createExportWrapper("org_jetbrains_skia_PictureRecorder__1nFinishRecordingAsDrawable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nMakeFromRuntimeEffect");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt2");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt3");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformInt4");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat2");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat3");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloat4");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix22");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix33");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44 = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nUniformFloatMatrix44");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nChildShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nChildColorFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader = Module["org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_RuntimeShaderBuilder__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetFinalizer = Module["org_jetbrains_skia_Bitmap__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nMake = Module["org_jetbrains_skia_Bitmap__1nMake"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nMakeClone = Module["org_jetbrains_skia_Bitmap__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMakeClone");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nSwap = Module["org_jetbrains_skia_Bitmap__1nSwap"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSwap");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetImageInfo = Module["org_jetbrains_skia_Bitmap__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetImageInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels = Module["org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nIsNull = Module["org_jetbrains_skia_Bitmap__1nIsNull"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsNull");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetRowBytes = Module["org_jetbrains_skia_Bitmap__1nGetRowBytes"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetRowBytes");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nSetAlphaType = Module["org_jetbrains_skia_Bitmap__1nSetAlphaType"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetAlphaType");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nComputeByteSize = Module["org_jetbrains_skia_Bitmap__1nComputeByteSize"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nComputeByteSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nIsImmutable = Module["org_jetbrains_skia_Bitmap__1nIsImmutable"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsImmutable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nSetImmutable = Module["org_jetbrains_skia_Bitmap__1nSetImmutable"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetImmutable");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nReset = Module["org_jetbrains_skia_Bitmap__1nReset"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nReset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nComputeIsOpaque = Module["org_jetbrains_skia_Bitmap__1nComputeIsOpaque"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nComputeIsOpaque");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nSetImageInfo = Module["org_jetbrains_skia_Bitmap__1nSetImageInfo"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetImageInfo");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nAllocPixelsFlags = Module["org_jetbrains_skia_Bitmap__1nAllocPixelsFlags"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixelsFlags");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes = Module["org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes");
+/** @type {function(...*):?} */
+var _free = createExportWrapper("free");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nInstallPixels = Module["org_jetbrains_skia_Bitmap__1nInstallPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nInstallPixels");
+/** @type {function(...*):?} */
+var _malloc = createExportWrapper("malloc");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nAllocPixels = Module["org_jetbrains_skia_Bitmap__1nAllocPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetPixelRef = Module["org_jetbrains_skia_Bitmap__1nGetPixelRef"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRef");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX = Module["org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY = Module["org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nSetPixelRef = Module["org_jetbrains_skia_Bitmap__1nSetPixelRef"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetPixelRef");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nIsReadyToDraw = Module["org_jetbrains_skia_Bitmap__1nIsReadyToDraw"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsReadyToDraw");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetGenerationId = Module["org_jetbrains_skia_Bitmap__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetGenerationId");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged = Module["org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nEraseColor = Module["org_jetbrains_skia_Bitmap__1nEraseColor"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nEraseColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nErase = Module["org_jetbrains_skia_Bitmap__1nErase"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nErase");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetColor = Module["org_jetbrains_skia_Bitmap__1nGetColor"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetColor");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nGetAlphaf = Module["org_jetbrains_skia_Bitmap__1nGetAlphaf"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetAlphaf");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nExtractSubset = Module["org_jetbrains_skia_Bitmap__1nExtractSubset"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nExtractSubset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nReadPixels = Module["org_jetbrains_skia_Bitmap__1nReadPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nReadPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nExtractAlpha = Module["org_jetbrains_skia_Bitmap__1nExtractAlpha"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nExtractAlpha");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nPeekPixels = Module["org_jetbrains_skia_Bitmap__1nPeekPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nPeekPixels");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Bitmap__1nMakeShader = Module["org_jetbrains_skia_Bitmap__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer = Module["org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_sksg_InvalidationController_nMake = Module["org_jetbrains_skia_sksg_InvalidationController_nMake"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_sksg_InvalidationController_nInvalidate = Module["org_jetbrains_skia_sksg_InvalidationController_nInvalidate"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nInvalidate");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_sksg_InvalidationController_nGetBounds = Module["org_jetbrains_skia_sksg_InvalidationController_nGetBounds"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nGetBounds");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_sksg_InvalidationController_nReset = Module["org_jetbrains_skia_sksg_InvalidationController_nReset"] = createExportWrapper("org_jetbrains_skia_sksg_InvalidationController_nReset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nMakeEmpty = Module["org_jetbrains_skia_FontStyleSet__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nMakeEmpty");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nCount = Module["org_jetbrains_skia_FontStyleSet__1nCount"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nCount");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nGetStyle = Module["org_jetbrains_skia_FontStyleSet__1nGetStyle"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetStyle");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nGetStyleName = Module["org_jetbrains_skia_FontStyleSet__1nGetStyleName"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetStyleName");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nGetTypeface = Module["org_jetbrains_skia_FontStyleSet__1nGetTypeface"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nGetTypeface");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_FontStyleSet__1nMatchStyle = Module["org_jetbrains_skia_FontStyleSet__1nMatchStyle"] = createExportWrapper("org_jetbrains_skia_FontStyleSet__1nMatchStyle");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathSegmentIterator__1nMake = Module["org_jetbrains_skia_PathSegmentIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer = Module["org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_PathSegmentIterator__1nNext = Module["org_jetbrains_skia_PathSegmentIterator__1nNext"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nNext");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_ParagraphStyle__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_ParagraphStyle__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphStyle__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -8883,53 +9163,29 @@ var org_jetbrains_skia_paragraph_ParagraphStyle__1nSetTextIndent = Module["org_j
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_ParagraphStyle__1nGetTextIndent = Module["org_jetbrains_skia_paragraph_ParagraphStyle__1nGetTextIndent"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphStyle__1nGetTextIndent");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nMake = Module["org_jetbrains_skia_paragraph_StrutStyle__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nMake");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nReset = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nReset"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nReset");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nEquals = Module["org_jetbrains_skia_paragraph_StrutStyle__1nEquals"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nEquals");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle");
+var org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize");
+var org_jetbrains_skia_paragraph_TextBox__1nGetArraySize = Module["org_jetbrains_skia_paragraph_TextBox__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nGetArraySize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize");
+var org_jetbrains_skia_paragraph_TextBox__1nDisposeArray = Module["org_jetbrains_skia_paragraph_TextBox__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nDisposeArray");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight");
+var org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement = Module["org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight");
+var org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake = Module["org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_TypefaceFontProvider__1nMake");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize = Module["org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray = Module["org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement = Module["org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement");
+var org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface = Module["org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface"] = createExportWrapper("org_jetbrains_skia_paragraph_TypefaceFontProvider__1nRegisterTypeface");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_FontCollection__1nMake = Module["org_jetbrains_skia_paragraph_FontCollection__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_FontCollection__1nMake");
 /** @type {function(...*):?} */
@@ -8955,65 +9211,19 @@ var org_jetbrains_skia_paragraph_FontCollection__1nSetEnableFallback = Module["o
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_FontCollection__1nGetParagraphCache = Module["org_jetbrains_skia_paragraph_FontCollection__1nGetParagraphCache"] = createExportWrapper("org_jetbrains_skia_paragraph_FontCollection__1nGetParagraphCache");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nAbandon");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nReset = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nReset"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nReset");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nUpdateParagraph");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nFindParagraph");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nPrintStatistics");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nSetEnabled");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount = Module["org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphCache__1nGetCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetHeight = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines = Module["org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nLayout = Module["org_jetbrains_skia_paragraph_Paragraph__1nLayout"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nLayout");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nPaint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty = Module["org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint");
+var org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_TextStyle__1nMake = Module["org_jetbrains_skia_paragraph_TextStyle__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_TextStyle__1nMake");
 /** @type {function(...*):?} */
@@ -9105,389 +9315,99 @@ var org_jetbrains_skia_paragraph_TextStyle__1nIsPlaceholder = Module["org_jetbra
 /** @type {function(...*):?} */
 var org_jetbrains_skia_paragraph_TextStyle__1nSetPlaceholder = Module["org_jetbrains_skia_paragraph_TextStyle__1nSetPlaceholder"] = createExportWrapper("org_jetbrains_skia_paragraph_TextStyle__1nSetPlaceholder");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_TextBox__1nGetArraySize = Module["org_jetbrains_skia_paragraph_TextBox__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nGetArraySize");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_TextBox__1nDisposeArray = Module["org_jetbrains_skia_paragraph_TextBox__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nDisposeArray");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMaxWidth");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement = Module["org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement"] = createExportWrapper("org_jetbrains_skia_paragraph_TextBox__1nGetArrayElement");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetHeight = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetHeight");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nMake");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMinIntrinsicWidth");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nGetFinalizer");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetMaxIntrinsicWidth");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nPushStyle");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetAlphabeticBaseline");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nPopStyle");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetIdeographicBaseline");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddText");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLongestLine");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nAddPlaceholder");
+var org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines = Module["org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nDidExceedMaxLines");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild = Module["org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild"] = createExportWrapper("org_jetbrains_skia_paragraph_ParagraphBuilder__1nBuild");
+var org_jetbrains_skia_paragraph_Paragraph__1nLayout = Module["org_jetbrains_skia_paragraph_Paragraph__1nLayout"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nLayout");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_PathSegmentIterator__1nMake = Module["org_jetbrains_skia_PathSegmentIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nMake");
+var org_jetbrains_skia_paragraph_Paragraph__1nPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nPaint");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer = Module["org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nGetFinalizer");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForRange");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_PathSegmentIterator__1nNext = Module["org_jetbrains_skia_PathSegmentIterator__1nNext"] = createExportWrapper("org_jetbrains_skia_PathSegmentIterator__1nNext");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetRectsForPlaceholders");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nGetFinalizer = Module["org_jetbrains_skia_BreakIterator__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetFinalizer");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetGlyphPositionAtCoordinate");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nMake = Module["org_jetbrains_skia_BreakIterator__1nMake"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nMake");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetWordBoundary");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nClone = Module["org_jetbrains_skia_BreakIterator__1nClone"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nClone");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLineMetrics");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nCurrent = Module["org_jetbrains_skia_BreakIterator__1nCurrent"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nCurrent");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetLineNumber");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nNext = Module["org_jetbrains_skia_BreakIterator__1nNext"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nNext");
+var org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty = Module["org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nMarkDirty");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nPrevious = Module["org_jetbrains_skia_BreakIterator__1nPrevious"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nPrevious");
+var org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount = Module["org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nGetUnresolvedGlyphsCount");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nFirst = Module["org_jetbrains_skia_BreakIterator__1nFirst"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nFirst");
+var org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateAlignment");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nLast = Module["org_jetbrains_skia_BreakIterator__1nLast"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nLast");
+var org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateFontSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nPreceding = Module["org_jetbrains_skia_BreakIterator__1nPreceding"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nPreceding");
+var org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateForegroundPaint");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nFollowing = Module["org_jetbrains_skia_BreakIterator__1nFollowing"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nFollowing");
+var org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint = Module["org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint"] = createExportWrapper("org_jetbrains_skia_paragraph_Paragraph__1nUpdateBackgroundPaint");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nIsBoundary = Module["org_jetbrains_skia_BreakIterator__1nIsBoundary"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nIsBoundary");
+var org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize = Module["org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nGetArraySize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nGetRuleStatus = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatus"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatus");
+var org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray = Module["org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nDisposeArray");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatusesLen");
+var org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement = Module["org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement"] = createExportWrapper("org_jetbrains_skia_paragraph_LineMetrics__1nGetArrayElement");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nGetRuleStatuses = Module["org_jetbrains_skia_BreakIterator__1nGetRuleStatuses"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nGetRuleStatuses");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_BreakIterator__1nSetText = Module["org_jetbrains_skia_BreakIterator__1nSetText"] = createExportWrapper("org_jetbrains_skia_BreakIterator__1nSetText");
+var org_jetbrains_skia_paragraph_StrutStyle__1nMake = Module["org_jetbrains_skia_paragraph_StrutStyle__1nMake"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nMake");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeRaster = Module["org_jetbrains_skia_Image__1nMakeRaster"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeRaster");
+var org_jetbrains_skia_paragraph_StrutStyle__1nEquals = Module["org_jetbrains_skia_paragraph_StrutStyle__1nEquals"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nEquals");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeRasterData = Module["org_jetbrains_skia_Image__1nMakeRasterData"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeRasterData");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontFamilies");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeFromBitmap = Module["org_jetbrains_skia_Image__1nMakeFromBitmap"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromBitmap");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontFamilies");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeFromPixmap = Module["org_jetbrains_skia_Image__1nMakeFromPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromPixmap");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontStyle");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeFromEncoded = Module["org_jetbrains_skia_Image__1nMakeFromEncoded"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeFromEncoded");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontStyle");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nGetImageInfo = Module["org_jetbrains_skia_Image__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Image__1nGetImageInfo");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetFontSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nEncodeToData = Module["org_jetbrains_skia_Image__1nEncodeToData"] = createExportWrapper("org_jetbrains_skia_Image__1nEncodeToData");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetFontSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nMakeShader = Module["org_jetbrains_skia_Image__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Image__1nMakeShader");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetHeight");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nPeekPixels = Module["org_jetbrains_skia_Image__1nPeekPixels"] = createExportWrapper("org_jetbrains_skia_Image__1nPeekPixels");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeight");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nPeekPixelsToPixmap = Module["org_jetbrains_skia_Image__1nPeekPixelsToPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nPeekPixelsToPixmap");
+var org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nGetLeading");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nReadPixelsBitmap = Module["org_jetbrains_skia_Image__1nReadPixelsBitmap"] = createExportWrapper("org_jetbrains_skia_Image__1nReadPixelsBitmap");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetLeading");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nReadPixelsPixmap = Module["org_jetbrains_skia_Image__1nReadPixelsPixmap"] = createExportWrapper("org_jetbrains_skia_Image__1nReadPixelsPixmap");
+var org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsEnabled");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Image__1nScalePixels = Module["org_jetbrains_skia_Image__1nScalePixels"] = createExportWrapper("org_jetbrains_skia_Image__1nScalePixels");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetEnabled");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeWithColorFilter = Module["org_jetbrains_skia_Shader__1nMakeWithColorFilter"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeWithColorFilter");
+var org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightForced");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeLinearGradient = Module["org_jetbrains_skia_Shader__1nMakeLinearGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeLinearGradient");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightForced");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeLinearGradientCS = Module["org_jetbrains_skia_Shader__1nMakeLinearGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeLinearGradientCS");
+var org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHeightOverridden");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeRadialGradient = Module["org_jetbrains_skia_Shader__1nMakeRadialGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeRadialGradient");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHeightOverridden");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeRadialGradientCS = Module["org_jetbrains_skia_Shader__1nMakeRadialGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeRadialGradientCS");
+var org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nIsHalfLeading");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient = Module["org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradient");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS = Module["org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTwoPointConicalGradientCS");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeSweepGradient = Module["org_jetbrains_skia_Shader__1nMakeSweepGradient"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeSweepGradient");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeSweepGradientCS = Module["org_jetbrains_skia_Shader__1nMakeSweepGradientCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeSweepGradientCS");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeEmpty = Module["org_jetbrains_skia_Shader__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeEmpty");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeColor = Module["org_jetbrains_skia_Shader__1nMakeColor"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeColor");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeColorCS = Module["org_jetbrains_skia_Shader__1nMakeColorCS"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeColorCS");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeBlend = Module["org_jetbrains_skia_Shader__1nMakeBlend"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeBlend");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeFractalNoise = Module["org_jetbrains_skia_Shader__1nMakeFractalNoise"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeFractalNoise");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Shader__1nMakeTurbulence = Module["org_jetbrains_skia_Shader__1nMakeTurbulence"] = createExportWrapper("org_jetbrains_skia_Shader__1nMakeTurbulence");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Logger__1nMake = Module["org_jetbrains_skia_skottie_Logger__1nMake"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Logger__1nInit = Module["org_jetbrains_skia_skottie_Logger__1nInit"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nInit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Logger__1nGetLogMessage = Module["org_jetbrains_skia_skottie_Logger__1nGetLogMessage"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogMessage");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Logger__1nGetLogJson = Module["org_jetbrains_skia_skottie_Logger__1nGetLogJson"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogJson");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Logger__1nGetLogLevel = Module["org_jetbrains_skia_skottie_Logger__1nGetLogLevel"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogLevel");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nMake = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetFinalizer = Module["org_jetbrains_skia_skottie_Animation__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nMakeFromString = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromString"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromString");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nMakeFromFile = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromFile"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromFile");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nMakeFromData = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nRender = Module["org_jetbrains_skia_skottie_Animation__1nRender"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nRender");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nSeek = Module["org_jetbrains_skia_skottie_Animation__1nSeek"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeek");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nSeekFrame = Module["org_jetbrains_skia_skottie_Animation__1nSeekFrame"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeekFrame");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nSeekFrameTime = Module["org_jetbrains_skia_skottie_Animation__1nSeekFrameTime"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeekFrameTime");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetDuration = Module["org_jetbrains_skia_skottie_Animation__1nGetDuration"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetDuration");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetFPS = Module["org_jetbrains_skia_skottie_Animation__1nGetFPS"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetFPS");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetInPoint = Module["org_jetbrains_skia_skottie_Animation__1nGetInPoint"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetInPoint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetOutPoint = Module["org_jetbrains_skia_skottie_Animation__1nGetOutPoint"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetOutPoint");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetVersion = Module["org_jetbrains_skia_skottie_Animation__1nGetVersion"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetVersion");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_skottie_Animation__1nGetSize = Module["org_jetbrains_skia_skottie_Animation__1nGetSize"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nGetFinalizer = Module["org_jetbrains_skia_Drawable__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nSetBounds = Module["org_jetbrains_skia_Drawable__1nSetBounds"] = createExportWrapper("org_jetbrains_skia_Drawable__1nSetBounds");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nGetBounds = Module["org_jetbrains_skia_Drawable__1nGetBounds"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetBounds");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nGetOnDrawCanvas = Module["org_jetbrains_skia_Drawable__1nGetOnDrawCanvas"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetOnDrawCanvas");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nMake = Module["org_jetbrains_skia_Drawable__1nMake"] = createExportWrapper("org_jetbrains_skia_Drawable__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nInit = Module["org_jetbrains_skia_Drawable__1nInit"] = createExportWrapper("org_jetbrains_skia_Drawable__1nInit");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nDraw = Module["org_jetbrains_skia_Drawable__1nDraw"] = createExportWrapper("org_jetbrains_skia_Drawable__1nDraw");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nMakePictureSnapshot = Module["org_jetbrains_skia_Drawable__1nMakePictureSnapshot"] = createExportWrapper("org_jetbrains_skia_Drawable__1nMakePictureSnapshot");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nGetGenerationId = Module["org_jetbrains_skia_Drawable__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_Drawable__1nGetGenerationId");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Drawable__1nNotifyDrawingChanged = Module["org_jetbrains_skia_Drawable__1nNotifyDrawingChanged"] = createExportWrapper("org_jetbrains_skia_Drawable__1nNotifyDrawingChanged");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nGetWidth = Module["org_jetbrains_skia_PixelRef__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nGetHeight = Module["org_jetbrains_skia_PixelRef__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nGetRowBytes = Module["org_jetbrains_skia_PixelRef__1nGetRowBytes"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetRowBytes");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nGetGenerationId = Module["org_jetbrains_skia_PixelRef__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nGetGenerationId");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged = Module["org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nNotifyPixelsChanged");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nIsImmutable = Module["org_jetbrains_skia_PixelRef__1nIsImmutable"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nIsImmutable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PixelRef__1nSetImmutable = Module["org_jetbrains_skia_PixelRef__1nSetImmutable"] = createExportWrapper("org_jetbrains_skia_PixelRef__1nSetImmutable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_StdVectorDecoder__1nGetArraySize = Module["org_jetbrains_skia_StdVectorDecoder__1nGetArraySize"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nGetArraySize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_StdVectorDecoder__1nReleaseElement = Module["org_jetbrains_skia_StdVectorDecoder__1nReleaseElement"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nReleaseElement");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_StdVectorDecoder__1nDisposeArray = Module["org_jetbrains_skia_StdVectorDecoder__1nDisposeArray"] = createExportWrapper("org_jetbrains_skia_StdVectorDecoder__1nDisposeArray");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeSum = Module["org_jetbrains_skia_PathEffect__1nMakeSum"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeSum");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeCompose = Module["org_jetbrains_skia_PathEffect__1nMakeCompose"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeCompose");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakePath1D = Module["org_jetbrains_skia_PathEffect__1nMakePath1D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakePath1D");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakePath2D = Module["org_jetbrains_skia_PathEffect__1nMakePath2D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakePath2D");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeLine2D = Module["org_jetbrains_skia_PathEffect__1nMakeLine2D"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeLine2D");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeCorner = Module["org_jetbrains_skia_PathEffect__1nMakeCorner"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeCorner");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeDash = Module["org_jetbrains_skia_PathEffect__1nMakeDash"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeDash");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_PathEffect__1nMakeDiscrete = Module["org_jetbrains_skia_PathEffect__1nMakeDiscrete"] = createExportWrapper("org_jetbrains_skia_PathEffect__1nMakeDiscrete");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGDOM__1nMakeFromData = Module["org_jetbrains_skia_svg_SVGDOM__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nMakeFromData");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGDOM__1nGetRoot = Module["org_jetbrains_skia_svg_SVGDOM__1nGetRoot"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nGetRoot");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize = Module["org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nGetContainerSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize = Module["org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nSetContainerSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGDOM__1nRender = Module["org_jetbrains_skia_svg_SVGDOM__1nRender"] = createExportWrapper("org_jetbrains_skia_svg_SVGDOM__1nRender");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGNode__1nGetTag = Module["org_jetbrains_skia_svg_SVGNode__1nGetTag"] = createExportWrapper("org_jetbrains_skia_svg_SVGNode__1nGetTag");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGCanvas__1nMake = Module["org_jetbrains_skia_svg_SVGCanvas__1nMake"] = createExportWrapper("org_jetbrains_skia_svg_SVGCanvas__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetTag = Module["org_jetbrains_skia_svg_SVGSVG__1nGetTag"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetTag");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetX = Module["org_jetbrains_skia_svg_SVGSVG__1nGetX"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetY = Module["org_jetbrains_skia_svg_SVGSVG__1nGetY"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetY");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetHeight = Module["org_jetbrains_skia_svg_SVGSVG__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetWidth = Module["org_jetbrains_skia_svg_SVGSVG__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio = Module["org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetPreserveAspectRatio");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetViewBox = Module["org_jetbrains_skia_svg_SVGSVG__1nGetViewBox"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetViewBox");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize = Module["org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nGetIntrinsicSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetX = Module["org_jetbrains_skia_svg_SVGSVG__1nSetX"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetY = Module["org_jetbrains_skia_svg_SVGSVG__1nSetY"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetY");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetWidth = Module["org_jetbrains_skia_svg_SVGSVG__1nSetWidth"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetHeight = Module["org_jetbrains_skia_svg_SVGSVG__1nSetHeight"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio = Module["org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetPreserveAspectRatio");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_svg_SVGSVG__1nSetViewBox = Module["org_jetbrains_skia_svg_SVGSVG__1nSetViewBox"] = createExportWrapper("org_jetbrains_skia_svg_SVGSVG__1nSetViewBox");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetFinalizer = Module["org_jetbrains_skia_Bitmap__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nMake = Module["org_jetbrains_skia_Bitmap__1nMake"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMake");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nMakeClone = Module["org_jetbrains_skia_Bitmap__1nMakeClone"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMakeClone");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nSwap = Module["org_jetbrains_skia_Bitmap__1nSwap"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSwap");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetImageInfo = Module["org_jetbrains_skia_Bitmap__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetImageInfo");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels = Module["org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetRowBytesAsPixels");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nIsNull = Module["org_jetbrains_skia_Bitmap__1nIsNull"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsNull");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetRowBytes = Module["org_jetbrains_skia_Bitmap__1nGetRowBytes"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetRowBytes");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nSetAlphaType = Module["org_jetbrains_skia_Bitmap__1nSetAlphaType"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetAlphaType");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nComputeByteSize = Module["org_jetbrains_skia_Bitmap__1nComputeByteSize"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nComputeByteSize");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nIsImmutable = Module["org_jetbrains_skia_Bitmap__1nIsImmutable"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsImmutable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nSetImmutable = Module["org_jetbrains_skia_Bitmap__1nSetImmutable"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetImmutable");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nReset = Module["org_jetbrains_skia_Bitmap__1nReset"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nReset");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nComputeIsOpaque = Module["org_jetbrains_skia_Bitmap__1nComputeIsOpaque"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nComputeIsOpaque");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nSetImageInfo = Module["org_jetbrains_skia_Bitmap__1nSetImageInfo"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetImageInfo");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nAllocPixelsFlags = Module["org_jetbrains_skia_Bitmap__1nAllocPixelsFlags"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixelsFlags");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes = Module["org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixelsRowBytes");
-/** @type {function(...*):?} */
-var _free = createExportWrapper("free");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nInstallPixels = Module["org_jetbrains_skia_Bitmap__1nInstallPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nInstallPixels");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nAllocPixels = Module["org_jetbrains_skia_Bitmap__1nAllocPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nAllocPixels");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetPixelRef = Module["org_jetbrains_skia_Bitmap__1nGetPixelRef"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRef");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX = Module["org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRefOriginX");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY = Module["org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetPixelRefOriginY");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nSetPixelRef = Module["org_jetbrains_skia_Bitmap__1nSetPixelRef"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nSetPixelRef");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nIsReadyToDraw = Module["org_jetbrains_skia_Bitmap__1nIsReadyToDraw"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nIsReadyToDraw");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetGenerationId = Module["org_jetbrains_skia_Bitmap__1nGetGenerationId"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetGenerationId");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged = Module["org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nNotifyPixelsChanged");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nEraseColor = Module["org_jetbrains_skia_Bitmap__1nEraseColor"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nEraseColor");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nErase = Module["org_jetbrains_skia_Bitmap__1nErase"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nErase");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetColor = Module["org_jetbrains_skia_Bitmap__1nGetColor"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetColor");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nGetAlphaf = Module["org_jetbrains_skia_Bitmap__1nGetAlphaf"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nGetAlphaf");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nExtractSubset = Module["org_jetbrains_skia_Bitmap__1nExtractSubset"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nExtractSubset");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nReadPixels = Module["org_jetbrains_skia_Bitmap__1nReadPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nReadPixels");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nExtractAlpha = Module["org_jetbrains_skia_Bitmap__1nExtractAlpha"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nExtractAlpha");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nPeekPixels = Module["org_jetbrains_skia_Bitmap__1nPeekPixels"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nPeekPixels");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_Bitmap__1nMakeShader = Module["org_jetbrains_skia_Bitmap__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_Bitmap__1nMakeShader");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetFinalizer = Module["org_jetbrains_skia_TextLine__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetFinalizer");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetAscent = Module["org_jetbrains_skia_TextLine__1nGetAscent"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetAscent");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetCapHeight = Module["org_jetbrains_skia_TextLine__1nGetCapHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetCapHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetXHeight = Module["org_jetbrains_skia_TextLine__1nGetXHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetXHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetDescent = Module["org_jetbrains_skia_TextLine__1nGetDescent"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetDescent");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetLeading = Module["org_jetbrains_skia_TextLine__1nGetLeading"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetLeading");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetWidth = Module["org_jetbrains_skia_TextLine__1nGetWidth"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetWidth");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetHeight = Module["org_jetbrains_skia_TextLine__1nGetHeight"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetHeight");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetTextBlob = Module["org_jetbrains_skia_TextLine__1nGetTextBlob"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetTextBlob");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetGlyphsLength = Module["org_jetbrains_skia_TextLine__1nGetGlyphsLength"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetGlyphsLength");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetGlyphs = Module["org_jetbrains_skia_TextLine__1nGetGlyphs"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetGlyphs");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetPositions = Module["org_jetbrains_skia_TextLine__1nGetPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetRunPositionsCount = Module["org_jetbrains_skia_TextLine__1nGetRunPositionsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetRunPositionsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetRunPositions = Module["org_jetbrains_skia_TextLine__1nGetRunPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetRunPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetBreakPositionsCount = Module["org_jetbrains_skia_TextLine__1nGetBreakPositionsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakPositionsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetBreakPositions = Module["org_jetbrains_skia_TextLine__1nGetBreakPositions"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakPositions");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount = Module["org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakOffsetsCount");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetBreakOffsets = Module["org_jetbrains_skia_TextLine__1nGetBreakOffsets"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetBreakOffsets");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetOffsetAtCoord = Module["org_jetbrains_skia_TextLine__1nGetOffsetAtCoord"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetOffsetAtCoord");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord = Module["org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetLeftOffsetAtCoord");
-/** @type {function(...*):?} */
-var org_jetbrains_skia_TextLine__1nGetCoordAtOffset = Module["org_jetbrains_skia_TextLine__1nGetCoordAtOffset"] = createExportWrapper("org_jetbrains_skia_TextLine__1nGetCoordAtOffset");
-/** @type {function(...*):?} */
-var org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative");
-/** @type {function(...*):?} */
-var org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative");
-/** @type {function(...*):?} */
-var org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative");
-/** @type {function(...*):?} */
-var org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative");
+var org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading = Module["org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading"] = createExportWrapper("org_jetbrains_skia_paragraph_StrutStyle__1nSetHalfLeading");
 /** @type {function(...*):?} */
 var org_jetbrains_skia_TextBlob__1nGetFinalizer = Module["org_jetbrains_skia_TextBlob__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_TextBlob__1nGetFinalizer");
 /** @type {function(...*):?} */
@@ -9543,35 +9463,115 @@ var org_jetbrains_skia_TextBlob_Iter__1nGetGlyphCount = Module["org_jetbrains_sk
 /** @type {function(...*):?} */
 var org_jetbrains_skia_TextBlob_Iter__1nGetGlyphs = Module["org_jetbrains_skia_TextBlob_Iter__1nGetGlyphs"] = createExportWrapper("org_jetbrains_skia_TextBlob_Iter__1nGetGlyphs");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetFinalizer = Module["org_jetbrains_skia_Codec__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFinalizer");
+var org_jetbrains_skia_FontMgr__1nGetFamiliesCount = Module["org_jetbrains_skia_FontMgr__1nGetFamiliesCount"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nGetFamiliesCount");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nMakeFromData = Module["org_jetbrains_skia_Codec__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_Codec__1nMakeFromData");
+var org_jetbrains_skia_FontMgr__1nGetFamilyName = Module["org_jetbrains_skia_FontMgr__1nGetFamilyName"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nGetFamilyName");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetImageInfo = Module["org_jetbrains_skia_Codec__1nGetImageInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetImageInfo");
+var org_jetbrains_skia_FontMgr__1nMakeStyleSet = Module["org_jetbrains_skia_FontMgr__1nMakeStyleSet"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMakeStyleSet");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetSizeWidth = Module["org_jetbrains_skia_Codec__1nGetSizeWidth"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetSizeWidth");
+var org_jetbrains_skia_FontMgr__1nMatchFamily = Module["org_jetbrains_skia_FontMgr__1nMatchFamily"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamily");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetSizeHeight = Module["org_jetbrains_skia_Codec__1nGetSizeHeight"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetSizeHeight");
+var org_jetbrains_skia_FontMgr__1nMatchFamilyStyle = Module["org_jetbrains_skia_FontMgr__1nMatchFamilyStyle"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamilyStyle");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetEncodedOrigin = Module["org_jetbrains_skia_Codec__1nGetEncodedOrigin"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetEncodedOrigin");
+var org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter = Module["org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMatchFamilyStyleCharacter");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetEncodedImageFormat = Module["org_jetbrains_skia_Codec__1nGetEncodedImageFormat"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetEncodedImageFormat");
+var org_jetbrains_skia_FontMgr__1nMakeFromData = Module["org_jetbrains_skia_FontMgr__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nMakeFromData");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nReadPixels = Module["org_jetbrains_skia_Codec__1nReadPixels"] = createExportWrapper("org_jetbrains_skia_Codec__1nReadPixels");
+var org_jetbrains_skia_FontMgr__1nDefault = Module["org_jetbrains_skia_FontMgr__1nDefault"] = createExportWrapper("org_jetbrains_skia_FontMgr__1nDefault");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetFrameCount = Module["org_jetbrains_skia_Codec__1nGetFrameCount"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFrameCount");
+var org_jetbrains_skia_Data__1nGetFinalizer = Module["org_jetbrains_skia_Data__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_Data__1nGetFinalizer");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetFrameInfo = Module["org_jetbrains_skia_Codec__1nGetFrameInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFrameInfo");
+var org_jetbrains_skia_Data__1nSize = Module["org_jetbrains_skia_Data__1nSize"] = createExportWrapper("org_jetbrains_skia_Data__1nSize");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetFramesInfo = Module["org_jetbrains_skia_Codec__1nGetFramesInfo"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetFramesInfo");
+var org_jetbrains_skia_Data__1nBytes = Module["org_jetbrains_skia_Data__1nBytes"] = createExportWrapper("org_jetbrains_skia_Data__1nBytes");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nFramesInfo_Delete = Module["org_jetbrains_skia_Codec__1nFramesInfo_Delete"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_Delete");
+var org_jetbrains_skia_Data__1nEquals = Module["org_jetbrains_skia_Data__1nEquals"] = createExportWrapper("org_jetbrains_skia_Data__1nEquals");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nFramesInfo_GetSize = Module["org_jetbrains_skia_Codec__1nFramesInfo_GetSize"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_GetSize");
+var org_jetbrains_skia_Data__1nMakeFromBytes = Module["org_jetbrains_skia_Data__1nMakeFromBytes"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeFromBytes");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nFramesInfo_GetInfos = Module["org_jetbrains_skia_Codec__1nFramesInfo_GetInfos"] = createExportWrapper("org_jetbrains_skia_Codec__1nFramesInfo_GetInfos");
+var org_jetbrains_skia_Data__1nMakeWithoutCopy = Module["org_jetbrains_skia_Data__1nMakeWithoutCopy"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeWithoutCopy");
 /** @type {function(...*):?} */
-var org_jetbrains_skia_Codec__1nGetRepetitionCount = Module["org_jetbrains_skia_Codec__1nGetRepetitionCount"] = createExportWrapper("org_jetbrains_skia_Codec__1nGetRepetitionCount");
+var org_jetbrains_skia_Data__1nMakeFromFileName = Module["org_jetbrains_skia_Data__1nMakeFromFileName"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeFromFileName");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Data__1nMakeSubset = Module["org_jetbrains_skia_Data__1nMakeSubset"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeSubset");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Data__1nMakeEmpty = Module["org_jetbrains_skia_Data__1nMakeEmpty"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeEmpty");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Data__1nMakeUninitialized = Module["org_jetbrains_skia_Data__1nMakeUninitialized"] = createExportWrapper("org_jetbrains_skia_Data__1nMakeUninitialized");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_Data__1nWritableData = Module["org_jetbrains_skia_Data__1nWritableData"] = createExportWrapper("org_jetbrains_skia_Data__1nWritableData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nMake = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nMake"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nSetFontManager");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nSetLogger");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromString");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromFile");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData = Module["org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData"] = createExportWrapper("org_jetbrains_skia_skottie_AnimationBuilder__1nBuildFromData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Logger__1nMake = Module["org_jetbrains_skia_skottie_Logger__1nMake"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nMake");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Logger__1nInit = Module["org_jetbrains_skia_skottie_Logger__1nInit"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nInit");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Logger__1nGetLogMessage = Module["org_jetbrains_skia_skottie_Logger__1nGetLogMessage"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogMessage");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Logger__1nGetLogJson = Module["org_jetbrains_skia_skottie_Logger__1nGetLogJson"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogJson");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Logger__1nGetLogLevel = Module["org_jetbrains_skia_skottie_Logger__1nGetLogLevel"] = createExportWrapper("org_jetbrains_skia_skottie_Logger__1nGetLogLevel");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetFinalizer = Module["org_jetbrains_skia_skottie_Animation__1nGetFinalizer"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetFinalizer");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nMakeFromString = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromString"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromString");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nMakeFromFile = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromFile"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromFile");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nMakeFromData = Module["org_jetbrains_skia_skottie_Animation__1nMakeFromData"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nMakeFromData");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nRender = Module["org_jetbrains_skia_skottie_Animation__1nRender"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nRender");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nSeek = Module["org_jetbrains_skia_skottie_Animation__1nSeek"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeek");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nSeekFrame = Module["org_jetbrains_skia_skottie_Animation__1nSeekFrame"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeekFrame");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nSeekFrameTime = Module["org_jetbrains_skia_skottie_Animation__1nSeekFrameTime"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nSeekFrameTime");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetDuration = Module["org_jetbrains_skia_skottie_Animation__1nGetDuration"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetDuration");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetFPS = Module["org_jetbrains_skia_skottie_Animation__1nGetFPS"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetFPS");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetInPoint = Module["org_jetbrains_skia_skottie_Animation__1nGetInPoint"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetInPoint");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetOutPoint = Module["org_jetbrains_skia_skottie_Animation__1nGetOutPoint"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetOutPoint");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetVersion = Module["org_jetbrains_skia_skottie_Animation__1nGetVersion"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetVersion");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_skottie_Animation__1nGetSize = Module["org_jetbrains_skia_skottie_Animation__1nGetSize"] = createExportWrapper("org_jetbrains_skia_skottie_Animation__1nGetSize");
+/** @type {function(...*):?} */
+var org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeGLRenderTargetNative");
+/** @type {function(...*):?} */
+var org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeGLContextNative");
+/** @type {function(...*):?} */
+var org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeMetalRenderTargetNative");
+/** @type {function(...*):?} */
+var org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative = Module["org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative"] = createExportWrapper("org_jetbrains_skiko_RenderTargetsKt_makeMetalContextNative");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1nMakeShader = Module["org_jetbrains_skia_RuntimeEffect__1nMakeShader"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1nMakeForShader = Module["org_jetbrains_skia_RuntimeEffect__1nMakeForShader"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeForShader");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter = Module["org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1nMakeForColorFilter");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr = Module["org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nGetPtr");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1Result_nGetError = Module["org_jetbrains_skia_RuntimeEffect__1Result_nGetError"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nGetError");
+/** @type {function(...*):?} */
+var org_jetbrains_skia_RuntimeEffect__1Result_nDestroy = Module["org_jetbrains_skia_RuntimeEffect__1Result_nDestroy"] = createExportWrapper("org_jetbrains_skia_RuntimeEffect__1Result_nDestroy");
 /** @type {function(...*):?} */
 var ___errno_location = createExportWrapper("__errno_location");
 /** @type {function(...*):?} */
