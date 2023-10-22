@@ -182,7 +182,7 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screenData = produceState<IntArray?>(null, gameName) {
+    val screenData = produceState<List<Boolean>?>(null, gameName) {
         emulator.observeScreenUpdates {
             value = it
         }
@@ -198,7 +198,7 @@ fun EmulatorView(emulator: Emulator, gameName: String) {
                 repeat(Display.WIDTH) { x ->
                     repeat(Display.HEIGHT) { y ->
                         val index = x + Display.WIDTH * y
-                        if (screenData[index] == 1) {
+                        if (screenData[index]) {
                             val xx = blockWidth * x.toFloat()
                             val yy = blockHeight * y.toFloat()
 

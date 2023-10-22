@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalStdlibApi::class)
-
 package com.beust.chip8
 
 fun log(s: String) {
@@ -9,12 +7,11 @@ fun log(s: String) {
 // Specs: http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf
 // Roms can be found at https://github.com/loktar00/chip8/tree/master/roms
 
-interface KeyListener {
-    fun onKey(key: Int?)
-}
-
 /** Format to hex with leading zeros */
+@OptIn(ExperimentalStdlibApi::class)
 val Int.h get() = this.toHexString(HexFormat { upperCase = true; number.removeLeadingZeros = true })
+
+@OptIn(ExperimentalStdlibApi::class)
 val Byte.h get() = this.toHexString(HexFormat { upperCase = true; number.removeLeadingZeros = false })
 
 class Nibbles(private val b0: Int, val b1: Int, val b2: Int, val b3: Int) {
