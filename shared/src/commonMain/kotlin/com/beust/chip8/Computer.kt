@@ -29,6 +29,7 @@ class Computer(val display: Display,
     private val scope = MainScope()
 
     fun loadRom(romData: ByteArray, launchTimers: Boolean = true) {
+        println("LoadRom")
         this.romData = romData
         resetCpu()
         if (launchTimers) {
