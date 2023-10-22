@@ -50,7 +50,7 @@ struct GameButton: View {
 
 
 struct EmulatorView: View {
-    let screenData: KotlinIntArray
+    let screenData: [KotlinBoolean]
     
     var body: some View {
         let displayWidth = 64
@@ -63,7 +63,7 @@ struct EmulatorView: View {
             for x in 0 ..< displayWidth {
                 for y in 0 ..< displayHeight {
                     let index = x + displayWidth * y
-                    if (screenData.get(index: Int32(index)) == 1) {
+                    if (screenData[index]) as! Bool {
                         let xx = blockSize * CGFloat(x)
                         let yy = blockSize * CGFloat(y)
 

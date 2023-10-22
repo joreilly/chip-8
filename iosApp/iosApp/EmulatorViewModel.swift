@@ -2,7 +2,7 @@ import Foundation
 import shared
 
 class EmulatorViewModel: ObservableObject {
-    @Published var screenData = KotlinIntArray(size: 2048)
+    @Published var screenData = [KotlinBoolean](repeating: false, count: 2048)
     
     private let emulator: Emulator
     init(emulator: Emulator) {
