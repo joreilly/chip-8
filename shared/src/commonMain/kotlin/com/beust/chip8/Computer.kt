@@ -6,7 +6,6 @@ import kotlinx.coroutines.*
  * For clients that want to be notified when something happens on the computer.
  */
 interface ComputerListener {
-    fun onKey(key: Int?)
     fun onPause() {}
     fun onStart() {}
 }
@@ -17,23 +16,17 @@ class Computer(val display: Display,
         var cpu: Cpu = Cpu(),
         val sound: Boolean = true)
 {
-    var paused = true
-    var cpuClockHz: Long = 1000
-        set(v) {
-            println("New clock speed: $v")
-            field = v
-            pause()
-            start()
-        }
+    private var paused = true
 
     private var cpuTickJob: Job? = null
     private var timerFutureJob: Job? = null
     private var romData: ByteArray? = null
 
-    var listener: ComputerListener? = null
+    private var listener: ComputerListener? = null
 
     private fun unsigned(b: Byte): Int = if (b < 0) b + 0x10 else b.toInt()
 
+    private val scope = MainScope()
 
     fun loadRom(romData: ByteArray, launchTimers: Boolean = true) {
         this.romData = romData
@@ -109,16 +102,18 @@ class Computer(val display: Display,
         }
         return result
     }
+
+
+    private fun startCoroutineTimer(delayMillis: Long = 0, repeatMillis: Long = 0, action: () -> Unit)  = scope.launch {
+            delay(delayMillis)
+            if (repeatMillis > 0) {
+                while (true) {
+                    action()
+                    delay(repeatMillis)
+                }
+            } else {
+                action()
+            }
+        }
 }
 
-inline fun startCoroutineTimer(delayMillis: Long = 0, repeatMillis: Long = 0, crossinline action: () -> Unit) = GlobalScope.launch {
-    delay(delayMillis)
-    if (repeatMillis > 0) {
-        while (true) {
-            action()
-            delay(repeatMillis)
-        }
-    } else {
-        action()
-    }
-}

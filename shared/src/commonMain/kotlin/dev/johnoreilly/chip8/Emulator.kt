@@ -20,7 +20,7 @@ class Emulator {
         return computer.disassemble()
     }
 
-    fun observeScreenUpdates(success: (IntArray) -> Unit) {
+    fun observeScreenUpdates(success: (List<Boolean>) -> Unit) {
         display.setScreenCallback {
             success(it)
         }
@@ -36,12 +36,14 @@ class Emulator {
 }
 
 
-class ComposeDisplay() : Display {
-    private var screenCallback: ((IntArray) -> Unit)? = null
+class ComposeDisplay : Display {
+    private var screenCallback: ((List<Boolean>) -> Unit)? = null
 
     override fun draw(frameBuffer: IntArray) {
-        val screen = IntArray(Display.WIDTH * Display.HEIGHT)
-        frameBuffer.copyInto(screen, 0)
+        val screen = ArrayList<Boolean>(Display.WIDTH * Display.HEIGHT)
+        frameBuffer.forEach { value ->
+            screen.add(value == 1)
+        }
         screenCallback?.invoke(screen)
     }
 
@@ -49,7 +51,7 @@ class ComposeDisplay() : Display {
         frameBuffer.fill(0)
     }
 
-    fun setScreenCallback(screenCallback: (IntArray) -> Unit) {
+    fun setScreenCallback(screenCallback: (List<Boolean>) -> Unit) {
         this.screenCallback = screenCallback
     }
 }
