@@ -24,6 +24,7 @@ import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.unit.dp
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
+import kotlinx.collections.immutable.ImmutableList
 
 
 class MainActivity : ComponentActivity() {
@@ -82,7 +83,7 @@ fun GameButton(emulator: Emulator, number: Int, icon: ImageVector) {
 
 @Composable
 fun EmulatorView(emulator: Emulator) {
-    val screenData = produceState<IntArray?>(null, emulator) {
+    val screenData = produceState<ImmutableList<Boolean>?>(null, emulator) {
         emulator.observeScreenUpdates {
             value = it
         }
@@ -100,7 +101,7 @@ fun EmulatorView(emulator: Emulator) {
                 repeat(displayWidth) { x ->
                     repeat(displayHeight) { y ->
                         val index = x + displayWidth * y
-                        if (screenData[index] == 1) {
+                        if (screenData[index]) {
                             val xx = blockSize * x.toFloat()
                             val yy = blockSize * y.toFloat()
 

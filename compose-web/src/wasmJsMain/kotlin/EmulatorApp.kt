@@ -23,6 +23,7 @@ import com.beust.chip8.Computer
 import com.beust.chip8.Display
 import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
+import kotlinx.collections.immutable.ImmutableList
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.resource
 
@@ -182,7 +183,7 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screenData = produceState<List<Boolean>?>(null, gameName) {
+    val screenData = produceState<ImmutableList<Boolean>?>(null, gameName) {
         emulator.observeScreenUpdates {
             value = it
         }

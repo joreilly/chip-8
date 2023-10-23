@@ -34,6 +34,7 @@ import androidx.wear.compose.material.Icon
 import androidx.wear.compose.material.OutlinedButton
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
+import kotlinx.collections.immutable.ImmutableList
 
 
 class MainActivity : ComponentActivity() {
@@ -78,7 +79,7 @@ fun MainLayout(romData: ByteArray) {
 fun EmulatorView(emulator: Emulator) {
     val focusRequester = remember { FocusRequester() }
 
-    val screenData = produceState<IntArray?>(null, emulator) {
+    val screenData = produceState<ImmutableList<Boolean>?>(null, emulator) {
         emulator.observeScreenUpdates {
             value = it
         }
@@ -97,7 +98,7 @@ fun EmulatorView(emulator: Emulator) {
             repeat(displayWidth) { x ->
                 repeat(displayHeight) { y ->
                     val index = x + displayWidth * y
-                    if (screenData[index] == 1) {
+                    if (screenData[index]) {
                         val xx = blockSize * x.toFloat()
                         val yy = blockSize * y.toFloat()
 
