@@ -1,12 +1,12 @@
 
 object Versions {
-    const val kotlin = "1.9.20-RC"
+    const val kotlin = "1.9.20"
     const val kotlinxCoroutines = "1.7.3"
 
-    const val compose = "1.5.1"
-    const val composeCompiler = "1.5.4-dev-k1.9.20-RC-1edce5fd625"
+    const val compose = "1.5.3"
+    const val composeCompiler = "1.5.4-dev-k1.9.20-50f08dfa4b4"
     const val navCompose = "2.5.2"
-    const val composeDesktop = "1.5.3"
+    const val composeDesktop = "1.5.10"
     const val wearCompose = "1.1.0"
 
     const val junit = "4.13"
