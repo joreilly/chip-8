@@ -6,7 +6,7 @@ object Versions {
     const val compose = "1.5.3"
     const val composeCompiler = "1.5.4-dev-k1.9.20-50f08dfa4b4"
     const val navCompose = "2.5.2"
-    const val composeDesktop = "1.5.10"
+    const val composeMultiplatform = "1.5.10-dev-wasm02"
     const val wearCompose = "1.1.0"
 
     const val junit = "4.13"

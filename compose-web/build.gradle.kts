@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "1.5.10-dev-wasm01"
+    id("org.jetbrains.compose") version Versions.composeMultiplatform
 }
 
 group = "com.example"
@@ -28,7 +28,7 @@ kotlin {
         binaries.executable()
     }
     sourceSets {
-        val commonMain by getting {
+        commonMain {
             dependencies {
                 api(compose.runtime)
                 api(compose.foundation)
@@ -37,19 +37,9 @@ kotlin {
                 implementation(project(":shared"))
             }
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
     }
 }
 
 compose.experimental {
     web.application {}
-}
-
-compose {
-    kotlinCompilerPlugin.set("1.5.3")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20")
 }

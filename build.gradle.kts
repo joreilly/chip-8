@@ -19,13 +19,4 @@ allprojects {
         maven("https://maven.pkg.jetbrains.space/kotlin/p/kotlin/dev")
         maven("https://androidx.dev/storage/compose-compiler/repository")
     }
-
-    configurations.all {
-        val conf = this
-        conf.resolutionStrategy.eachDependency {
-            if (requested.module.name.startsWith("kotlin-stdlib")) {
-                useVersion("1.9.20-RC")
-            }
-        }
-    }
 }
