@@ -10,8 +10,8 @@ pluginManagement {
 
 rootProject.name = "chip-8"
 
-//include(":androidApp")
+include(":androidApp")
 include(":shared")
 include(":compose-desktop")
-//include(":wearApp")
+include(":wearApp")
 include(":compose-web")

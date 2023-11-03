@@ -10,11 +10,6 @@ dependencies {
     implementation(compose.desktop.currentOs)
 }
 
-compose {
-    kotlinCompilerPlugin.set("1.5.3")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=1.9.20")
-}
-
 application {
     mainClass.set("MainKt")
 }
