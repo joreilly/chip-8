@@ -6,7 +6,11 @@ object Versions {
     const val compose = "1.5.1"
     const val composeCompiler = "1.5.4-dev-k1.9.20-RC-1edce5fd625"
     const val navCompose = "2.5.2"
+<<<<<<< Updated upstream
     const val composeDesktop = "1.5.3"
+=======
+    const val composeMultiplatform = "1.5.10-dev-wasm02"
+>>>>>>> Stashed changes
     const val wearCompose = "1.1.0"
 
     const val junit = "4.13"
