@@ -76,10 +76,10 @@ fun EmulatorApp() {
 
 @OptIn(ExperimentalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    //return resource("chip-8/${gameName}.ch8").readBytes()
+    return resource("chip-8/${gameName}.ch8").readBytes()
     // need to figure out way to manage web resource paths when
     // deployed but leaving like this for now so can be run locally
-    return resource("${gameName}.ch8").readBytes()
+    //return resource("${gameName}.ch8").readBytes()
 }
 
 @Composable
