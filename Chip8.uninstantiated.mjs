@@ -32,13 +32,13 @@ export async function instantiate(imports={}, runInitializer=true) {
                 arrayIndex++;
             }     
              },
+        'kotlin.wasm.internal.externrefToInt' : (ref) => Number(ref),
         'kotlin.wasm.internal.importStringFromWasm' : (address, length, prefix) => { 
             const mem16 = new Uint16Array(wasmExports.memory.buffer, address, length);
             const str = String.fromCharCode.apply(null, mem16);
             return (prefix == null) ? str : prefix + str;
              },
         'kotlin.wasm.internal.getJsEmptyString' : () => '',
-        'kotlin.wasm.internal.externrefToInt' : (ref) => Number(ref),
         'kotlin.wasm.internal.externrefToString' : (ref) => String(ref),
         'kotlin.wasm.internal.externrefEquals' : (lhs, rhs) => lhs === rhs,
         'kotlin.wasm.internal.externrefHashCode' : 
@@ -95,16 +95,28 @@ export async function instantiate(imports={}, runInitializer=true) {
         'kotlin.wasm.internal.getJsTrue' : () => true,
         'kotlin.wasm.internal.getJsFalse' : () => false,
         'kotlin.wasm.internal.tryGetOrSetExternrefBox_$external_fun' : (p0, p1) => tryGetOrSetExternrefBox(p0, p1),
+        'kotlin.js.jsCatch' : (f) => { 
+            let result = null;
+            try { 
+                f();
+            } catch (e) {
+               result = e;
+            }
+            return result;
+             },
+        'kotlin.js.__convertKotlinClosureToJsClosure_(()->Unit)' : (f) => () => wasmExports['__callFunction_(()->Unit)'](f, ),
+        'kotlin.js.jsThrow' : (e) => { throw e; },
         'kotlin.io.printError' : (error) => console.error(error),
         'kotlin.io.printlnImpl' : (message) => console.log(message),
         'kotlin.js.jsArrayGet' : (array, index) => array[index],
         'kotlin.js.length_$external_prop_getter' : (_this) => _this.length,
-        'kotlin.js.__convertKotlinClosureToJsClosure_(()->Unit)' : (f) => () => wasmExports['__callFunction_(()->Unit)'](f, ),
+        'kotlin.js.__convertKotlinClosureToJsClosure_((Js?)->Js?)' : (f) => (p0) => wasmExports['__callFunction_((Js?)->Js?)'](f, p0),
+        'kotlin.js.then_$external_fun' : (_this, p0, p1) => _this.then(p0, p1),
+        'kotlin.js.__convertKotlinClosureToJsClosure_((Js)->Js?)' : (f) => (p0) => wasmExports['__callFunction_((Js)->Js?)'](f, p0),
         'kotlin.random.initialSeed' : () => ((Math.random() * Math.pow(2, 32)) | 0),
         'kotlinx.browser.window_$external_prop_getter' : () => window,
         'kotlinx.browser.document_$external_prop_getter' : () => document,
         'org.khronos.webgl.byteLength_$external_prop_getter' : (_this) => _this.byteLength,
-        'org.khronos.webgl.ArrayBuffer_$external_class_instanceof' : (x) => x instanceof ArrayBuffer,
         'org.khronos.webgl.Int8Array_$external_fun' : (p0, p1, p2, isDefault0, isDefault1) => new Int8Array(p0, isDefault0 ? undefined : p1, isDefault1 ? undefined : p2, ),
         'org.khronos.webgl.length_$external_prop_getter' : (_this) => _this.length,
         'org.w3c.dom.css.height_$external_prop_setter' : (_this, v) => _this.height = v,
@@ -141,6 +153,7 @@ export async function instantiate(imports={}, runInitializer=true) {
         'org.w3c.dom.requestAnimationFrame_$external_fun' : (_this, p0) => _this.requestAnimationFrame(p0),
         'org.w3c.dom.__convertKotlinClosureToJsClosure_((Double)->Unit)' : (f) => (p0) => wasmExports['__callFunction_((Double)->Unit)'](f, p0),
         'org.w3c.dom.clearTimeout_$external_fun' : (_this, p0, isDefault0) => _this.clearTimeout(isDefault0 ? undefined : p0, ),
+        'org.w3c.dom.fetch_$external_fun' : (_this, p0, p1, isDefault0) => _this.fetch(p0, isDefault0 ? undefined : p1, ),
         'org.w3c.dom.documentElement_$external_prop_getter' : (_this) => _this.documentElement,
         'org.w3c.dom.head_$external_prop_getter' : (_this) => _this.head,
         'org.w3c.dom.createElement_$external_fun' : (_this, p0, p1, isDefault0) => _this.createElement(p0, isDefault0 ? undefined : p1, ),
@@ -166,14 +179,10 @@ export async function instantiate(imports={}, runInitializer=true) {
         'org.w3c.dom.height_$external_prop_getter' : (_this) => _this.height,
         'org.w3c.dom.height_$external_prop_setter' : (_this, v) => _this.height = v,
         'org.w3c.dom.HTMLCanvasElement_$external_class_instanceof' : (x) => x instanceof HTMLCanvasElement,
+        'org.w3c.fetch.ok_$external_prop_getter' : (_this) => _this.ok,
+        'org.w3c.fetch.arrayBuffer_$external_fun' : (_this, ) => _this.arrayBuffer(),
         'org.w3c.performance.performance_$external_prop_getter' : (_this) => _this.performance,
         'org.w3c.performance.now_$external_fun' : (_this, ) => _this.now(),
-        'org.w3c.xhr.XMLHttpRequest_$external_fun' : () => new XMLHttpRequest(),
-        'org.w3c.xhr.responseType_$external_prop_setter' : (_this, v) => _this.responseType = v,
-        'org.w3c.xhr.response_$external_prop_getter' : (_this) => _this.response,
-        'org.w3c.xhr.open_$external_fun' : (_this, p0, p1, p2, p3, p4, isDefault0, isDefault1) => _this.open(p0, p1, p2, isDefault0 ? undefined : p3, isDefault1 ? undefined : p4, ),
-        'org.w3c.xhr.send_$external_fun' : (_this, p0) => _this.send(p0),
-        'org.w3c.xhr.onload_$external_prop_setter' : (_this, v) => _this.onload = v,
         'kotlinx.coroutines.tryGetProcess' : () => (typeof(process) !== 'undefined' && typeof(process.nextTick) === 'function') ? process : null,
         'kotlinx.coroutines.tryGetWindow' : () => (typeof(window) !== 'undefined' && window != null && typeof(window.addEventListener) === 'function') ? window : null,
         'kotlinx.coroutines.nextTick_$external_fun' : (_this, p0) => _this.nextTick(p0),
