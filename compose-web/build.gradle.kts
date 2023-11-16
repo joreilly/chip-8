@@ -43,3 +43,8 @@ kotlin {
 compose.experimental {
     web.application {}
 }
+
+compose {
+    kotlinCompilerPlugin.set("1.5.4-dev1-kt2.0.0-Beta1")
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=2.0.0-Beta1")
+}
