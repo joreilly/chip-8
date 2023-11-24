@@ -11,10 +11,10 @@ version = "1.0-SNAPSHOT"
 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
 kotlin {
     wasmJs {
-        moduleName = "Chip8"
+        moduleName = "chip8"
         browser {
             commonWebpackConfig {
-                outputFileName = "Chip8.js"
+                outputFileName = "chip8.js"
                 devServer = (devServer ?: KotlinWebpackConfig.DevServer()).copy(
                     static = (devServer?.static ?: mutableListOf()).apply {
                         // Serve sources to debug inside browser
