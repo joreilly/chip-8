@@ -1,4 +1,4 @@
-import { instantiate } from './Chip8.uninstantiated.mjs';
+import { instantiate } from './chip8.uninstantiated.mjs';
 
 await wasmSetup;
 
