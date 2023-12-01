@@ -1,7 +1,7 @@
 
 object Versions {
     const val kotlin = "2.0.0-Beta1"
-    const val kotlinxCoroutines = "1.7.3"
+    const val kotlinxCoroutines = "1.8.0-RC"
 
     const val compose = "1.5.3"
     const val composeCompiler = "1.5.5-dev-k2.0.0-Beta1-06b8ae672a4"
