@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version Versions.composeMultiplatform
+    id("org.jetbrains.compose") version libs.versions.composeMultiplatform
 }
 
 group = "com.example"

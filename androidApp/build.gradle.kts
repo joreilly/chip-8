@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk = AndroidSdk.compile
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "dev.johnoreilly.chip8"
-        minSdk = AndroidSdk.min
-        targetSdk = AndroidSdk.target
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
 
         versionCode = 1
         versionName = "1.0"
@@ -20,7 +20,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.composeCompiler
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
     }
 
     buildTypes {
@@ -41,22 +41,16 @@ android {
 
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
 
-    implementation(Compose.ui)
-    implementation(Compose.uiGraphics)
-    implementation(Compose.uiTooling)
-    implementation(Compose.foundationLayout)
-    implementation(Compose.material)
-    implementation(Compose.materialIconsExtended)
-    implementation(Compose.navigation)
-
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("androidx.test:core:1.5.0")
-    testImplementation("org.robolectric:robolectric:4.10.3")
-    androidTestImplementation("androidx.test:runner:1.5.2")
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.compose.foundation.layout)
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling)
+    implementation(libs.androidx.navigation.compose)
 
     implementation(project(":shared"))
 }

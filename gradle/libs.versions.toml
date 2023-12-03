@@ -1,0 +1,37 @@
+[versions]
+kotlin = "2.0.0-Beta1"
+coroutines = "1.8.0-RC"
+
+androidxActivity = "1.8.1"
+androidxComposeBom = "2023.10.01"
+androidxNavigationCompose = "2.7.5"
+androidxComposeCompiler = "1.5.5-dev-k2.0.0-Beta1-06b8ae672a4"
+navCompose = "2.5.2"
+composeMultiplatform = "1.5.10-dev-wasm03"
+wearCompose = "1.1.0"
+
+junit = "4.13"
+
+minSdk = "21"
+minSdkWear = "28"
+targetSdk = "34"
+compileSdk = "34"
+
+
+[libraries]
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+androidx-compose-material = { group = "androidx.compose.material", name = "material" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigationCompose" }
+
+wear-compose-founndation = { module = "androidx.wear.compose:compose-foundation", version.ref = "wearCompose" }
+wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "wearCompose" }
+wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "wearCompose" }
