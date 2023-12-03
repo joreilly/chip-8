@@ -1,12 +1,12 @@
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version Versions.composeMultiplatform
+    id("org.jetbrains.compose") version libs.versions.composeMultiplatform
     application
 }
 
 dependencies {
     implementation(project(":shared"))
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:${Versions.kotlinxCoroutines}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:${libs.versions.coroutines}")
     implementation(compose.desktop.currentOs)
 }
 

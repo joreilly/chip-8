@@ -28,7 +28,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0-RC")
+                implementation(libs.kotlinx.coroutines)
                 implementation("org.jetbrains.kotlinx:atomicfu:0.23.1")
                 api("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.4-wasm0")
             }

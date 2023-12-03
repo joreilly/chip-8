@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace = "dev.johnoreilly.chip8"
-    compileSdk = AndroidSdk.compile
+    compileSdk = libs.versions.compileSdk.get().toInt()
     defaultConfig {
         applicationId = "dev.johnoreilly.chip8"
-        minSdk = AndroidSdk.minWear
-        targetSdk = AndroidSdk.target
+        minSdk = libs.versions.minSdkWear.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
 
         versionCode = 1
         versionName = "1.0"
@@ -20,7 +20,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Versions.composeCompiler
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
     }
 
     buildTypes {
@@ -39,17 +39,15 @@ android {
 dependencies {
     implementation(project(":shared"))
 
-    with (Compose) {
-        implementation(ui)
-        implementation(uiGraphics)
-        implementation(uiTooling)
-        implementation(foundationLayout)
-        implementation(activityCompose)
-        implementation(materialIconsExtended)
-        implementation(wearFoundation)
-        implementation(wearMaterial)
-        implementation(wearNavigation)
-    }
+    implementation(libs.androidx.activity.compose)
+
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.material.iconsExtended)
+
+    implementation(libs.wear.compose.founndation)
+    implementation(libs.wear.compose.material)
+    implementation(libs.wear.compose.navigation)
+
 
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
 }
