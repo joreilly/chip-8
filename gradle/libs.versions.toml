@@ -7,7 +7,7 @@ androidxComposeBom = "2023.10.01"
 androidxNavigationCompose = "2.7.5"
 androidxComposeCompiler = "1.5.5-dev-k2.0.0-Beta1-06b8ae672a4"
 navCompose = "2.5.2"
-composeMultiplatform = "1.5.10-dev-wasm03"
+composeMultiplatform = "1.6.0-alpha01"
 wearCompose = "1.1.0"
 
 junit = "4.13"
