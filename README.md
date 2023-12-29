@@ -12,7 +12,7 @@ Current clients
 * Desktop (Compose for Desktop)
 * Web (Wasm based Compose for Web)
 
-(The game emulator has virtual "keyboard" interface. In the desktop client game is typically driven by 4, 5, and 6
+(The game emulator has virtual "keyboard" interface. In the desktop client game is typically driven by <kbd>4</kbd>, <kbd>5</kbd>, and <kbd>6</kbd>
 keys...on mobile these are simulated with buttons)
 
 ![Screenshots](/art/screenshots.png?raw=true)
