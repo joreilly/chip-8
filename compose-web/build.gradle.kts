@@ -15,12 +15,12 @@ kotlin {
         browser {
             commonWebpackConfig {
                 outputFileName = "chip8.js"
-                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).copy(
-                    static = (devServer?.static ?: mutableListOf()).apply {
-                        // Serve sources to debug inside browser
-                        add(project.rootDir.path)
-                        add(project.rootDir.path + "/compose-web/")
-                    },)
+//                devServer = (devServer ?: KotlinWebpackConfig.DevServer()).copy(
+//                    static = (devServer?.static ?: mutableListOf()).apply {
+//                        // Serve sources to debug inside browser
+//                        add(project.rootDir.path)
+//                        add(project.rootDir.path + "/compose-web/")
+//                    },)
 
             }
         }
