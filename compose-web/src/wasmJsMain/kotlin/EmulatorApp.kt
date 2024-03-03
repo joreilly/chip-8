@@ -25,7 +25,8 @@ import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
 import kotlinx.collections.immutable.ImmutableList
 import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.resource
+import org.jetbrains.compose.resources.InternalResourceApi
+import org.jetbrains.compose.resources.readResourceBytes
 
 
 @Composable
@@ -74,9 +75,9 @@ fun EmulatorApp() {
     }
 }
 
-@OptIn(ExperimentalResourceApi::class)
+@OptIn(ExperimentalResourceApi::class, InternalResourceApi::class)
 private suspend fun getRomData(gameName: String): ByteArray {
-    return resource("${gameName}.ch8").readBytes()
+    return  readResourceBytes("${gameName}.ch8")
 }
 
 @Composable
