@@ -1,18 +1,18 @@
 [versions]
-kotlin = "2.0.0-Beta1"
-coroutines = "1.8.0"
+kotlin = "2.0.0"
+coroutines = "1.8.1"
 
-androidxActivity = "1.8.2"
-androidxComposeBom = "2024.02.01"
+androidGradlePlugin = "8.4.1"
+androidxActivity = "1.9.0"
+androidxComposeBom = "2024.05.00"
 androidxNavigationCompose = "2.7.7"
-androidxComposeCompiler = "1.5.5-dev-k2.0.0-Beta1-06b8ae672a4"
 navCompose = "2.5.2"
-composeMultiplatform = "1.6.0"
-wearCompose = "1.3.0"
+compose-multiplatform = "1.6.10"
+wearCompose = "1.3.1"
 
 junit = "4.13"
 
-minSdk = "21"
+minSdk = "24"
 minSdkWear = "28"
 targetSdk = "34"
 compileSdk = "34"
@@ -35,3 +35,10 @@ androidx-navigation-compose = { module = "androidx.navigation:navigation-compose
 wear-compose-founndation = { module = "androidx.wear.compose:compose-foundation", version.ref = "wearCompose" }
 wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "wearCompose" }
 wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "wearCompose" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
