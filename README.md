@@ -1,6 +1,6 @@
 # Chip-8 Kotlin Multiplatform
 
-![kotlin-version](https://img.shields.io/badge/kotlin-1.9.20-blue)
+![kotlin-version](https://img.shields.io/badge/kotlin-2.0.0-blue?logo=kotlin)
 
 Kotlin Multiplatform fork of https://github.com/cbeust/chip-8
 ([Chip-8](http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf) emulator)
@@ -24,11 +24,16 @@ keys...on mobile these are simulated with buttons)
 
 
 
-# Other Kotlin Multiplatform samples
-* [PeopleInSpace](https://github.com/joreilly/PeopleInSpace)
-* [BikeShare](https://github.com/joreilly/BikeShare)
-* [FantasyPremierLeague](https://github.com/joreilly/FantasyPremierLeague)
-* [MortyComposeKMM](https://github.com/joreilly/MortyComposeKMM)
-* [StarWars](https://github.com/joreilly/StarWars)
-* [Confetti](https://github.com/joreilly/Confetti)
-* [GalwayBus](https://github.com/joreilly/GalwayBus)
+## Full set of Kotlin Multiplatform/Compose/SwiftUI samples
+
+*  PeopleInSpace (https://github.com/joreilly/PeopleInSpace)
+*  GalwayBus (https://github.com/joreilly/GalwayBus)
+*  Confetti (https://github.com/joreilly/Confetti)
+*  BikeShare (https://github.com/joreilly/BikeShare)
+*  FantasyPremierLeague (https://github.com/joreilly/FantasyPremierLeague)
+*  ClimateTrace (https://github.com/joreilly/ClimateTraceKMP)
+*  GeminiKMP (https://github.com/joreilly/GeminiKMP)
+*  MortyComposeKMM (https://github.com/joreilly/MortyComposeKMM)
+*  StarWars (https://github.com/joreilly/StarWars)
+*  WordMasterKMP (https://github.com/joreilly/WordMasterKMP)
+*  Chip-8 (https://github.com/joreilly/chip-8)

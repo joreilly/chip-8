@@ -1,7 +1,8 @@
 plugins {
     kotlin("jvm")
-    id("org.jetbrains.compose") version libs.versions.composeMultiplatform
     application
+    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.jetbrainsCompose)
 }
 
 dependencies {
@@ -16,7 +17,3 @@ application {
 
 tasks.getByName<JavaExec>("run").workingDir=project.rootDir
 
-compose {
-    kotlinCompilerPlugin.set("1.5.4-dev1-kt2.0.0-Beta1")
-    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=2.0.0-Beta1")
-}
