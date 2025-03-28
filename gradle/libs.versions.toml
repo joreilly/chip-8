@@ -1,21 +1,21 @@
 [versions]
-kotlin = "2.0.20"
-coroutines = "1.9.0"
+kotlin = "2.1.20"
+coroutines = "1.10.1"
 
-androidGradlePlugin = "8.5.2"
-androidxActivity = "1.9.2"
-androidxComposeBom = "2024.09.02"
-androidxNavigationCompose = "2.8.1"
+androidGradlePlugin = "8.9.1"
+androidxActivity = "1.10.1"
+androidxComposeBom = "2025.03.01"
+androidxNavigationCompose = "2.8.9"
 navCompose = "2.5.2"
 compose-multiplatform = "1.6.10"
-wearCompose = "1.4.0"
+wearCompose = "1.4.1"
 
 junit = "4.13"
 
 minSdk = "24"
 minSdkWear = "28"
-targetSdk = "34"
-compileSdk = "34"
+targetSdk = "35"
+compileSdk = "35"
 
 
 [libraries]
