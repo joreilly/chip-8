@@ -8,11 +8,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.runtime.*
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -57,9 +57,9 @@ fun MainLayout(romData: ByteArray) {
         EmulatorView(emulator)
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
-            GameButton(emulator, 4, Icons.Filled.ArrowBack)
+            GameButton(emulator, 4, Icons.AutoMirrored.Filled.ArrowBack)
             GameButton(emulator, 5, Icons.Filled.ArrowUpward)
-            GameButton(emulator, 6, Icons.Filled.ArrowForward)
+            GameButton(emulator, 6, Icons.AutoMirrored.Filled.ArrowForward)
         }
     }
 }
@@ -95,27 +95,23 @@ fun EmulatorView(emulator: Emulator) {
     val displayHeight = Display.HEIGHT
 
     screenData.value?.let { screenData ->
-        BoxWithConstraints {
+        Canvas(modifier = Modifier.fillMaxWidth()) {
+            val blockSize = size.width / displayWidth
 
-            Canvas(modifier = Modifier.fillMaxWidth()) {
-                val blockSize = size.width / displayWidth
+            repeat(displayWidth) { x ->
+                repeat(displayHeight) { y ->
+                    val index = x + displayWidth * y
+                    if (screenData[index]) {
+                        val xx = blockSize * x.toFloat()
+                        val yy = blockSize * y.toFloat()
 
-                repeat(displayWidth) { x ->
-                    repeat(displayHeight) { y ->
-                        val index = x + displayWidth * y
-                        if (screenData[index]) {
-                            val xx = blockSize * x.toFloat()
-                            val yy = blockSize * y.toFloat()
-
-                            drawRect(Color.Black, topLeft = Offset(xx, yy),
-                                size = Size(blockSize, blockSize))
-                        }
+                        drawRect(Color.Black, topLeft = Offset(xx, yy),
+                            size = Size(blockSize, blockSize))
                     }
                 }
             }
         }
     }
-
 }
 
 
