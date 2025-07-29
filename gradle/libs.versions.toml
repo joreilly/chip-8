@@ -1,6 +1,7 @@
 [versions]
-kotlin = "2.2.0"
+kotlin = "2.2.20-Beta2"
 coroutines = "1.10.2"
+collections-immutable = "0.4-wasm0"
 
 androidGradlePlugin = "8.11.1"
 androidxActivity = "1.10.1"
@@ -17,6 +18,7 @@ compileSdk = "36"
 
 [libraries]
 kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-collections-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "collections-immutable" }
 
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
