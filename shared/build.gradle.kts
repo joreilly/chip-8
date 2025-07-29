@@ -1,6 +1,7 @@
-@file:OptIn(ExperimentalWasmDsl::class)
+@file:OptIn(ExperimentalWasmDsl::class, ExperimentalKotlinGradlePluginApi::class)
 
-import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform")
@@ -8,11 +9,7 @@ plugins {
 }
 
 kotlin {
-    jvmToolchain(17)
-
     androidTarget()
-    jvm()
-
     listOf(
         iosArm64(), iosX64(), iosSimulatorArm64()
     ).forEach {
@@ -20,24 +17,19 @@ kotlin {
             baseName = "shared"
         }
     }
-
+    jvm()
     wasmJs {
         browser()
     }
 
-    sourceSets {
-        commonMain {
-            dependencies {
-                implementation(libs.kotlinx.coroutines)
-                implementation("org.jetbrains.kotlinx:atomicfu:0.23.1")
-                api("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.4-wasm0")
-            }
-        }
+    dependencies {
+        implementation(libs.kotlinx.coroutines)
+        api(libs.kotlinx.collections.immutable)
     }
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 36
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = 21
