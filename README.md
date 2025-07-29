@@ -1,6 +1,6 @@
 # Chip-8 Kotlin Multiplatform
 
-![kotlin-version](https://img.shields.io/badge/kotlin-2.2.0-blue?logo=kotlin)
+![kotlin-version](https://img.shields.io/badge/kotlin-2.2.20-Beta2-blue?logo=kotlin)
 
 Kotlin Multiplatform fork of https://github.com/cbeust/chip-8
 ([Chip-8](http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf) emulator)
