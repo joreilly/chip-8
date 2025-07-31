@@ -2,6 +2,7 @@
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
 
 plugins {
     kotlin("multiplatform")
@@ -10,16 +11,19 @@ plugins {
 
 kotlin {
     androidTarget()
-    listOf(
-        iosArm64(), iosX64(), iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
-        }
-    }
+    iosArm64()
+    iosX64()
+    iosSimulatorArm64()
     jvm()
     wasmJs {
         browser()
+    }
+
+    @OptIn(ExperimentalSwiftExportDsl::class)
+    swiftExport {
+        moduleName = "Shared"
+
+        flattenPackage = "dev.johnoreilly.chip8"
     }
 
     dependencies {

@@ -1,6 +1,6 @@
 package com.beust.chip8
 
-class FrameBuffer {
+internal class FrameBuffer {
     companion object {
         const val WIDTH = 64
         const val HEIGHT = 32

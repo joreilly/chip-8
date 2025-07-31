@@ -1,6 +1,6 @@
 # Chip-8 Kotlin Multiplatform
 
-![kotlin-version](https://img.shields.io/badge/kotlin-2.2.20-blue?logo=kotlin)
+![kotlin-version](https://img.shields.io/badge/kotlin-2.3.0-Dev-blue?logo=kotlin)
 
 Kotlin Multiplatform fork of https://github.com/cbeust/chip-8
 ([Chip-8](http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf) emulator)
@@ -37,3 +37,4 @@ keys...on mobile these are simulated with buttons)
 *  StarWars (https://github.com/joreilly/StarWars)
 *  WordMasterKMP (https://github.com/joreilly/WordMasterKMP)
 *  Chip-8 (https://github.com/joreilly/chip-8)
+*  FirebaseAILogicKMPSample (https://github.com/joreilly/FirebaseAILogicKMPSample)

@@ -1,5 +1,6 @@
 package dev.johnoreilly.chip8
 
+import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Computer
 import com.beust.chip8.Display
 import kotlinx.collections.immutable.ImmutableList
@@ -18,11 +19,11 @@ class Emulator {
         computer.stop()
     }
 
-    fun disassemble(): List<Computer.AssemblyLine> {
+    fun disassemble(): List<AssemblyLine> {
         return computer.disassemble()
     }
 
-    fun observeScreenUpdates(success: (ImmutableList<Boolean>) -> Unit) {
+    fun observeScreenUpdates(success: (List<Boolean>) -> Unit) {
         display.setScreenCallback {
             success(it)
         }
