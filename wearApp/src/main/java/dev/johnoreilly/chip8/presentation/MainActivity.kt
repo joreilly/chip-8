@@ -79,7 +79,7 @@ fun MainLayout(romData: ByteArray) {
 fun EmulatorView(emulator: Emulator) {
     val focusRequester = remember { FocusRequester() }
 
-    val screenData = produceState<ImmutableList<Boolean>?>(null, emulator) {
+    val screenData = produceState<List<Boolean>?>(null, emulator) {
         emulator.observeScreenUpdates {
             value = it
         }

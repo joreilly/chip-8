@@ -1,5 +1,5 @@
 import SwiftUI
-import shared
+import Shared
 
 
 struct ContentView: View {
@@ -50,7 +50,7 @@ struct GameButton: View {
 
 
 struct EmulatorView: View {
-    let screenData: [KotlinBoolean]
+    let screenData: [Bool]
     
     var body: some View {
         let displayWidth = 64

@@ -19,7 +19,7 @@ import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.beust.chip8.Computer
+import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Display
 import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
@@ -34,7 +34,7 @@ fun EmulatorApp() {
     val emulator = remember { Emulator() }
 
     var gameNames by remember { mutableStateOf(emptyList<String>()) }
-    var disassembly by remember { mutableStateOf(emptyList<Computer.AssemblyLine>()) }
+    var disassembly by remember { mutableStateOf(emptyList<AssemblyLine>()) }
     var selectedGame by remember { mutableStateOf("") }
 
     LaunchedEffect(true) {
@@ -81,7 +81,7 @@ private suspend fun getRomData(gameName: String): ByteArray {
 }
 
 @Composable
-fun DisassemblyInfo(disassembly: List<Computer.AssemblyLine>) {
+fun DisassemblyInfo(disassembly: List<AssemblyLine>) {
 
     LazyColumn(
         modifier = Modifier
@@ -181,7 +181,7 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screenData = produceState<ImmutableList<Boolean>?>(null, gameName) {
+    val screenData = produceState<List<Boolean>?>(null, gameName) {
         emulator.observeScreenUpdates {
             value = it
         }

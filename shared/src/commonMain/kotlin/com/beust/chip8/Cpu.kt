@@ -2,7 +2,7 @@ package com.beust.chip8
 
 
 @Suppress("PropertyName")
-class Cpu {
+internal class Cpu {
     private val PC_START = 0x200
 
     /** Program counter */

@@ -1,24 +1,20 @@
 import Foundation
-import shared
+import Shared
+import KotlinStdlib
 
 class EmulatorViewModel: ObservableObject {
-    @Published var screenData = [KotlinBoolean](repeating: false, count: 2048)
+    @Published var screenData = [Bool](repeating: false, count: 2048)
     
     private let emulator: Emulator
     init(emulator: Emulator) {
         self.emulator = emulator
         
         if let data = loadFile() {
-            let intArray : [Int8] = data.map { Int8(bitPattern: $0) }
-            let kotlinByteArray: KotlinByteArray = KotlinByteArray.init(size: Int32(data.count))
-            for (index, element) in intArray.enumerated() {
-                kotlinByteArray.set(index: Int32(index), value: element)
-            }
-            self.emulator.loadRom(romData: kotlinByteArray)
+            self.emulator.loadRom(romData: convertNSDataToByteArray(data: data as NSData))
 
             self.emulator.observeScreenUpdates(success: { screenData in
                 self.screenData = screenData
-            })            
+            })
         }
     }
     

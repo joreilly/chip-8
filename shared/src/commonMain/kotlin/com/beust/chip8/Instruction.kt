@@ -21,7 +21,7 @@ class Nibbles(private val b0: Int, val b1: Int, val b2: Int, val b3: Int) {
     override fun toString() = (b0.shl(4) + b1).h + " " + (b2.shl(4) + b3).h
 }
 
-class Instruction(private val computer: Computer, b0: Int, b1: Int, b2: Int, b3: Int) {
+internal class Instruction(private val computer: Computer, b0: Int, b1: Int, b2: Int, b3: Int) {
     private val op: Op
 
     init {

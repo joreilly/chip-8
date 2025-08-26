@@ -10,7 +10,11 @@ interface ComputerListener {
     fun onStart() {}
 }
 
-class Computer(val display: Display,
+
+data class AssemblyLine(val counter: Int, val byte0: Byte, val byte1: Byte, val name: String)
+
+
+internal class Computer(val display: Display,
         val keyboard: Keyboard = Keyboard(),
         val frameBuffer: FrameBuffer = FrameBuffer(),
         var cpu: Cpu = Cpu(),
@@ -91,7 +95,6 @@ class Computer(val display: Display,
         }
     }
 
-    data class AssemblyLine(val counter: Int, val byte0: Byte, val byte1: Byte, val name: String)
 
     fun disassemble(p: Int = cpu.PC): List<AssemblyLine> {
         var pc = p
