@@ -23,7 +23,8 @@ kotlin {
     swiftExport {
         moduleName = "Shared"
 
-        flattenPackage = "dev.johnoreilly.chip8"
+        // see https://youtrack.jetbrains.com/issue/KT-81270#focus=Comments-27-12735527.0-0
+        //flattenPackage = "dev.johnoreilly.chip8"
     }
 
     dependencies {

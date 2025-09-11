@@ -1,9 +1,10 @@
 import Foundation
 import Shared
 import KotlinStdlib
+internal import Combine
 
 class EmulatorViewModel: ObservableObject {
-    //@Published var screenData = [Bool](repeating: false, count: 2048)
+    @Published var screenData = [Bool](repeating: false, count: 2048)
     
     private let emulator: Emulator
     init(emulator: Emulator) {
