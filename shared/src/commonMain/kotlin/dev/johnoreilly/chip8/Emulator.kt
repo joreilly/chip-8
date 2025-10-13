@@ -5,6 +5,7 @@ import com.beust.chip8.Computer
 import com.beust.chip8.Display
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
+import kotlinx.coroutines.delay
 
 class Emulator {
     private val display = ComposeDisplay()
@@ -17,6 +18,14 @@ class Emulator {
 
     fun stop() {
         computer.stop()
+    }
+
+
+    // testing calling suspend functions using Swift Export
+    suspend fun testSuspendFun(): Int {
+        println("testSuspendFun")
+        delay(1000)
+        return 42
     }
 
     fun disassemble(): List<AssemblyLine> {

@@ -1,7 +1,9 @@
 import Foundation
-import Shared
+@preconcurrency import Shared
 import KotlinStdlib
 
+
+@MainActor
 class EmulatorViewModel: ObservableObject {
     @Published var screenData = [Bool](repeating: false, count: 2048)
     
@@ -16,6 +18,12 @@ class EmulatorViewModel: ObservableObject {
                 self.screenData = screenData
             })
         }
+    }
+    
+    
+    func testAsyncFunction() async {
+        let result = await emulator.testSuspendFun()
+        print("Result: \(result)")
     }
     
     func keyPressed(key: Int32) {

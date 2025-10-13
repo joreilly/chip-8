@@ -6,7 +6,6 @@ struct ContentView: View {
     @ObservedObject var emulatorViewModel = EmulatorViewModel(emulator: Emulator())
     
     var body: some View {
-        
         NavigationView {
             GeometryReader { geometry in
                 VStack {
@@ -22,6 +21,8 @@ struct ContentView: View {
             }
             .padding()
             .navigationBarTitle(Text("Chip-8 Emulator"))
+        }.task {
+            await emulatorViewModel.testAsyncFunction()
         }
     }
 }

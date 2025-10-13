@@ -1,8 +1,10 @@
 @file:OptIn(ExperimentalWasmDsl::class, ExperimentalKotlinGradlePluginApi::class)
+@file:Suppress("UnstableApiUsage")
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
+import org.jetbrains.kotlin.gradle.plugin.mpp.apple.swiftexport.SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON
 
 plugins {
     kotlin("multiplatform")
@@ -22,8 +24,11 @@ kotlin {
     @OptIn(ExperimentalSwiftExportDsl::class)
     swiftExport {
         moduleName = "Shared"
-
         flattenPackage = "dev.johnoreilly.chip8"
+
+        configure {
+            settings.put(SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON, "true")
+        }
     }
 
     dependencies {
