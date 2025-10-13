@@ -1,34 +1,37 @@
 import Foundation
-import Shared
+@preconcurrency import Shared
 import KotlinStdlib
 
+
+@MainActor
 class EmulatorViewModel: ObservableObject {
-    //@Published var screenData = [Bool](repeating: false, count: 2048)
+    @Published var screenData = [Bool](repeating: false, count: 2048)
     
     private let emulator: Emulator
     init(emulator: Emulator) {
         self.emulator = emulator
         
-//        if let data = loadFile() {
-//            self.emulator.loadRom(romData: convertNSDataToByteArray(data: data as NSData))
-//
-//            self.emulator.observeScreenUpdates(success: { screenData in
-//                self.screenData = screenData
-//            })
-//        }
+        if let data = loadFile() {
+            self.emulator.loadRom(romData: convertNSDataToByteArray(data: data as NSData))
+
+            self.emulator.observeScreenUpdates(success: { screenData in
+                self.screenData = screenData
+            })
+        }
+    }
+    
+    
+    func testAsyncFunction() async {
+        let result = await emulator.testSuspendFun()
+        print("Result: \(result)")
     }
     
     func keyPressed(key: Int32) {
-//        emulator.keyPressed(key: key)
-        
-//        Task {
-//            await emulator.testSuspendFun()
-//        }
-        
+        emulator.keyPressed(key: key)
     }
 
     func keyReleased() {
-        //emulator.keyReleased()
+        emulator.keyReleased()
     }
 
     func loadFile() -> Data? {

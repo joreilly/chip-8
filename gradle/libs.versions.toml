@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.3.0-dev-9823"
+kotlin = "2.3.0-Beta2-32"
 coroutines = "1.10.2"
 collections-immutable = "0.4-wasm0"
 

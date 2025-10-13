@@ -21,11 +21,12 @@ class Emulator {
     }
 
 
-    // add to test calling suspend functions using Swift Export
-//    suspend fun testSuspendFun() {
-//        delay(100)
-//        println("testSuspendFun")
-//    }
+    // testing calling suspend functions using Swift Export
+    suspend fun testSuspendFun(): Int {
+        println("testSuspendFun")
+        delay(1000)
+        return 42
+    }
 
     fun disassemble(): List<AssemblyLine> {
         return computer.disassemble()
