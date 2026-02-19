@@ -1,7 +1,5 @@
 import Foundation
-@preconcurrency import Shared
-import KotlinStdlib
-
+import Shared
 
 @MainActor
 class EmulatorViewModel: ObservableObject {
@@ -13,18 +11,18 @@ class EmulatorViewModel: ObservableObject {
         
         if let data = loadFile() {
             self.emulator.loadRom(romData: convertNSDataToByteArray(data: data as NSData))
-
-            self.emulator.observeScreenUpdates(success: { screenData in
-                self.screenData = screenData
-            })
+            
+            Task {
+                for try await screen in self.emulator.screen {
+                    let screenData = (screen as! Screen).screenData
+                    if (screenData.count > 0) {
+                        self.screenData = screenData
+                    }
+                }
+            }
         }
     }
     
-    
-    func testAsyncFunction() async {
-        let result = await emulator.testSuspendFun()
-        print("Result: \(result)")
-    }
     
     func keyPressed(key: Int32) {
         emulator.keyPressed(key: key)

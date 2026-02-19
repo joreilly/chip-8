@@ -84,16 +84,13 @@ fun GameButton(emulator: Emulator, number: Int, icon: ImageVector) {
 
 @Composable
 fun EmulatorView(emulator: Emulator) {
-    val screenData = produceState<List<Boolean>?>(null, emulator) {
-        emulator.observeScreenUpdates {
-            value = it
-        }
-    }
+    val screen by emulator.screen.collectAsState()
+    val screenData = screen.screenData
 
     val displayWidth = Display.WIDTH
     val displayHeight = Display.HEIGHT
 
-    screenData.value?.let { screenData ->
+    if (screenData.isNotEmpty()) {
         Canvas(modifier = Modifier.fillMaxWidth()) {
             val blockSize = size.width / displayWidth
 

@@ -67,7 +67,7 @@ internal class Cpu {
 
 
 // TODO move this to some utils file
-class Stack<E>{
+internal class Stack<E>{
     val elements: MutableList<E> = mutableListOf()
 
     fun isEmpty() = elements.isEmpty()

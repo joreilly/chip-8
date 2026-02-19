@@ -23,7 +23,6 @@ import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Display
 import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
-import kotlinx.collections.immutable.ImmutableList
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.InternalResourceApi
 import org.jetbrains.compose.resources.readResourceBytes
@@ -181,13 +180,10 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screenData = produceState<List<Boolean>?>(null, gameName) {
-        emulator.observeScreenUpdates {
-            value = it
-        }
-    }
+    val screen by emulator.screen.collectAsState()
+    val screenData = screen.screenData
 
-    screenData.value?.let { screenData ->
+    if (screenData.isNotEmpty()) {
         BoxWithConstraints {
             val blockWidth = constraints.maxWidth / Display.WIDTH
             val blockHeight = blockWidth
