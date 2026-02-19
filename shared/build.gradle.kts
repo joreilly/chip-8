@@ -4,7 +4,6 @@
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
-import org.jetbrains.kotlin.gradle.plugin.mpp.apple.swiftexport.SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON
 
 plugins {
     kotlin("multiplatform")
@@ -25,15 +24,10 @@ kotlin {
     swiftExport {
         moduleName = "Shared"
         flattenPackage = "dev.johnoreilly.chip8"
-
-        configure {
-            settings.put(SWIFT_EXPORT_COROUTINES_SUPPORT_TURNED_ON, "true")
-        }
     }
 
     dependencies {
         implementation(libs.kotlinx.coroutines)
-        api(libs.kotlinx.collections.immutable)
     }
 }
 

@@ -3,38 +3,35 @@ package dev.johnoreilly.chip8
 import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Computer
 import com.beust.chip8.Display
-import kotlinx.collections.immutable.ImmutableList
-import kotlinx.collections.immutable.toImmutableList
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
+data class Screen(val screenData: List<Boolean>)
 class Emulator {
     private val display = ComposeDisplay()
     private val computer = Computer(display)
 
+    private val _screen = MutableStateFlow<Screen>(Screen(emptyList()))
+    val screen: StateFlow<Screen> = _screen.asStateFlow()
+
     fun loadRom(romData: ByteArray) {
         computer.stop()
         computer.loadRom(romData)
+        observeScreenUpdates()
     }
 
     fun stop() {
         computer.stop()
     }
 
-
-    // testing calling suspend functions using Swift Export
-    suspend fun testSuspendFun(): Int {
-        println("testSuspendFun")
-        delay(1000)
-        return 42
-    }
-
     fun disassemble(): List<AssemblyLine> {
         return computer.disassemble()
     }
 
-    fun observeScreenUpdates(success: (List<Boolean>) -> Unit) {
+    private fun observeScreenUpdates() {
         display.setScreenCallback {
-            success(it)
+            _screen.value = Screen(it)
         }
     }
 
@@ -49,21 +46,21 @@ class Emulator {
 
 
 class ComposeDisplay : Display {
-    private var screenCallback: ((ImmutableList<Boolean>) -> Unit)? = null
+    private var screenCallback: ((List<Boolean>) -> Unit)? = null
 
     override fun draw(frameBuffer: IntArray) {
         val screen = ArrayList<Boolean>(Display.WIDTH * Display.HEIGHT)
         frameBuffer.forEach { value ->
             screen.add(value == 1)
         }
-        screenCallback?.invoke(screen.toImmutableList())
+        screenCallback?.invoke(screen)
     }
 
     override fun clear(frameBuffer: IntArray) {
         frameBuffer.fill(0)
     }
 
-    fun setScreenCallback(screenCallback: (ImmutableList<Boolean>) -> Unit) {
+    fun setScreenCallback(screenCallback: (List<Boolean>) -> Unit) {
         this.screenCallback = screenCallback
     }
 }

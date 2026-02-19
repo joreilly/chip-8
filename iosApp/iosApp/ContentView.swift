@@ -21,8 +21,6 @@ struct ContentView: View {
             }
             .padding()
             .navigationBarTitle(Text("Chip-8 Emulator"))
-        }.task {
-            await emulatorViewModel.testAsyncFunction()
         }
     }
 }
