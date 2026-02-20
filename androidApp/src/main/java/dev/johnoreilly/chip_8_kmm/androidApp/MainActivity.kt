@@ -25,6 +25,7 @@ import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.unit.dp
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
+import dev.johnoreilly.chip8.Screen
 
 
 class MainActivity : ComponentActivity() {
@@ -84,7 +85,7 @@ fun GameButton(emulator: Emulator, number: Int, icon: ImageVector) {
 
 @Composable
 fun EmulatorView(emulator: Emulator) {
-    val screen by emulator.screen.collectAsState()
+    val screen by emulator.screen.collectAsState(Screen(emptyList()))
     val screenData = screen.screenData
 
     val displayWidth = Display.WIDTH
