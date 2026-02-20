@@ -3,8 +3,8 @@ package dev.johnoreilly.chip8
 import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Computer
 import com.beust.chip8.Display
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 data class Screen(val screenData: List<Boolean>)
@@ -13,7 +13,7 @@ class Emulator {
     private val computer = Computer(display)
 
     private val _screen = MutableStateFlow<Screen>(Screen(emptyList()))
-    val screen: StateFlow<Screen> = _screen.asStateFlow()
+    val screen: Flow<Screen> = _screen.asStateFlow()
 
     fun loadRom(romData: ByteArray) {
         computer.stop()

@@ -23,6 +23,7 @@ import com.beust.chip8.AssemblyLine
 import com.beust.chip8.Display
 import com.beust.chip8.h
 import dev.johnoreilly.chip8.Emulator
+import dev.johnoreilly.chip8.Screen
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.InternalResourceApi
 import org.jetbrains.compose.resources.readResourceBytes
@@ -180,7 +181,7 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screen by emulator.screen.collectAsState()
+    val screen by emulator.screen.collectAsState(Screen(emptyList()))
     val screenData = screen.screenData
 
     if (screenData.isNotEmpty()) {

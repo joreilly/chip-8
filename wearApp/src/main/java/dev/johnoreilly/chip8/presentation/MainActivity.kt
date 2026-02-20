@@ -34,6 +34,7 @@ import androidx.wear.compose.material.Icon
 import androidx.wear.compose.material.OutlinedButton
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
+import dev.johnoreilly.chip8.Screen
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 
@@ -80,7 +81,7 @@ fun MainLayout(romData: ByteArray) {
 fun EmulatorView(emulator: Emulator) {
     val focusRequester = remember { FocusRequester() }
 
-    val screen by emulator.screen.collectAsState()
+    val screen by emulator.screen.collectAsState(Screen(emptyList()))
     val screenData = screen.screenData
 
     val displayWidth = Display.WIDTH

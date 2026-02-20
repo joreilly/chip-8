@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.*
 import com.beust.chip8.Display
 import dev.johnoreilly.chip8.Emulator
+import dev.johnoreilly.chip8.Screen
 import kotlinx.coroutines.flow.filterNotNull
 import theme.SlackColors
 import theme.divider
@@ -163,7 +164,7 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screen by emulator.screen.collectAsState()
+    val screen by emulator.screen.collectAsState(Screen(emptyList()))
     val screenData = screen.screenData
 
     if (screenData.isNotEmpty()) {
