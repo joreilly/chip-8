@@ -14,8 +14,7 @@ class EmulatorViewModel: ObservableObject {
             
             Task {
                 for try await screen in self.emulator.screen {
-                    let screenData = screen.screenData
-                    if (screenData.count > 0) {
+                    if let screenData = screen?.screenData {
                         self.screenData = screenData
                     }
                 }

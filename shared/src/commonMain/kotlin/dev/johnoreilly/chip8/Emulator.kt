@@ -12,8 +12,8 @@ class Emulator {
     private val display = ComposeDisplay()
     private val computer = Computer(display)
 
-    private val _screen = MutableStateFlow<Screen>(Screen(emptyList()))
-    val screen: Flow<Screen> = _screen.asStateFlow()
+    private val _screen = MutableStateFlow<Screen?>(null)
+    val screen: Flow<Screen?> = _screen.asStateFlow()
 
     fun loadRom(romData: ByteArray) {
         computer.stop()

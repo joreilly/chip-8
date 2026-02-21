@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.4.0-dev-3656"
+kotlin = "2.4.0-dev-4131"
 coroutines = "1.10.2"
 collections-immutable = "0.4-wasm0"
 

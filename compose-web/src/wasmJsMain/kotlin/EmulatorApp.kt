@@ -181,8 +181,8 @@ fun GameWindow(emulator: Emulator, gameName: String) {
 
 @Composable
 fun EmulatorView(emulator: Emulator, gameName: String) {
-    val screen by emulator.screen.collectAsState(Screen(emptyList()))
-    val screenData = screen.screenData
+    val screen by emulator.screen.collectAsState(null)
+    val screenData = screen?.screenData ?: emptyList()
 
     if (screenData.isNotEmpty()) {
         BoxWithConstraints {

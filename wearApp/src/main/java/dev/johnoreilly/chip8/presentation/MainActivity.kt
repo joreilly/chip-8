@@ -81,8 +81,8 @@ fun MainLayout(romData: ByteArray) {
 fun EmulatorView(emulator: Emulator) {
     val focusRequester = remember { FocusRequester() }
 
-    val screen by emulator.screen.collectAsState(Screen(emptyList()))
-    val screenData = screen.screenData
+    val screen by emulator.screen.collectAsState(null)
+    val screenData = screen?.screenData ?: emptyList()
 
     val displayWidth = Display.WIDTH
     val displayHeight = Display.HEIGHT
