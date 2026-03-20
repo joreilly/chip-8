@@ -14,10 +14,10 @@
             filePath = "iosApp/EmulatorViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "EmulatorViewModel"
-            landmarkType = "3">
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "keyReleased()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,6 +114,64 @@
             endingLineNumber = "16"
             landmarkName = "init(emulator:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6320C84A-1C8D-4435-9593-BD5E7FAD7E4F - a18984cd873eb16a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 () async throws -&gt; () in iosApp.EmulatorViewModel.init(emulator: ExportedKotlinPackages.dev.johnoreilly.chip8.Emulator) -&gt; iosApp.EmulatorViewModel"
+                  moduleName = "iosApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joreilly/dev/github/chip-8/iosApp/iosApp/EmulatorViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "6320C84A-1C8D-4435-9593-BD5E7FAD7E4F - 990491573e7c16a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 () async throws -&gt; () in iosApp.EmulatorViewModel.init(emulator: ExportedKotlinPackages.dev.johnoreilly.chip8.Emulator) -&gt; iosApp.EmulatorViewModel"
+                  moduleName = "iosApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joreilly/dev/github/chip-8/iosApp/iosApp/EmulatorViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "6320C84A-1C8D-4435-9593-BD5E7FAD7E4F - 9a0181c76368f5ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 () async throws -&gt; () in iosApp.EmulatorViewModel.init(emulator: ExportedKotlinPackages.dev.johnoreilly.chip8.Emulator) -&gt; iosApp.EmulatorViewModel"
+                  moduleName = "iosApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joreilly/dev/github/chip-8/iosApp/iosApp/EmulatorViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16">
+               </Location>
+               <Location
+                  uuid = "6320C84A-1C8D-4435-9593-BD5E7FAD7E4F - f9459f5a5d7e05bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 () async throws -&gt; () in iosApp.EmulatorViewModel.init(emulator: ExportedKotlinPackages.dev.johnoreilly.chip8.Emulator) -&gt; iosApp.EmulatorViewModel"
+                  moduleName = "iosApp.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joreilly/dev/github/chip-8/iosApp/iosApp/EmulatorViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

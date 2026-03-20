@@ -38,7 +38,7 @@ kotlin {
     }
 }
 
-compose.experimental {
-    web.application {}
-}
+//compose.experimental {
+//    web.application {}
+//}
 
