@@ -13,7 +13,7 @@ class EmulatorViewModel: ObservableObject {
             self.emulator.loadRom(romData: convertNSDataToByteArray(data: data as NSData))
             
             Task {
-                for try await screen in self.emulator.screen {
+                for try await screen in self.emulator.screen.asAsyncSequence() {
                     let screenData = screen.screenData
                     if (screenData.count > 0) {
                         self.screenData = screenData
