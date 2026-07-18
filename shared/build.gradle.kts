@@ -3,7 +3,6 @@
 
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl
 
 plugins {
     kotlin("multiplatform")
@@ -20,7 +19,6 @@ kotlin {
         browser()
     }
 
-    @OptIn(ExperimentalSwiftExportDsl::class)
     swiftExport {
         moduleName = "Shared"
         flattenPackage = "dev.johnoreilly.chip8"
