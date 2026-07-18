@@ -3,7 +3,7 @@
 ![kotlin-version](https://img.shields.io/badge/kotlin-2.4.20-blue?logo=kotlin)
 
 Kotlin Multiplatform fork of https://github.com/cbeust/chip-8
-([Chip-8](http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf) emulator)
+([Chip-8](http://www.cs.columbia.edu/~sedwards/classes/2016/4840-spring/designs/Chip8.pdf) emulator).  This project is also being used to try out Swift Export.
 
 Current clients
 * Android (Jetpack Compose)
