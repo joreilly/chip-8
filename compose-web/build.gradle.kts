@@ -28,11 +28,7 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material)
-                api(compose.components.resources)
-                implementation(project(":shared"))
+                implementation(project(":shared-ui"))
             }
         }
     }

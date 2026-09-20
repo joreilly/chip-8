@@ -12,8 +12,17 @@ Current clients
 * Desktop (Compose for Desktop)
 * Web (Wasm based Compose for Web)
 
-(The game emulator has virtual "keyboard" interface. In the desktop client game is typically driven by <kbd>4</kbd>, <kbd>5</kbd>, and <kbd>6</kbd>
-keys...on mobile these are simulated with buttons)
+The Android, Desktop and Web clients share a single Compose Multiplatform UI (`shared-ui`),
+with a bundled rom library, a phosphor CRT style display, and pause/restart/speed controls.
+
+Chip-8 machines have a 16 key hex keypad. Each bundled rom knows which of those keys it
+actually uses, so the clients show meaningful controls rather than raw hex digits:
+
+* **Keyboard** (desktop/web): the arrow keys and <kbd>Space</kbd> are mapped to the selected
+  game's controls, and the hex keys <kbd>0</kbd>-<kbd>9</kbd> / <kbd>A</kbd>-<kbd>F</kbd>
+  always map straight through (so Space Invaders still plays on <kbd>4</kbd> <kbd>5</kbd> <kbd>6</kbd>).
+* **Touch**: on-screen buttons for the current game, or the full 4x4 hex keypad via the toggle
+  in the app bar.
 
 ![Screenshots](/art/screenshots.png?raw=true)
 

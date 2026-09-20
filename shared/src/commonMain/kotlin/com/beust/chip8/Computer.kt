@@ -8,6 +8,7 @@ import kotlinx.coroutines.*
 interface ComputerListener {
     fun onPause() {}
     fun onStart() {}
+    fun onSoundChanged(isBeeping: Boolean) {}
 }
 
 
@@ -20,7 +21,25 @@ internal class Computer(val display: Display,
         var cpu: Cpu = Cpu(),
         val sound: Boolean = true)
 {
-    private var paused = true
+    var isRunning: Boolean = false
+        private set
+
+    /**
+     * How many instructions the CPU executes per second. Games were written for a wide
+     * range of real-world speeds, so this is adjustable from the UI.
+     */
+    var speedHz: Int = DEFAULT_SPEED_HZ
+        set(value) {
+            field = value.coerceIn(MIN_SPEED_HZ, MAX_SPEED_HZ)
+            if (isRunning) {
+                // Restart the loops so the new speed takes effect immediately.
+                launchTimers()
+            }
+        }
+
+    /** True while the Chip-8 sound timer is counting down, i.e. the machine is beeping. */
+    var isBeeping: Boolean = false
+        private set
 
     private var cpuTickJob: Job? = null
     private var timerFutureJob: Job? = null
@@ -32,8 +51,11 @@ internal class Computer(val display: Display,
 
     private val scope = MainScope()
 
+    fun setListener(listener: ComputerListener?) {
+        this.listener = listener
+    }
+
     fun loadRom(romData: ByteArray, launchTimers: Boolean = true) {
-        println("LoadRom")
         this.romData = romData
         resetCpu()
         if (launchTimers) {
@@ -43,6 +65,7 @@ internal class Computer(val display: Display,
 
     private fun resetCpu() {
         cpu = Cpu()
+        keyboard.releaseAll()
         romData?.let {
             cpu.loadRom(it)
         }
@@ -50,21 +73,47 @@ internal class Computer(val display: Display,
 
     fun stop() {
         pause()
+        frameBuffer.frameBuffer.fill(0)
         display.clear(frameBuffer.frameBuffer)
         resetCpu()
     }
 
+    /** Stop, clear the screen and start the currently loaded rom again from the beginning. */
+    fun reset() {
+        stop()
+        if (romData != null) {
+            start()
+        }
+    }
+
     fun pause() {
+        if (!isRunning) return
+        isRunning = false
+        cancelTimers()
+        keyboard.releaseAll()
+        setBeeping(false)
         listener?.onPause()
-        paused = true
-        cpuTickJob?.cancel()
-        timerFutureJob?.cancel()
     }
 
     fun start() {
-        listener?.onStart()
-        paused = false
+        if (isRunning) return
+        isRunning = true
         launchTimers()
+        listener?.onStart()
+    }
+
+    private fun cancelTimers() {
+        cpuTickJob?.cancel()
+        cpuTickJob = null
+        timerFutureJob?.cancel()
+        timerFutureJob = null
+    }
+
+    private fun setBeeping(beeping: Boolean) {
+        if (isBeeping != beeping) {
+            isBeeping = beeping
+            listener?.onSoundChanged(beeping)
+        }
     }
 
     private fun nextInstruction(pc: Int = cpu.PC) : Instruction {
@@ -81,25 +130,41 @@ internal class Computer(val display: Display,
     }
 
     private fun launchTimers() {
-        cpuTickJob = startCoroutineTimer(repeatMillis = 2) {
-            nextInstruction().run()
+        cancelTimers()
+
+        // Run a batch of instructions per frame rather than sleeping between each one:
+        // timer granularity (4ms+ in browsers) makes per-instruction delays wildly
+        // inaccurate, which is what made the emulator feel sluggish on some platforms.
+        val cyclesPerFrame = ((speedHz * FRAME_MILLIS) / 1000).coerceAtLeast(1).toInt()
+        cpuTickJob = startCoroutineTimer(repeatMillis = FRAME_MILLIS) {
+            repeat(cyclesPerFrame) {
+                nextInstruction().run()
+            }
         }
 
-        timerFutureJob = startCoroutineTimer(repeatMillis = 16) {
+        // The Chip-8 delay and sound timers always tick at 60Hz, independent of CPU speed.
+        timerFutureJob = startCoroutineTimer(repeatMillis = FRAME_MILLIS) {
             if (cpu.DT > 0) {
                 cpu.DT--
             }
             if (cpu.ST > 0) {
                 cpu.ST--
             }
+            setBeeping(sound && cpu.ST > 0)
         }
     }
 
 
-    fun disassemble(p: Int = cpu.PC): List<AssemblyLine> {
-        var pc = p
-        val result = arrayListOf<AssemblyLine>()
-        repeat(1024) {
+    /**
+     * Disassemble the loaded rom. Defaults to the whole rom from its load address rather
+     * than a fixed instruction count, which previously ran on past the end into garbage.
+     */
+    fun disassemble(from: Int = PROGRAM_START): List<AssemblyLine> {
+        val instructionCount = ((romData?.size ?: 0) / 2).coerceAtMost(MAX_DISASSEMBLY_LINES)
+        var pc = from
+        val result = ArrayList<AssemblyLine>(instructionCount)
+        repeat(instructionCount) {
+            if (pc + 1 >= cpu.memory.size) return result
             val inst = nextInstruction(pc)
             result.add(AssemblyLine(pc, cpu.memory[pc], cpu.memory[pc + 1], inst.toString()))
             pc += 2
@@ -119,5 +184,18 @@ internal class Computer(val display: Display,
                 action()
             }
         }
+
+    companion object {
+        /** 60Hz, the rate the Chip-8 delay and sound timers run at. */
+        private const val FRAME_MILLIS = 16L
+
+        /** Roms are loaded at 0x200; the bytes below that hold the font sprites. */
+        const val PROGRAM_START = 0x200
+        private const val MAX_DISASSEMBLY_LINES = 2048
+
+        const val MIN_SPEED_HZ = 100
+        const val DEFAULT_SPEED_HZ = 600
+        const val MAX_SPEED_HZ = 2000
+    }
 }
 

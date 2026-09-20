@@ -1,7 +1,5 @@
 package com.beust.chip8
 
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 /**
@@ -229,8 +227,12 @@ internal class Shl(c: Computer, n: Nibbles): Op(c, n) {
 /**
  * 9xy0
  * Skip next instruction if Vx != Vy.@*/
-internal class SneVxVy(c: Computer, n: Nibbles): SkipBase(c, n) {
-    override fun condition(key: Int?, expected: Int) = cpu.V[x] != cpu.V[y]
+internal class SneVxVy(c: Computer, n: Nibbles): Op(c, n) {
+    override fun run() {
+        if (cpu.V[x] != cpu.V[y]) {
+            cpu.PC += 2
+        }
+    }
     override fun toString() = "SNE V$x, V$y"
 }
 
@@ -290,14 +292,13 @@ internal class Draw(c: Computer, nib: Nibbles): Op(c, nib) {
  */
 internal abstract class SkipBase(c: Computer, n: Nibbles): Op(c, n) {
     override fun run() {
-        val key = computer.keyboard.key
         val expected = computer.cpu.V[x]
-        if (condition(key, expected)) {
+        if (condition(computer.keyboard.isPressed(expected))) {
             computer.cpu.PC += 2
         }
     }
 
-    abstract fun condition(key: Int?, expected: Int): Boolean
+    abstract fun condition(isPressed: Boolean): Boolean
 }
 
 /**
@@ -305,7 +306,7 @@ internal abstract class SkipBase(c: Computer, n: Nibbles): Op(c, n) {
  * Skip if key is pressed
  */
 internal class SkipIfPressed(c: Computer, n: Nibbles): SkipBase(c, n) {
-    override fun condition(key: Int?, expected: Int) = key != null && key == expected
+    override fun condition(isPressed: Boolean) = isPressed
     override fun toString() = "SKP V$x"
 }
 
@@ -314,7 +315,7 @@ internal class SkipIfPressed(c: Computer, n: Nibbles): SkipBase(c, n) {
  * Skip if key is not pressed
  */
 internal class SkipIfNotPressed(c: Computer, n: Nibbles): SkipBase(c, n) {
-    override fun condition(key: Int?, expected: Int) = key == null || key != expected
+    override fun condition(isPressed: Boolean) = !isPressed
     override fun toString() = "SKNP V$x"
 }
 
@@ -332,11 +333,14 @@ internal class LdVDt(c: Computer, n: Nibbles): Op(c, n) {
  * Wait for a key press, store the value of the key in Vx
  */
 internal class LdVxK(c: Computer, n: Nibbles): Op(c, n) {
-    val mainScope = MainScope()
-
     override fun run() {
-        mainScope.launch {
-            computer.cpu.V[x] = computer.keyboard.waitForKeyPress()
+        val key = computer.keyboard.key
+        if (key == null) {
+            // Block the way real hardware does: stay on this instruction until a key
+            // goes down. (Instruction.run adds 2 to PC after every op.)
+            cpu.PC -= 2
+        } else {
+            cpu.V[x] = key
         }
     }
     override fun toString() = "LD V$x, Keyboard"

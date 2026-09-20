@@ -24,6 +24,7 @@ dependencyResolutionManagement {
 rootProject.name = "chip-8"
 include(":androidApp")
 include(":shared")
+include(":shared-ui")
 include(":compose-desktop")
 include(":wearApp")
 include(":compose-web")
