@@ -54,7 +54,7 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.navigation.compose)
-    implementation("io.github.piepacker:jampadcompose:0.0.1-alpha1")
 
     implementation(project(":shared"))
+    implementation(project(":shared-ui"))
 }
