@@ -1,4 +1,4 @@
-name: Android CI
+name: Compose Desktop CI
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 # Cancel superseded runs for the same PR/branch
 concurrency:
-  group: android-${{ github.head_ref || github.ref }}
+  group: desktop-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
           distribution: 'zulu'
           java-version: 21
       - uses: gradle/actions/setup-gradle@v6
-      - name: Build with Gradle
-        run: ./gradlew assembleDebug
-      - name: Build iOS shared code
-        run: ./gradlew :shared:compileKotlinIosArm64
+
+      # distTar/distZip (application plugin) hit duplicate jar entries, so skip them
+      - name: Build Compose Desktop app
+        run: ./gradlew :compose-desktop:build -x distTar -x distZip

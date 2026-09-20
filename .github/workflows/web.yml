@@ -1,4 +1,4 @@
-name: Android CI
+name: Web CI
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 # Cancel superseded runs for the same PR/branch
 concurrency:
-  group: android-${{ github.head_ref || github.ref }}
+  group: web-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -25,7 +25,9 @@ jobs:
           distribution: 'zulu'
           java-version: 21
       - uses: gradle/actions/setup-gradle@v6
-      - name: Build with Gradle
-        run: ./gradlew assembleDebug
-      - name: Build iOS shared code
-        run: ./gradlew :shared:compileKotlinIosArm64
+
+      - name: kotlinUpgradeYarnLock
+        run: ./gradlew kotlinUpgradeYarnLock
+
+      - name: Build web app
+        run: ./gradlew :compose-web:assemble
