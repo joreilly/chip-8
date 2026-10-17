@@ -1,0 +1,19 @@
+# Shared by the Android and iOS apps: CI passes APP_ID with -e
+appId: ${APP_ID}
+---
+- launchApp:
+    clearState: true
+
+# Titled "CHIP-8" on Android and "Chip-8 Emulator" on iOS (Maestro matches case-insensitively)
+- assertVisible: "CHIP-8( Emulator)?"
+
+# Let the built-in game (Space Invaders) run, then press the controls; everything is local,
+# so a crash in the emulator loop or key handling would show up here
+- assertVisible: "Left"
+- assertVisible: "Right"
+- waitForAnimationToEnd:
+    timeout: 3000
+- tapOn: "Left"
+- tapOn: "Right"
+- assertVisible: "CHIP-8( Emulator)?"
+- takeScreenshot: chip-8
