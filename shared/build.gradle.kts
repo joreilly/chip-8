@@ -19,9 +19,13 @@ kotlin {
         browser()
     }
 
-    swiftExport {
-        moduleName = "Shared"
-        flattenPackage = "dev.johnoreilly.chip8"
+    @OptIn(org.jetbrains.kotlin.gradle.swiftexport.ExperimentalSwiftExportDsl::class)
+    export {
+        swift {
+            moduleName = "Shared"
+            rootPackage = "dev.johnoreilly.chip8"
+            xcodeIntegration()
+        }
     }
 
     dependencies {
