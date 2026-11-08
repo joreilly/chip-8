@@ -19,11 +19,11 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(compose.runtime)
-                api(compose.foundation)
-                api(compose.material3)
-                api(compose.materialIconsExtended)
-                api(compose.components.resources)
+                api(libs.compose.runtime)
+                api(libs.compose.foundation)
+                api(libs.compose.material3)
+                api(libs.compose.material.icons.extended)
+                api(libs.compose.components.resources)
                 api(project(":shared"))
                 implementation(libs.kotlinx.coroutines)
             }

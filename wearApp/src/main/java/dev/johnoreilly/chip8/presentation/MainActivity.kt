@@ -15,8 +15,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.ArrowUpward
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
@@ -68,9 +68,9 @@ fun MainLayout(romData: ByteArray) {
         EmulatorView(emulator)
 
         Row(modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp), horizontalArrangement = Arrangement.Center) {
-            GameButton(emulator, 4, Icons.Filled.ArrowBack)
+            GameButton(emulator, 4, Icons.AutoMirrored.Filled.ArrowBack)
             GameButton(emulator, 5, Icons.Filled.ArrowUpward)
-            GameButton(emulator, 6, Icons.Filled.ArrowForward)
+            GameButton(emulator, 6, Icons.AutoMirrored.Filled.ArrowForward)
         }
     }
 }
