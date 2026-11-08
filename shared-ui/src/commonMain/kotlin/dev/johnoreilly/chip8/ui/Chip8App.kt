@@ -14,7 +14,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Code
 import androidx.compose.material.icons.filled.GridView
-import androidx.compose.material.icons.filled.MenuOpen
+import androidx.compose.material.icons.automirrored.filled.MenuOpen
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
@@ -181,7 +181,7 @@ private fun Chip8TopBar(
             if (wideWindow) {
                 IconButton(onClick = state::toggleLibrary) {
                     Icon(
-                        imageVector = Icons.Filled.MenuOpen,
+                        imageVector = Icons.AutoMirrored.Filled.MenuOpen,
                         contentDescription = if (state.showLibrary) "Hide game library" else "Show game library",
                         tint = activeTint(state.showLibrary),
                     )

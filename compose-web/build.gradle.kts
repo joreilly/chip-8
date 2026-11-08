@@ -7,7 +7,6 @@ plugins {
 group = "com.example"
 version = "1.0-SNAPSHOT"
 
-@OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
 kotlin {
     wasmJs {
         browser {
