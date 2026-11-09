@@ -4,13 +4,24 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform")
-    id("com.android.library")
+    id("com.android.kotlin.multiplatform.library")
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.jetbrainsCompose)
 }
 
 kotlin {
-    androidTarget()
+    android {
+        namespace = "dev.johnoreilly.chip8.ui"
+        compileSdk = libs.versions.compileSdk.get().toInt()
+        minSdk = libs.versions.minSdk.get().toInt()
+        compilerOptions {
+            jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
+        }
+        // Required for Compose Multiplatform resources (the ROMs in composeResources/files)
+        androidResources {
+            enable = true
+        }
+    }
     jvm()
     wasmJs {
         browser()
@@ -33,16 +44,4 @@ kotlin {
 
 compose.resources {
     packageOfResClass = "dev.johnoreilly.chip8.ui.resources"
-}
-
-android {
-    compileSdk = libs.versions.compileSdk.get().toInt()
-    defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
-    }
-    namespace = "dev.johnoreilly.chip8.ui"
 }

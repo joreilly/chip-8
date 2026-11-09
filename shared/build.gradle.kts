@@ -6,13 +6,16 @@ import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 
 plugins {
     kotlin("multiplatform")
-    id("com.android.library")
+    id("com.android.kotlin.multiplatform.library")
 }
 
 kotlin {
-    androidTarget()
+    android {
+        namespace = "dev.johnoreilly.chip_8_kmm.shared"
+        compileSdk = 36
+        minSdk = 21
+    }
     iosArm64()
-    iosX64()
     iosSimulatorArm64()
     jvm()
     wasmJs {
@@ -31,13 +34,4 @@ kotlin {
     dependencies {
         implementation(libs.kotlinx.coroutines)
     }
-}
-
-android {
-    compileSdk = 36
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdk = 21
-    }
-    namespace = "dev.johnoreilly.chip_8_kmm.shared"
 }
