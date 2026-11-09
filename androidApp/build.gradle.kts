@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
     alias(libs.plugins.compose.compiler)
 }
 
@@ -34,12 +33,6 @@ android {
     }
 
     namespace = "dev.johnoreilly.chip_8_kmm.androidApp"
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
-    }
 }
 
 dependencies {

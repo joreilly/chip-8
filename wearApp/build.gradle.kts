@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    kotlin("android")
     alias(libs.plugins.compose.compiler)
 }
 
@@ -31,12 +30,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21
-    }
 }
 
 dependencies {
